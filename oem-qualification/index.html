@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment Qualification Packages for Manufacturers | CoreDraft Studio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="../Assets/Logo.png" sizes="any">
+  <style>
+    :root { --primary-navy: #213758; --text-dark: #111111; --bg-light: #F8F9FA; --border-grey: #E5E7EB; --white: #FFFFFF; }
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+    .font-serif-heading { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-sans-body { font-family: 'Inter', system-ui, sans-serif; }
+    .fade-up { opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+    .btn-primary { position:relative; overflow:hidden; transition:all 0.4s ease; }
+    .btn-primary::before { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:rgba(255,255,255,0.1); transition:left 0.4s ease; }
+    .btn-primary:hover::before { left:100%; }
+    .doc-card { transition:all 0.4s ease; }
+    .doc-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(33,55,88,0.08); }
+  </style>
+</head>
+<body class="font-sans-body bg-white text-[#111111] overflow-x-hidden">
+  <div class="w-full">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E5E7EB]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <a href="../" class="flex items-center gap-3">
+            <img src="../Assets/Logo.png" alt="CoreDraft Studio Logo" class="h-10 w-10 object-contain block" />
+            <span class="font-serif-heading text-xl lg:text-2xl font-semibold tracking-tight text-[#213758]"><span class="font-semibold">CoreDraft</span><span class="font-light"> Studio</span></span>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="../#services" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Services</a>
+            <a href="#packages" class="text-sm font-medium text-[#213758] border-b-2 border-[#213758] transition-colors">Packages</a>
+            <a href="#faq" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">FAQ</a>
+            <a href="#contact" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Contact</a>
+          </div>
+          <a href="#contact" class="hidden lg:block px-5 py-2.5 bg-[#213758] text-white text-sm font-medium tracking-wide hover:bg-[#1a2c47] transition-colors">Request Quote</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-[85vh] flex items-center bg-[#213758] overflow-hidden pt-20">
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 25px 25px, white 1px, transparent 0); background-size: 50px 50px;"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <div class="max-w-4xl">
+          <div class="inline-block px-4 py-2 border border-white/20 mb-8">
+            <span class="text-xs lg:text-sm font-medium tracking-[0.2em] text-white/80 uppercase">Equipment Qualification Packages</span>
+          </div>
+          <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.1] mb-6">Your Equipment. Qualified for Any Market.</h1>
+          <p class="text-lg lg:text-xl text-white/70 max-w-3xl mb-8 leading-relaxed font-light">Complete URS, DQ, IQ, OQ, PQ &amp; SOP documentation packages for pharmaceutical, HVAC, and cleanroom equipment manufacturers exporting to regulated markets.</p>
+          
+          <!-- Key Stats -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10 max-w-3xl">
+            <div>
+              <div class="text-2xl lg:text-3xl font-serif-heading font-semibold text-white">5–7</div>
+              <div class="text-xs text-white/50 uppercase tracking-wider mt-1">Days Delivery</div>
+            </div>
+            <div>
+              <div class="text-2xl lg:text-3xl font-serif-heading font-semibold text-white">$2,000</div>
+              <div class="text-xs text-white/50 uppercase tracking-wider mt-1">Per Package</div>
+            </div>
+            <div>
+              <div class="text-2xl lg:text-3xl font-serif-heading font-semibold text-white">PIC/S</div>
+              <div class="text-xs text-white/50 uppercase tracking-wider mt-1">Compliant</div>
+            </div>
+            <div>
+              <div class="text-2xl lg:text-3xl font-serif-heading font-semibold text-white">100+</div>
+              <div class="text-xs text-white/50 uppercase tracking-wider mt-1">Equipment Types</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <a href="#contact" class="btn-primary inline-flex items-center px-8 py-4 bg-white text-[#213758] font-medium tracking-wide hover:bg-white/95 transition-all">
+              <span>Request Package Quote</span>
+              <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+            <div class="flex items-center gap-3 text-white/50 text-sm">
+              <span class="w-1 h-1 bg-white/50 rounded-full"></span>
+              <span>Free sample template available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 lg:py-28 bg-[#F8F9FA]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="inline-block px-4 py-2 border border-[#213758]/20 mb-6">
+              <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/70 uppercase">The Problem</span>
+            </div>
+            <h2 class="font-serif-heading text-3xl lg:text-4xl font-semibold text-[#213758] leading-[1.2] mb-6">Why Good Equipment Gets Rejected</h2>
+            <p class="text-[#111111]/70 leading-relaxed mb-6">You've built reliable, affordable equipment. But when your buyer's auditor asks for the IQ/OQ/PQ dossier — you don't have it. The deal stalls. Your competitor with documentation wins.</p>
+            <p class="text-[#111111]/70 leading-relaxed mb-8">Regulated markets (pharma, biotech, cleanroom, healthcare) require documented proof that every piece of equipment meets GMP, PIC/S, or WHO standards before it can be used. Without a qualification package, your equipment is literally unselable.</p>
+            <div class="flex items-start gap-4 p-5 bg-white border border-[#E5E7EB]">
+              <div class="w-10 h-10 rounded-full bg-[#213758]/10 flex items-center justify-center shrink-0 mt-0.5">
+                <span class="text-[#213758] font-bold text-lg">"</span>
+              </div>
+              <p class="text-sm italic text-[#111111]/80">We had a Chinese HVAC unit held at customs for 3 months because the buyer's QA team couldn't validate performance specs. The factory had no qualification docs. — Equipment importer, Karachi</p>
+            </div>
+          </div>
+          <div class="bg-white p-8 lg:p-10 border border-[#E5E7EB]">
+            <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-6">What You're Losing Without Documentation</h3>
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                  <span class="text-red-500 text-sm font-bold">✕</span>
+                </div>
+                <div>
+                  <p class="font-medium text-sm">Lost Pharma &amp; Biotech Contracts</p>
+                  <p class="text-xs text-[#111111]/60 mt-0.5">75% of pharma buyers require IQ/OQ/PQ before purchase consideration</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                  <span class="text-red-500 text-sm font-bold">✕</span>
+                </div>
+                <div>
+                  <p class="font-medium text-sm">Price Pressure from Unregulated Markets</p>
+                  <p class="text-xs text-[#111111]/60 mt-0.5">Commodity pricing instead of premium equipment positioning</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                  <span class="text-red-500 text-sm font-bold">✕</span>
+                </div>
+                <div>
+                  <p class="font-medium text-sm">Regulatory Delays &amp; Customs Holds</p>
+                  <p class="text-xs text-[#111111]/60 mt-0.5">Shipments delayed while buyers scramble to validate internally</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                  <span class="text-red-500 text-sm font-bold">✕</span>
+                </div>
+                <div>
+                  <p class="font-medium text-sm">Dependence on Buyer's Capabilities</p>
+                  <p class="text-xs text-[#111111]/60 mt-0.5">You rely on distributors who lack documentation skills</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-block px-4 py-2 border border-[#213758]/20 mb-6">
+            <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/70 uppercase">Qualification Packages</span>
+          </div>
+          <h2 class="font-serif-heading text-3xl lg:text-4xl font-semibold text-[#213758] leading-[1.2] mb-4">Documentation Packages for Every Equipment Type</h2>
+          <p class="text-[#111111]/70">Each package is tailored to your equipment specifications and your target market's regulatory requirements.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Pharma Core -->
+          <div class="doc-card p-8 border border-[#E5E7EB] bg-white flex flex-col">
+            <div class="mb-6">
+              <div class="w-12 h-12 bg-[#213758] flex items-center justify-center mb-4">
+                <span class="text-white font-serif-heading text-xl font-bold">P</span>
+              </div>
+              <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-2">Pharma Core</h3>
+              <p class="text-sm text-[#111111]/60">For pharmaceutical &amp; biotech production equipment</p>
+            </div>
+            <div class="flex-1 space-y-3 mb-8">
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>User Requirement Spec (URS)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Design Qualification (DQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Installation Qualification (IQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Operational Qualification (OQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Performance Qualification (PQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Standard Operating Procedures (SOPs)</span>
+              </div>
+            </div>
+            <div class="border-t border-[#E5E7EB] pt-4 mt-auto">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-sm text-[#111111]/60">Starting from</span>
+                <span class="font-serif-heading text-2xl font-semibold text-[#213758]">$2,000</span>
+              </div>
+              <a href="#contact" class="block w-full text-center py-3 border border-[#213758] text-[#213758] text-sm font-medium hover:bg-[#213758] hover:text-white transition-all">Get Quote</a>
+            </div>
+          </div>
+
+          <!-- HVAC & Utilities -->
+          <div class="doc-card p-8 border border-[#E5E7EB] bg-white flex flex-col">
+            <div class="mb-6">
+              <div class="w-12 h-12 bg-[#213758] flex items-center justify-center mb-4">
+                <span class="text-white font-serif-heading text-xl font-bold">H</span>
+              </div>
+              <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-2">HVAC &amp; Utilities</h3>
+              <p class="text-sm text-[#111111]/60">For cleanroom HVAC, water systems, and utility equipment</p>
+            </div>
+            <div class="flex-1 space-y-3 mb-8">
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>User Requirement Spec (URS)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Design Qualification (DQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Installation Qualification (IQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Operational Qualification (OQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Performance Qualification (PQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Standard Operating Procedures (SOPs)</span>
+              </div>
+            </div>
+            <div class="border-t border-[#E5E7EB] pt-4 mt-auto">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-sm text-[#111111]/60">Starting from</span>
+                <span class="font-serif-heading text-2xl font-semibold text-[#213758]">$2,000</span>
+              </div>
+              <a href="#contact" class="block w-full text-center py-3 border border-[#213758] text-[#213758] text-sm font-medium hover:bg-[#213758] hover:text-white transition-all">Get Quote</a>
+            </div>
+          </div>
+
+          <!-- Cleanroom -->
+          <div class="doc-card p-8 border border-[#E5E7EB] bg-white flex flex-col">
+            <div class="mb-6">
+              <div class="w-12 h-12 bg-[#213758] flex items-center justify-center mb-4">
+                <span class="text-white font-serif-heading text-xl font-bold">C</span>
+              </div>
+              <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-2">Cleanroom &amp; Lab</h3>
+              <p class="text-sm text-[#111111]/60">For cleanroom equipment, lab instruments, and testing gear</p>
+            </div>
+            <div class="flex-1 space-y-3 mb-8">
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>User Requirement Spec (URS)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Design Qualification (DQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Installation Qualification (IQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Operational Qualification (OQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Performance Qualification (PQ)</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#213758] shrink-0"></span>
+                <span>Standard Operating Procedures (SOPs)</span>
+              </div>
+            </div>
+            <div class="border-t border-[#E5E7EB] pt-4 mt-auto">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-sm text-[#111111]/60">Starting from</span>
+                <span class="font-serif-heading text-2xl font-semibold text-[#213758]">$1,800</span>
+              </div>
+              <a href="#contact" class="block w-full text-center py-3 border border-[#213758] text-[#213758] text-sm font-medium hover:bg-[#213758] hover:text-white transition-all">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add-on row -->
+        <div class="mt-10 p-6 bg-[#F8F9FA] border border-[#E5E7EB] text-center">
+          <p class="text-sm text-[#111111]/70"><span class="font-semibold text-[#213758]">Add-on:</span> Validation Summary Reports, Training Materials, and Site Acceptance Test (SAT) protocols available at $500 each.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 lg:py-28 bg-[#F8F9FA]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-block px-4 py-2 border border-[#213758]/20 mb-6">
+            <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/70 uppercase">How It Works</span>
+          </div>
+          <h2 class="font-serif-heading text-3xl lg:text-4xl font-semibold text-[#213758] leading-[1.2] mb-4">From Specs to Signed-Off Qualification in 7 Days</h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-4 bg-[#213758] flex items-center justify-center">
+              <span class="text-white font-serif-heading text-2xl font-bold">01</span>
+            </div>
+            <h3 class="font-medium text-[#213758] mb-2">You Share Specs</h3>
+            <p class="text-sm text-[#111111]/60">Equipment datasheets, drawings, and target market requirements</p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-4 bg-[#213758] flex items-center justify-center">
+              <span class="text-white font-serif-heading text-2xl font-bold">02</span>
+            </div>
+            <h3 class="font-medium text-[#213758] mb-2">We Draft</h3>
+            <p class="text-sm text-[#111111]/60">Full qualification package in GMP-compliant format with regulatory references</p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-4 bg-[#213758] flex items-center justify-center">
+              <span class="text-white font-serif-heading text-2xl font-bold">03</span>
+            </div>
+            <h3 class="font-medium text-[#213758] mb-2">You Review</h3>
+            <p class="text-sm text-[#111111]/60">One round of revisions included. We incorporate your technical feedback.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-4 bg-[#213758] flex items-center justify-center">
+              <span class="text-white font-serif-heading text-2xl font-bold">04</span>
+            </div>
+            <h3 class="font-medium text-[#213758] mb-2">Deliver &amp; Sell</h3>
+            <p class="text-sm text-[#111111]/60">You get signed-off PDF + editable source files. Ready to attach to every quote.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliance Standards -->
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-block px-4 py-2 border border-[#213758]/20 mb-6">
+            <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/70 uppercase">Regulatory Standards</span>
+          </div>
+          <h2 class="font-serif-heading text-3xl lg:text-4xl font-semibold text-[#213758] leading-[1.2] mb-4">Built to Pass Any Audit</h2>
+          <p class="text-[#111111]/70">Our documentation follows international standards accepted by regulators worldwide.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
+          <div class="p-5 text-center border border-[#E5E7EB]">
+            <div class="font-serif-heading text-xl font-bold text-[#213758] mb-1">PIC/S</div>
+            <div class="text-[10px] text-[#111111]/50 uppercase tracking-wider">GMP Standard</div>
+          </div>
+          <div class="p-5 text-center border border-[#E5E7EB]">
+            <div class="font-serif-heading text-xl font-bold text-[#213758] mb-1">WHO</div>
+            <div class="text-[10px] text-[#111111]/50 uppercase tracking-wider">TRS 961</div>
+          </div>
+          <div class="p-5 text-center border border-[#E5E7EB]">
+            <div class="font-serif-heading text-xl font-bold text-[#213758] mb-1">EU GMP</div>
+            <div class="text-[10px] text-[#111111]/50 uppercase tracking-wider">Annex 15</div>
+          </div>
+          <div class="p-5 text-center border border-[#E5E7EB]">
+            <div class="font-serif-heading text-xl font-bold text-[#213758] mb-1">ISO</div>
+            <div class="text-[10px] text-[#111111]/50 uppercase tracking-wider">9001 / 14644</div>
+          </div>
+          <div class="p-5 text-center border border-[#E5E7EB]">
+            <div class="font-serif-heading text-xl font-bold text-[#213758] mb-1">FDA</div>
+            <div class="text-[10px] text-[#111111]/50 uppercase tracking-wider">21 CFR Part 11</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 lg:py-28 bg-[#F8F9FA]">
+      <div class="max-w-3xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <div class="inline-block px-4 py-2 border border-[#213758]/20 mb-6">
+            <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/70 uppercase">FAQ</span>
+          </div>
+          <h2 class="font-serif-heading text-3xl lg:text-4xl font-semibold text-[#213758] leading-[1.2] mb-4">Common Questions</h2>
+        </div>
+        <div class="space-y-4">
+          <details class="bg-white border border-[#E5E7EB] p-5 group">
+            <summary class="font-medium text-[#213758] cursor-pointer list-none flex justify-between items-center">What equipment types do you cover?<span class="text-[#213758]/40 group-open:rotate-180 transition-transform">▼</span></summary>
+            <p class="mt-3 text-sm text-[#111111]/70 leading-relaxed">Pharmaceutical manufacturing equipment (tablet presses, coating pans, mixers, granulators, filling lines), HVAC systems (AHUs, chillers, boilers, cleanroom air handling), water systems (purified water, WFI, storage/distribution), cleanroom equipment (laminar flow hoods, isolators, biosafety cabinets), and laboratory instruments (HPLC, GC, dissolution testers, stability chambers).</p>
+          </details>
+          <details class="bg-white border border-[#E5E7EB] p-5 group">
+            <summary class="font-medium text-[#213758] cursor-pointer list-none flex justify-between items-center">How long does a package take?<span class="text-[#213758]/40 group-open:rotate-180 transition-transform">▼</span></summary>
+            <p class="mt-3 text-sm text-[#111111]/70 leading-relaxed">Standard delivery is 5-7 business days. We can expedite to 3 days at a 25% premium. Rush orders depend on current queue.</p>
+          </details>
+          <details class="bg-white border border-[#E5E7EB] p-5 group">
+            <summary class="font-medium text-[#213758] cursor-pointer list-none flex justify-between items-center">Do I need to provide technical drawings?<span class="text-[#213758]/40 group-open:rotate-180 transition-transform">▼</span></summary>
+            <p class="mt-3 text-sm text-[#111111]/70 leading-relaxed">Yes — we need equipment datasheets, P&amp;IDs (if available), and functional specifications. The more detail you provide, the more accurate the qualification. If you only have basic specs, we can work with that and flag assumptions for your review.</p>
+          </details>
+          <details class="bg-white border border-[#E5E7EB] p-5 group">
+            <summary class="font-medium text-[#213758] cursor-pointer list-none flex justify-between items-center">Is the documentation specific to a target country?<span class="text-[#213758]/40 group-open:rotate-180 transition-transform">▼</span></summary>
+            <p class="mt-3 text-sm text-[#111111]/70 leading-relaxed">We tailor each package to your target market's regulatory framework — PIC/S (Europe/Asia), WHO (developing markets), or FDA (US). Tell us where your equipment is going and we'll align the documentation accordingly.</p>
+          </details>
+          <details class="bg-white border border-[#E5E7EB] p-5 group">
+            <summary class="font-medium text-[#213758] cursor-pointer list-none flex justify-between items-center">Can I get a sample before purchasing?<span class="text-[#213758]/40 group-open:rotate-180 transition-transform">▼</span></summary>
+            <p class="mt-3 text-sm text-[#111111]/70 leading-relaxed">Yes. Contact us and we'll share a sample qualification package (TOC + one completed section + a blank template) so you can evaluate the quality and format before committing.</p>
+          </details>
+          <details class="bg-white border border-[#E5E7EB] p-5 group">
+            <summary class="font-medium text-[#213758] cursor-pointer list-none flex justify-between items-center">What format do you deliver in?<span class="text-[#213758]/40 group-open:rotate-180 transition-transform">▼</span></summary>
+            <p class="mt-3 text-sm text-[#111111]/70 leading-relaxed">Signed-off PDF for submission, plus editable Word/Excel source files so you can modify for future projects or translate into other languages.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 lg:py-28 bg-[#213758]">
+      <div class="max-w-3xl mx-auto px-6 lg:px-12 text-center">
+        <div class="inline-block px-4 py-2 border border-white/20 mb-8">
+          <span class="text-xs font-medium tracking-[0.2em] text-white/80 uppercase">Get Started</span>
+        </div>
+        <h2 class="font-serif-heading text-3xl lg:text-4xl font-semibold text-white leading-[1.2] mb-6">Ready to Make Your Equipment Sellable Anywhere?</h2>
+        <p class="text-white/70 max-w-2xl mx-auto mb-10">Send us your equipment specs and target markets. We'll respond with a package quote and a sample template within 24 hours.</p>
+        <div class="max-w-xl mx-auto">
+          <a href="mailto:intake@coredraftstudio.com?subject=Equipment%20Qualification%20Inquiry&body=Equipment%20Type%3A%0ATarget%20Market(s)%3A%0AKey%20Specs%3A%0ADeadline%3A" class="btn-primary inline-flex items-center px-8 py-4 bg-white text-[#213758] font-medium tracking-wide hover:bg-white/95 transition-all">
+            <span>Email Us: intake@coredraftstudio.com</span>
+            <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l
