@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoreDraft Studio | International Engineering Documentation Consultancy</title>
+  <title>CoreDraft Studio | Equipment Qualification &amp; Engineering Documentation Consultancy</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="/_sdk/element_sdk.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,355 +11,312 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="icon" href="Assets/Logo.png" sizes="any">
   <style>
-    :root {
-      --primary-navy: #213758;
-      --text-dark: #111111;
-      --bg-light: #F8F9FA;
-      --border-grey: #E5E7EB;
-      --white: #FFFFFF;
-    }
-    
-    html, body {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .font-serif-heading {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-    }
-    
-    .font-sans-body {
-      font-family: 'Inter', system-ui, sans-serif;
-    }
-    
-    /* Blueprint Grid Animation */
-    .blueprint-grid {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-      opacity: 0.06;
-    }
-    
-    .grid-line-h, .grid-line-v {
-      position: absolute;
-      background: var(--white);
-    }
-    
-    .grid-line-h {
-      height: 1px;
-      width: 100%;
-      animation: fadeSlideH 12s ease-in-out infinite;
-    }
-    
-    .grid-line-v {
-      width: 1px;
-      height: 100%;
-      animation: fadeSlideV 15s ease-in-out infinite;
-    }
-    
-    @keyframes fadeSlideH {
-      0%, 100% { opacity: 0; transform: translateX(-5%); }
-      50% { opacity: 1; transform: translateX(5%); }
-    }
-    
-    @keyframes fadeSlideV {
-      0%, 100% { opacity: 0; transform: translateY(-3%); }
-      50% { opacity: 1; transform: translateY(3%); }
-    }
-    
-    /* Geometric Outlines */
-    .geo-outline {
-      position: absolute;
-      border: 1px solid rgba(255,255,255,0.15);
-      animation: geoFloat 20s ease-in-out infinite;
-    }
-    
-    @keyframes geoFloat {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
-      25% { transform: translate(10px, -10px) rotate(1deg); opacity: 0.5; }
-      50% { transform: translate(5px, 5px) rotate(-0.5deg); opacity: 0.4; }
-      75% { transform: translate(-5px, -5px) rotate(0.5deg); opacity: 0.5; }
-    }
-    
-    /* Subtle Moving Lines */
-    .moving-line {
-      position: absolute;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      animation: moveLine 18s linear infinite;
-    }
-    
-    @keyframes moveLine {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(200%); }
-    }
-    
-    /* Scroll Animations */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    /* Button Hover */
-    .btn-primary {
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s ease;
-    }
-    
-    .btn-primary::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: rgba(255,255,255,0.1);
-      transition: left 0.4s ease;
-    }
-    
-    .btn-primary:hover::before {
-      left: 100%;
-    }
-    
-    /* Divider */
-    .divider {
-      height: 1px;
-      background: var(--border-grey);
-    }
-    
-    /* Process Step */
-    .process-step {
-      position: relative;
-    }
-    
-    .process-step::before {
-      content: '';
-      position: absolute;
-      left: 23px;
-      top: 48px;
-      width: 1px;
-      height: calc(100% - 24px);
-      background: var(--border-grey);
-    }
-    
-    .process-step:last-child::before {
-      display: none;
-    }
-    
-    /* Service Card */
-    .service-card {
-      transition: all 0.4s ease;
-    }
-    
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(33, 55, 88, 0.08);
-    }
+    :root { --primary-navy: #213758; --text-dark: #111111; --bg-light: #F8F9FA; --border-grey: #E5E7EB; --white: #FFFFFF; }
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+    .font-serif-heading { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-sans-body { font-family: 'Inter', system-ui, sans-serif; }
+    .blueprint-grid { position: absolute; inset: 0; overflow: hidden; opacity: 0.06; }
+    .grid-line-h, .grid-line-v { position: absolute; background: var(--white); }
+    .grid-line-h { height: 1px; width: 100%; animation: fadeSlideH 12s ease-in-out infinite; }
+    .grid-line-v { width: 1px; height: 100%; animation: fadeSlideV 15s ease-in-out infinite; }
+    @keyframes fadeSlideH { 0%,100% { opacity:0; transform:translateX(-5%); } 50% { opacity:1; transform:translateX(5%); } }
+    @keyframes fadeSlideV { 0%,100% { opacity:0; transform:translateY(-3%); } 50% { opacity:1; transform:translateY(3%); } }
+    .geo-outline { position:absolute; border:1px solid rgba(255,255,255,0.15); animation:geoFloat 20s ease-in-out infinite; }
+    @keyframes geoFloat { 0%,100% { transform:translate(0,0) rotate(0deg); opacity:0.3; } 25% { transform:translate(10px,-10px) rotate(1deg); opacity:0.5; } 50% { transform:translate(5px,5px) rotate(-0.5deg); opacity:0.4; } 75% { transform:translate(-5px,-5px) rotate(0.5deg); opacity:0.5; } }
+    .moving-line { position:absolute; height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent); animation:moveLine 18s linear infinite; }
+    @keyframes moveLine { 0% { transform:translateX(-100%); } 100% { transform:translateX(200%); } }
+    .fade-up { opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+    .btn-primary { position:relative; overflow:hidden; transition:all 0.4s ease; }
+    .btn-primary::before { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:rgba(255,255,255,0.1); transition:left 0.4s ease; }
+    .btn-primary:hover::before { left:100%; }
+    .divider { height:1px; background:var(--border-grey); }
+    .process-step { position:relative; }
+    .process-step::before { content:''; position:absolute; left:23px; top:48px; width:1px; height:calc(100% - 24px); background:var(--border-grey); }
+    .process-step:last-child::before { display:none; }
+    .service-card { transition:all 0.4s ease; }
+    .service-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(33,55,88,0.08); }
   </style>
   <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full font-sans-body bg-white text-[#111111] overflow-x-hidden">
-  <div class="w-full h-full overflow-auto"><!-- Navigation -->
+  <div class="w-full h-full overflow-auto">
+   <!-- Navigation -->
    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E5E7EB]">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
      <div class="flex items-center justify-between h-16 lg:h-20">
       <div class="flex items-center gap-3">
-       <img
-        src="Assets/Logo.png"
-        alt="CoreDraft Studio Logo"
-        class="h-10 w-10 object-contain block"
-       />
-       <span class="font-serif-heading text-xl lg:text-2xl font-semibold tracking-tight text-[#213758]" id="nav-logo"><span class="font-semibold">CoreDraft</span><span class="font-light"> Studio</span></span>
+       <img src="Assets/Logo.png" alt="CoreDraft Studio Logo" class="h-10 w-10 object-contain block" />
+       <span class="font-serif-heading text-xl lg:text-2xl font-semibold tracking-tight text-[#213758]"><span class="font-semibold">CoreDraft</span><span class="font-light"> Studio</span></span>
       </div>
-      <div class="hidden md:flex items-center gap-8"><a href="#services" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Services</a> <a href="#process" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Process</a> <a href="#contact" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Contact</a>
-      </div><a href="#contact" class="hidden lg:block px-5 py-2.5 bg-[#213758] text-white text-sm font-medium tracking-wide hover:bg-[#1a2c47] transition-colors"> Start Intake </a>
+      <div class="hidden md:flex items-center gap-8">
+       <a href="#services" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Services</a>
+       <a href="#oem" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">For OEMs</a>
+       <a href="#process" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Process</a>
+       <a href="#contact" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Contact</a>
+      </div>
+      <a href="#contact" class="hidden lg:block px-5 py-2.5 bg-[#213758] text-white text-sm font-medium tracking-wide hover:bg-[#1a2c47] transition-colors">Start Intake</a>
      </div>
     </div>
-   </nav><!-- Hero Section -->
-   <section class="relative min-h-[90%] flex items-center bg-[#213758] overflow-hidden pt-20"><!-- Blueprint Grid Background -->
+   </nav>
+
+   <!-- Hero Section -->
+   <section class="relative min-h-[90%] flex items-center bg-[#213758] overflow-hidden pt-20">
     <div class="blueprint-grid">
-     <div class="grid-line-h" style="top: 20%;"></div>
-     <div class="grid-line-h" style="top: 40%; animation-delay: -3s;"></div>
-     <div class="grid-line-h" style="top: 60%; animation-delay: -6s;"></div>
-     <div class="grid-line-h" style="top: 80%; animation-delay: -9s;"></div>
-     <div class="grid-line-v" style="left: 15%;"></div>
-     <div class="grid-line-v" style="left: 35%; animation-delay: -4s;"></div>
-     <div class="grid-line-v" style="left: 55%; animation-delay: -8s;"></div>
-     <div class="grid-line-v" style="left: 75%; animation-delay: -12s;"></div>
-     <div class="grid-line-v" style="left: 95%; animation-delay: -2s;"></div>
-    </div><!-- Geometric Outlines -->
-    <div class="geo-outline w-64 h-64 top-[10%] right-[10%]" style="animation-delay: -5s;"></div>
-    <div class="geo-outline w-48 h-48 bottom-[15%] left-[5%]" style="animation-delay: -10s;"></div>
-    <div class="geo-outline w-32 h-32 top-[40%] right-[30%]" style="animation-delay: -15s;"></div><!-- Moving Lines -->
-    <div class="moving-line w-[60%] top-[25%]" style="animation-delay: -3s;"></div>
-    <div class="moving-line w-[40%] top-[55%]" style="animation-delay: -9s;"></div>
-    <div class="moving-line w-[50%] top-[75%]" style="animation-delay: -15s;"></div>
+     <div class="grid-line-h" style="top:20%"></div>
+     <div class="grid-line-h" style="top:40%;animation-delay:-3s"></div>
+     <div class="grid-line-h" style="top:60%;animation-delay:-6s"></div>
+     <div class="grid-line-h" style="top:80%;animation-delay:-9s"></div>
+     <div class="grid-line-v" style="left:15%"></div>
+     <div class="grid-line-v" style="left:35%;animation-delay:-4s"></div>
+     <div class="grid-line-v" style="left:55%;animation-delay:-8s"></div>
+     <div class="grid-line-v" style="left:75%;animation-delay:-12s"></div>
+     <div class="grid-line-v" style="left:95%;animation-delay:-2s"></div>
+    </div>
+    <div class="geo-outline w-64 h-64 top-[10%] right-[10%]" style="animation-delay:-5s"></div>
+    <div class="geo-outline w-48 h-48 bottom-[15%] left-[5%]" style="animation-delay:-10s"></div>
+    <div class="geo-outline w-32 h-32 top-[40%] right-[30%]" style="animation-delay:-15s"></div>
+    <div class="moving-line w-[60%] top-[25%]" style="animation-delay:-3s"></div>
+    <div class="moving-line w-[40%] top-[55%]" style="animation-delay:-9s"></div>
+    <div class="moving-line w-[50%] top-[75%]" style="animation-delay:-15s"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-32">
      <div class="max-w-4xl">
-      <div class="inline-block px-4 py-2 border border-white/20 mb-8"><span class="text-xs lg:text-sm font-medium tracking-[0.2em] text-white/80 uppercase">International Engineering Documentation Consultancy</span>
+      <div class="inline-block px-4 py-2 border border-white/20 mb-8">
+       <span class="text-xs lg:text-sm font-medium tracking-[0.2em] text-white/80 uppercase">Equipment Qualification &amp; Engineering Documentation Consultancy</span>
       </div>
-      <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.1] mb-8" id="hero-headline">Strong Engineering Deserves <br class="hidden lg:block"><span class="text-white/90">Strong Documentation.</span></h1>
-      <p class="text-lg lg:text-xl text-white/70 max-w-2xl mb-12 leading-relaxed font-light" id="hero-subheadline">In high-stakes engineering assessments and technical submissions, documentation quality determines the outcome. We build structured, competency-aligned documentation designed to withstand professional scrutiny.</p>
-      <div class="flex flex-col sm:flex-row items-start gap-6"><a href="#contact" class="btn-primary inline-flex items-center px-8 py-4 bg-white text-[#213758] font-medium tracking-wide hover:bg-white/95 transition-all" id="hero-cta"> <span id="cta-text">Start Intake</span>
-        <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg></a>
-       <div class="flex items-center gap-3 text-white/50 text-sm"><span class="w-1 h-1 bg-white/50 rounded-full"></span> <span>Confidential evaluation. Clear next steps. No obligation.</span><br class="hidden lg:block">
+      <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.1] mb-8">Sell Your Equipment Anywhere.<br class="hidden lg:block"><span class="text-white/90">Compliance Docs Included.</span></h1>
+      <p class="text-lg lg:text-xl text-white/70 max-w-2xl mb-12 leading-relaxed font-light">Every equipment sale into regulated markets needs URS, IQ, OQ, PQ, and SOP documentation. We build complete qualification packages — so your customers pass audits without delays.</p>
+      <div class="flex flex-col sm:flex-row items-start gap-6">
+       <a href="#contact" class="btn-primary inline-flex items-center px-8 py-4 bg-white text-[#213758] font-medium tracking-wide hover:bg-white/95 transition-all">
+        <span>Request Qualification Package</span>
+        <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+       </a>
+       <div class="flex items-center gap-3 text-white/50 text-sm">
+        <span class="w-1 h-1 bg-white/50 rounded-full"></span>
+        <span>Confidential review. Clear scope. No obligation.</span>
        </div>
       </div>
-      <p class="text-white/70 text-sm mt-8 tracking-wide">Confidential. Structured. Decision-ready within 72 hours.</p>
-      <p class="mt-2 text-white/60 text-xs text-center">Designed for engineers preparing submissions for international accreditation, professional qualification reviews, and regulated technical environments.</p>
+      <p class="text-white/70 text-sm mt-8 tracking-wide">Decision-ready documentation packages within 72 hours.</p>
+      <p class="mt-2 text-white/60 text-xs">Serving equipment manufacturers, pharma facilities, and engineering organisations in regulated markets.</p>
      </div>
-    </div><!-- Bottom Border Accent -->
+    </div>
     <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-   </section><!-- Positioning Section -->
+   </section>
+
+   <!-- Positioning Section -->
    <section class="py-20 lg:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
      <div class="fade-up max-w-4xl mx-auto text-center">
-      <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] mb-8" id="positioning-heading">Documentation Failure Is Expensive.</h2>
-      <p class="text-lg lg:text-xl text-[#111111]/70 leading-relaxed font-light">Rejections, costly revisions, delayed approvals, lost opportunities, and credibility damage often originate from poorly structured documentation. In high-stakes evaluations, clarity becomes the deciding factor.</p>
-       <div class="mt-8 text-center">
-        <a href="#process" class="text-[#213758] font-medium underline">See how our structured process works →</a>
-       </div>
+      <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] mb-8">Missing Compliance Docs = Missed Sales.</h2>
+      <p class="text-lg lg:text-xl text-[#111111]/70 leading-relaxed font-light">Equipment buyers in regulated industries require URS, IQ, OQ, PQ, and GxP-compliant documentation before they can purchase. Without it, your equipment becomes unsellable in the markets that pay the highest premiums. We close that gap.</p>
+      <div class="mt-8 text-center">
+       <a href="#services" class="text-[#213758] font-medium underline">See our qualification service in detail →</a>
+      </div>
      </div>
     </div>
    </section>
-   <div class="divider max-w-7xl mx-auto"></div><!-- Authority Section -->
+
+   <div class="divider max-w-7xl mx-auto"></div>
+
+   <!-- Authority Section -->
    <section class="py-20 lg:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
      <div class="fade-up text-center mb-16 lg:mb-20">
       <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758]">Why CoreDraft Studio</h2>
-      <p class="mt-8 text-gray-600 text-lg max-w-2xl mx-auto">Documentation engineered for formal review environments.</p>
+      <p class="mt-8 text-gray-600 text-lg max-w-2xl mx-auto">Documentation engineered for regulatory approval and audit readiness.</p>
      </div>
      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
-      <div class="fade-up text-center lg:text-left" style="transition-delay: 0.1s;">
+      <div class="fade-up text-center lg:text-left" style="transition-delay:0.1s">
        <div class="w-12 h-12 border border-[#213758] flex items-center justify-center mb-6 mx-auto lg:mx-0">
-        <svg class="w-6 h-6 text-[#213758]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-        </svg>
+        <svg class="w-6 h-6 text-[#213758]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
        </div>
-       <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758] mb-4">Structured Methodology</h3>
-       <p class="text-[#111111]/60 leading-relaxed mb-4">Every engagement follows a defined documentation architecture - eliminating guesswork and reducing revision cycles.</p>
-       <p class="text-sm text-[#213758] font-medium tracking-wide">Define → Plan → Draft → Refine → Deliver</p>
+       <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758] mb-4">Regulatory Compliance Ready</h3>
+       <p class="text-[#111111]/60 leading-relaxed">Every deliverable built to WHO, PIC/S, GMP, and EU GMP Annex 15 standards — audit-ready from day one.</p>
       </div>
-      <div class="fade-up text-center lg:text-left" style="transition-delay: 0.2s;">
+      <div class="fade-up text-center lg:text-left" style="transition-delay:0.2s">
        <div class="w-12 h-12 border border-[#213758] flex items-center justify-center mb-6 mx-auto lg:mx-0">
-        <svg class="w-6 h-6 text-[#213758]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+        <svg class="w-6 h-6 text-[#213758]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
        </div>
-       <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758] mb-4">International Alignment</h3>
-       <p class="text-[#111111]/60 leading-relaxed">Documentation structured against formal evaluation frameworks - ensuring alignment with international engineering and accreditation standards.</p>
+       <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758] mb-4">Pharma-Grade Expertise</h3>
+       <p class="text-[#111111]/60 leading-relaxed">Built by senior engineers with real plant experience in WHO and PIC/S-regulated pharmaceutical facilities.</p>
       </div>
-      <div class="fade-up text-center lg:text-left" style="transition-delay: 0.3s;">
+      <div class="fade-up text-center lg:text-left" style="transition-delay:0.3s">
        <div class="w-12 h-12 border border-[#213758] flex items-center justify-center mb-6 mx-auto lg:mx-0">
-        <svg class="w-6 h-6 text-[#213758]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-        </svg>
+        <svg class="w-6 h-6 text-[#213758]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
        </div>
-       <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758] mb-4">Confidential Execution</h3>
-       <p class="text-[#111111]/60 leading-relaxed">Sensitive professional submissions handled with discretion, structural discipline, and document integrity at every stage.</p>
+       <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758] mb-4">Scalable Delivery</h3>
+       <p class="text-[#111111]/60 leading-relaxed">Template-driven methodology delivers qualification packages in 2-3 days per equipment — 80% structured, 20% tailored.</p>
       </div>
      </div>
     </div>
    </section>
-   <div class="divider max-w-7xl mx-auto"></div><!-- Who We Work With Section -->
+
+   <div class="divider max-w-7xl mx-auto"></div>
+
+   <!-- Who We Work With -->
    <section class="py-20 lg:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
      <div class="fade-up text-center mb-16 lg:mb-20">
       <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758]">Who We Work With</h2>
-      <div class="mt-10 bg-[#f7f7f7 border border-[#111111]/10 rounded-xl p-8 lg:p-12">
-      <div class="grid md:grid-cols-4 gap-16 max-w-6xl mx-auto px-6 text-center mt-12">
-       <div class="p-6 border rounded-lg">
-        <h4>Engineers</h4>
-        <p class="text-sm text-gray-600">Pursuing international accreditation and competency assessments.</p>
-       </div>
-       <div class="p-6 border rounded-lg">
-        <h4>Technical Professionals</h4>
-        <p class="text-sm text-gray-600">Preparing structured documentation for formal evaluation.</p>
-       </div>
-       <div class="p-6 border rounded-lg">
-        <h4>Engineering Organizations</h4>
-        <p class="text-sm text-gray-600">Requiring structured technical documentation and submissions.</p>
-       </div>
-       <div class="p-6 border rounded-lg">
-        <h4>Manufacturing Firms</h4>
-        <p class="text-sm text-gray-600">Preparing qualification documentation for compliance and audits.</p>
-       </div>
+     </div>
+     <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div class="fade-up p-6 border border-[#E5E7EB] rounded-lg bg-white service-card text-center" style="transition-delay:0.1s">
+       <h4 class="font-serif-heading text-lg font-semibold text-[#213758] mb-2">Equipment Manufacturers</h4>
+       <p class="text-sm text-gray-600">HVAC, pharma, and utility OEMs needing qualification packages to unlock regulated markets.</p>
+      </div>
+      <div class="fade-up p-6 border border-[#E5E7EB] rounded-lg bg-white service-card text-center" style="transition-delay:0.2s">
+       <h4 class="font-serif-heading text-lg font-semibold text-[#213758] mb-2">Pharma Facilities</h4>
+       <p class="text-sm text-gray-600">Requiring URS, IQ/OQ/PQ, and validation documentation for procurement and audits.</p>
+      </div>
+      <div class="fade-up p-6 border border-[#E5E7EB] rounded-lg bg-white service-card text-center" style="transition-delay:0.3s">
+       <h4 class="font-serif-heading text-lg font-semibold text-[#213758] mb-2">Engineering Organisations</h4>
+       <p class="text-sm text-gray-600">Requiring structured technical documentation, tender submissions, and compliance mapping.</p>
+      </div>
+      <div class="fade-up p-6 border border-[#E5E7EB] rounded-lg bg-white service-card text-center" style="transition-delay:0.4s">
+       <h4 class="font-serif-heading text-lg font-semibold text-[#213758] mb-2">Engineers &amp; Professionals</h4>
+       <p class="text-sm text-gray-600">Pursuing international accreditation, CDR submissions, and competency assessments.</p>
+      </div>
      </div>
     </div>
-   </div>
-   </div>
    </section>
-   <!-- Services Section -->
+
+   <!-- Services -->
    <section id="services" class="py-20 lg:py-32 bg-[#F8F9FA]">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
      <div class="fade-up text-center mb-16 lg:mb-20">
       <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] mb-4">Our Areas of Practice</h2>
-      <p class="text-[#111111]/60 max-w-2xl mx-auto">Specialized documentation services for engineering professionals and organizations.</p>
+      <p class="text-[#111111]/60 max-w-2xl mx-auto">Specialized documentation services for equipment manufacturers, regulated industries, and engineering professionals.</p>
      </div>
-     <div class="grid md:grid-cols-2 gap-6 lg:gap-8"><!-- Service 1 -->
-      <div class="fade-up service-card bg-white p-8 lg:p-10 border border-[#E5E7EB]" style="transition-delay: 0.1s;">
+     <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+
+      <!-- Service 1: Qualification & Validation (Flagship) -->
+      <div class="fade-up service-card bg-white p-8 lg:p-10 border border-[#E5E7EB] md:col-span-2" style="transition-delay:0.1s;border-left:4px solid #213758">
        <div class="flex items-start gap-4 mb-6">
-        <div class="w-10 h-10 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="font-serif-heading text-lg font-semibold text-[#213758]">01</span>
+        <div class="w-10 h-10 bg-[#213758] flex items-center justify-center flex-shrink-0"><span class="font-serif-heading text-lg font-semibold text-white">★</span></div>
+        <div>
+         <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758]">Equipment Qualification &amp; Validation Documentation</h3>
+         <p class="text-xs text-[#213758]/70 font-medium tracking-wide mt-1 uppercase">Flagship Service</p>
         </div>
+       </div>
+       <p class="text-[#111111]/60 leading-relaxed mb-6">Complete URS, IQ/OQ/PQ protocols, SOPs, and GxP-compliant documentation for equipment manufacturers and regulated facilities. Every package enables your equipment to be sold and commissioned in WHO, PIC/S, and GMP-regulated environments.</p>
+       <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <ul class="space-y-2">
+         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>User Requirement Specifications (URS)</span></li>
+         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Design Qualification (DQ) protocols</span></li>
+         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Installation Qualification (IQ) protocols</span></li>
+        </ul>
+        <ul class="space-y-2">
+         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Operational Qualification (OQ) protocols</span></li>
+         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Performance Qualification (PQ) protocols</span></li>
+         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>SOPs, Validation Plans &amp; GxP compliance frameworks</span></li>
+        </ul>
+       </div>
+       <div class="flex flex-wrap items-center gap-3 text-sm">
+        <span class="px-3 py-1 bg-[#213758]/5 text-[#213758] font-medium">Per-equipment pricing</span>
+        <span class="px-3 py-1 bg-[#213758]/5 text-[#213758] font-medium">72-hour delivery</span>
+        <span class="px-3 py-1 bg-[#213758]/5 text-[#213758] font-medium">WHO / PIC-S / GMP aligned</span>
+       </div>
+      </div>
+
+      <!-- Service 2: Tender -->
+      <div class="fade-up service-card bg-white p-8 lg:p-10 border border-[#E5E7EB]" style="transition-delay:0.2s">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-10 h-10 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="font-serif-heading text-lg font-semibold text-[#213758]">01</span></div>
+        <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758]">Tender &amp; Technical Documentation</h3>
+       </div>
+       <p class="text-[#111111]/60 leading-relaxed mb-6">Structured proposal documentation for engineering contracts, capability statements, and prequalification submissions.</p>
+       <ul class="space-y-3">
+        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Technical methodology and approach documentation</span></li>
+        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Capability statements and corporate profiles</span></li>
+        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Response matrix development and compliance mapping</span></li>
+       </ul>
+      </div>
+
+      <!-- Service 3: CDR -->
+      <div class="fade-up service-card bg-white p-8 lg:p-10 border border-[#E5E7EB]" style="transition-delay:0.3s">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-10 h-10 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="font-serif-heading text-lg font-semibold text-[#213758]">02</span></div>
         <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758]">CDR Development</h3>
        </div>
-       <p class="text-[#111111]/60 leading-relaxed mb-6">Comprehensive Competency Demonstration Report structuring and refinement.</p>
+       <p class="text-[#111111]/60 leading-relaxed mb-6">Comprehensive Competency Demonstration Report structuring and refinement for Engineers Australia assessments.</p>
        <ul class="space-y-3">
         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Career Episode development aligned to competency elements</span></li>
         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Summary Statement cross-referencing and validation</span></li>
         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>CPD and technical contribution documentation</span></li>
        </ul>
-      </div><!-- Service 2 -->
-      <div class="fade-up service-card bg-white p-8 lg:p-10 border border-[#E5E7EB]" style="transition-delay: 0.2s;">
+      </div>
+
+      <!-- Service 4: CV -->
+      <div class="fade-up service-card bg-white p-8 lg:p-10 border border-[#E5E7EB]" style="transition-delay:0.4s">
        <div class="flex items-start gap-4 mb-6">
-        <div class="w-10 h-10 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="font-serif-heading text-lg font-semibold text-[#213758]">02</span>
-        </div>
+        <div class="w-10 h-10 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="font-serif-heading text-lg font-semibold text-[#213758]">03</span></div>
         <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758]">Professional CV Development</h3>
        </div>
        <p class="text-[#111111]/60 leading-relaxed mb-6">Technical positioning and achievement articulation for engineering professionals.</p>
        <ul class="space-y-3">
         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Technical achievement quantification and framing</span></li>
         <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Project portfolio structuring and presentation</span></li>
-        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Industry-specific formatting and optimization</span></li>
+        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Industry-specific formatting and optimisation</span></li>
        </ul>
-      </div><!-- Service 3 -->
-      <div class="fade-up service-card bg-white p-8 lg:p-10 border border-[#E5E7EB]" style="transition-delay: 0.3s;">
-       <div class="flex items-start gap-4 mb-6">
-        <div class="w-10 h-10 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="font-serif-heading text-lg font-semibold text-[#213758]">03</span>
+      </div>
+
+     </div>
+    </div>
+   </section>
+
+   <!-- For OEMs Section -->
+   <section id="oem" class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+     <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+      <div class="fade-up lg:col-span-3">
+       <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/60 uppercase mb-4 block">For Equipment Manufacturers</span>
+       <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] mb-6">Your Equipment, Fully Qualified for Any Market.</h2>
+       <p class="text-[#111111]/60 leading-relaxed mb-6 text-lg">You manufacture world-class HVAC, pharma, and utility equipment. But every regulated market requires qualification documentation before that equipment can be purchased and commissioned. We are your documentation backend — invisible to your customer, essential to your sale.</p>
+       <ul class="space-y-4 mb-8">
+        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Add qualification packages to every equipment sale — new revenue, zero effort on your side</span></li>
+        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Eliminate the #1 objection buyers in regulated markets raise: missing compliance docs</span></li>
+        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>No overhead. No hiring. We handle everything — URS through PQ, SOPs included</span></li>
+        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Delivered in 72 hours. Your documentation ready before your equipment ships.</span></li>
+       </ul>
+       <a href="#contact" class="inline-flex items-center px-6 py-3 bg-[#213758] text-white text-sm font-medium tracking-wide hover:bg-[#1a2c47] transition-colors">Discuss Your Qualification Needs →</a>
+      </div>
+      <div class="fade-up lg:col-span-2" style="transition-delay:0.2s">
+       <div class="bg-[#F8F9FA] p-8 lg:p-10 border border-[#E5E7EB]">
+        <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-6">Per-Equipment Package Includes</h3>
+        <div class="space-y-5">
+         <div class="flex items-start gap-3">
+          <div class="w-8 h-8 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="text-xs font-bold text-[#213758]">1</span></div>
+          <div><p class="text-sm font-medium text-[#111111]">User Requirement Specification (URS)</p><p class="text-xs text-gray-500">Defines functional, design, and compliance requirements for each equipment type.</p></div>
+         </div>
+         <div class="flex items-start gap-3">
+          <div class="w-8 h-8 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="text-xs font-bold text-[#213758]">2</span></div>
+          <div><p class="text-sm font-medium text-[#111111]">Design Qualification (DQ)</p><p class="text-xs text-gray-500">Verifies the equipment design meets all specified URS requirements.</p></div>
+         </div>
+         <div class="flex items-start gap-3">
+          <div class="w-8 h-8 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="text-xs font-bold text-[#213758]">3</span></div>
+          <div><p class="text-sm font-medium text-[#111111]">Installation Qualification (IQ)</p><p class="text-xs text-gray-500">Confirms correct installation per manufacturer specs and design intent.</p></div>
+         </div>
+         <div class="flex items-start gap-3">
+          <div class="w-8 h-8 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="text-xs font-bold text-[#213758]">4</span></div>
+          <div><p class="text-sm font-medium text-[#111111]">Operational Qualification (OQ)</p><p class="text-xs text-gray-500">Validates operational functions and performance ranges under normal conditions.</p></div>
+         </div>
+         <div class="flex items-start gap-3">
+          <div class="w-8 h-8 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="text-xs font-bold text-[#213758]">5</span></div>
+          <div><p class="text-sm font-medium text-[#111111]">Performance Qualification (PQ)</p><p class="text-xs text-gray-500">Demonstrates consistent performance under real operational conditions.</p></div>
+         </div>
+         <div class="flex items-start gap-3">
+          <div class="w-8 h-8 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="text-xs font-bold text-[#213758]">6</span></div>
+          <div><p class="text-sm font-medium text-[#111111]">SOPs &amp; Validation Plan</p><p class="text-xs text-gray-500">Standard operating procedures and full validation framework for audit trail.</p></div>
+         </div>
         </div>
-        <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758]">Tender &amp; Technical Documentation</h3>
        </div>
-       <p class="text-[#111111]/60 leading-relaxed mb-6">Structured proposal documentation for engineering contracts.</p>
-       <ul class="space-y-3">
-        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Technical methodology and approach documentation</span></li>
-        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Capability statements and corporate profiles</span></li>
-        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Response matrix development and compliance mapping</span></li>
-       </ul>
-      </div><!-- Service 4 -->
-      <div class="fade-up service-card bg-white p-8 lg:p-10 border border-[#E5E7EB]" style="transition-delay: 0.4s;">
-       <div class="flex items-start gap-4 mb-6">
-        <div class="w-10 h-10 bg-[#213758]/5 flex items-center justify-center flex-shrink-0"><span class="font-serif-heading text-lg font-semibold text-[#213758]">04</span>
-        </div>
-        <h3 class="font-serif-heading text-xl lg:text-2xl font-semibold text-[#213758]">Qualification &amp; Validation Documentation</h3>
-       </div>
-       <p class="text-[#111111]/60 leading-relaxed mb-6">URS, IQ/OQ/PQ protocols, and structured compliance documentation for regulated industries.</p>
-       <ul class="space-y-3">
-        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>User Requirement Specifications development</span></li>
-        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>Installation, Operational, Performance Qualification protocols</span></li>
-        <li class="flex items-start gap-3 text-sm text-[#111111]/70"><span class="w-1.5 h-1.5 bg-[#213758] rounded-full mt-2 flex-shrink-0"></span> <span>GxP compliance documentation framework</span></li>
-       </ul>
       </div>
      </div>
     </div>
-   </section><!-- Process Section -->
+   </section>
+
+   <!-- Process Section -->
    <section id="process" class="py-20 lg:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
      <div class="fade-up text-center mb-16 lg:mb-20">
@@ -367,252 +324,129 @@
       <p class="text-[#111111]/60 max-w-2xl mx-auto">Every engagement follows a defined workflow to ensure technical clarity, structural integrity, and professional alignment.</p>
      </div>
      <div class="max-w-3xl mx-auto">
-      <div class="space-y-0"><!-- Step 1 -->
-       <div class="fade-up process-step flex gap-6 pb-10" style="transition-delay: 0.1s;">
-        <div class="w-12 h-12 border-2 border-[#213758] flex items-center justify-center flex-shrink-0 bg-white"><span class="font-serif-heading text-lg font-semibold text-[#213758]">01</span>
-        </div>
+      <div class="space-y-0">
+       <div class="fade-up process-step flex gap-6 pb-10" style="transition-delay:0.1s">
+        <div class="w-12 h-12 border-2 border-[#213758] flex items-center justify-center flex-shrink-0 bg-white"><span class="font-serif-heading text-lg font-semibold text-[#213758]">01</span></div>
         <div class="pt-2">
          <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-2">Technical Intake &amp; Documentation Strategy</h3>
-         <p class="text-[#111111]/60 leading-relaxed">Comprehensive review of professional background, technical contributions, and documentation objectives.</p>
+         <p class="text-[#111111]/60 leading-relaxed">Comprehensive review of equipment specifications, regulatory requirements, and documentation objectives.</p>
         </div>
-       </div><!-- Step 2 -->
-       <div class="fade-up process-step flex gap-6 pb-10" style="transition-delay: 0.2s;">
-        <div class="w-12 h-12 border-2 border-[#213758] flex items-center justify-center flex-shrink-0 bg-white"><span class="font-serif-heading text-lg font-semibold text-[#213758]">02</span>
-        </div>
+       </div>
+       <div class="fade-up process-step flex gap-6 pb-10" style="transition-delay:0.2s">
+        <div class="w-12 h-12 border-2 border-[#213758] flex items-center justify-center flex-shrink-0 bg-white"><span class="font-serif-heading text-lg font-semibold text-[#213758]">02</span></div>
         <div class="pt-2">
          <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-2">Structural Documentation Development</h3>
-         <p class="text-[#111111]/60 leading-relaxed">Systematic construction of documentation framework aligned with target evaluation criteria.</p>
+         <p class="text-[#111111]/60 leading-relaxed">Systematic construction of URS, DQ, IQ, OQ, PQ documentation aligned with regulatory standards.</p>
         </div>
-       </div><!-- Step 3 -->
-       <div class="fade-up process-step flex gap-6 pb-10" style="transition-delay: 0.3s;">
-        <div class="w-12 h-12 border-2 border-[#213758] flex items-center justify-center flex-shrink-0 bg-white"><span class="font-serif-heading text-lg font-semibold text-[#213758]">03</span>
-        </div>
+       </div>
+       <div class="fade-up process-step flex gap-6 pb-10" style="transition-delay:0.3s">
+        <div class="w-12 h-12 border-2 border-[#213758] flex items-center justify-center flex-shrink-0 bg-white"><span class="font-serif-heading text-lg font-semibold text-[#213758]">03</span></div>
         <div class="pt-2">
          <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-2">Precision Review &amp; Refinement</h3>
-         <p class="text-[#111111]/60 leading-relaxed">Iterative refinement ensuring technical accuracy, narrative clarity, and framework compliance.</p>
+         <p class="text-[#111111]/60 leading-relaxed">Iterative refinement ensuring technical accuracy, regulatory compliance, and narrative clarity.</p>
         </div>
-       </div><!-- Step 4 -->
-       <div class="fade-up process-step flex gap-6" style="transition-delay: 0.4s;">
-        <div class="w-12 h-12 border-2 border-[#213758] flex items-center justify-center flex-shrink-0 bg-white"><span class="font-serif-heading text-lg font-semibold text-[#213758]">04</span>
-        </div>
+       </div>
+       <div class="fade-up process-step flex gap-6" style="transition-delay:0.4s">
+        <div class="w-12 h-12 border-2 border-[#213758] flex items-center justify-center flex-shrink-0 bg-white"><span class="font-serif-heading text-lg font-semibold text-[#213758]">04</span></div>
         <div class="pt-2">
          <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-2">Final Delivery &amp; Submission Guidance</h3>
-         <p class="text-[#111111]/60 leading-relaxed">Comprehensive documentation package with submission protocols and guidance materials.</p>
+         <p class="text-[#111111]/60 leading-relaxed">Comprehensive documentation package with submission protocols and compliance guidance materials.</p>
         </div>
        </div>
       </div>
      </div>
     </div>
    </section>
-   <div class="divider max-w-7xl mx-auto"></div><!-- Differentiation Section -->
+
+   <div class="divider max-w-7xl mx-auto"></div>
+
+   <!-- Differentiation Section -->
    <section class="py-20 lg:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div class="fade-up">
        <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] mb-6">What Sets Us Apart</h2>
-       <p class="text-[#111111]/60 leading-relaxed">Our approach combines technical expertise with documentation methodology, ensuring every deliverable meets the highest professional standards.</p>
+       <p class="text-[#111111]/60 leading-relaxed">Our approach combines technical engineering expertise with documentation methodology, ensuring every deliverable meets the highest regulatory and professional standards.</p>
       </div>
-      <div class="fade-up" style="transition-delay: 0.2s;">
+      <div class="fade-up" style="transition-delay:0.2s">
        <ul class="space-y-6">
         <li class="flex items-start gap-4 p-5 bg-[#F8F9FA] border-l-2 border-[#213758]">
-         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg><span class="text-[#111111]/80">Framework-driven structuring</span></li>
+         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+         <span class="text-[#111111]/80">Regulatory compliance-first approach</span>
+        </li>
         <li class="flex items-start gap-4 p-5 bg-[#F8F9FA] border-l-2 border-[#213758]">
-         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg><span class="text-[#111111]/80">Engineering-first language</span></li>
+         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+         <span class="text-[#111111]/80">Engineering-first documentation language</span>
+        </li>
         <li class="flex items-start gap-4 p-5 bg-[#F8F9FA] border-l-2 border-[#213758]">
-         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg><span class="text-[#111111]/80">Competency mapping discipline</span></li>
+         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+         <span class="text-[#111111]/80">Pharma, HVAC, and utilities domain depth</span>
+        </li>
         <li class="flex items-start gap-4 p-5 bg-[#F8F9FA] border-l-2 border-[#213758]">
-         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg><span class="text-[#111111]/80">Review-board perspective structuring</span></li>
+         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+         <span class="text-[#111111]/80">Audit-proven methodology and templates</span>
+        </li>
         <li class="flex items-start gap-4 p-5 bg-[#F8F9FA] border-l-2 border-[#213758]">
-         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg><span class="text-[#111111]/80">Professional narrative clarity</span></li>
+         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+         <span class="text-[#111111]/80">72-hour delivery commitment</span>
+        </li>
         <li class="flex items-start gap-4 p-5 bg-[#F8F9FA] border-l-2 border-[#213758]">
-         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg><span class="text-[#111111]/80">Revision and refinement cycles</span></li>
+         <svg class="w-5 h-5 text-[#213758] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+         <span class="text-[#111111]/80">Confidential, secure, and professional execution</span>
+        </li>
        </ul>
       </div>
      </div>
     </div>
-   </section><!-- Final CTA Section -->
-   <section id="contact" class="py-20 lg:py-32 bg-[#213758] relative overflow-hidden"><!-- Subtle Background Elements -->
+   </section>
+
+   <!-- CTA Section -->
+   <section id="contact" class="py-20 lg:py-32 bg-[#213758] relative overflow-hidden">
     <div class="absolute inset-0 opacity-5">
-     <div class="grid-line-h" style="top: 30%;"></div>
-     <div class="grid-line-h" style="top: 70%;"></div>
+     <div class="grid-line-h" style="top:30%"></div>
+     <div class="grid-line-h" style="top:70%"></div>
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
      <div class="fade-up">
-      <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-white mb-6">Begin Your Documentation Intake</h2>
-      <p class="text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">Begin a structured intake so we can evaluate your documentation requirements and advise next steps.</p>
-      <div class="flex flex-col items-center gap-8"><a href="mailto:intake@coredraftstudio.com" class="btn-primary inline-flex items-center px-10 py-4 bg-white text-[#213758] font-medium tracking-wide hover:bg-white/95 transition-all" id="final-cta"> <span>Start Intake</span>
-        <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg></a>
-       <div class="flex items-center gap-3 text-white/40 text-sm"><span class="w-1 h-1 bg-white/40 rounded-full"></span> <span>Confidential</span> <span class="w-1 h-1 bg-white/40 rounded-full"></span> <span>Structured</span> <span class="w-1 h-1 bg-white/40 rounded-full"></span> <span>Professional</span>
+      <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-white mb-6">Ready to Unlock Regulated Markets?</h2>
+      <p class="text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">Submit a brief intake so we can evaluate your documentation requirements. Confidential review. Clear scope. No obligation.</p>
+      <div class="flex flex-col items-center gap-8">
+       <a href="mailto:intake@coredraftstudio.com" class="btn-primary inline-flex items-center px-10 py-4 bg-white text-[#213758] font-medium tracking-wide hover:bg-white/95 transition-all">
+        <span>Start Your Intake</span>
+        <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+       </a>
+       <div class="flex items-center gap-3 text-white/40 text-sm">
+        <span class="w-1 h-1 bg-white/40 rounded-full"></span>
+        <span>Confidential</span>
+        <span class="w-1 h-1 bg-white/40 rounded-full"></span>
+        <span>Structured</span>
+        <span class="w-1 h-1 bg-white/40 rounded-full"></span>
+        <span>Professional</span>
        </div>
       </div>
      </div>
     </div>
-   </section><!-- Footer -->
+   </section>
+
+   <!-- Footer -->
    <footer class="py-12 bg-white border-t border-[#E5E7EB]">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
      <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-4">
-         <img
-          src="Assets/Logo.png"
-          alt="CoreDraft Studio Logo"
-          class="h-10 w-10 object-contain block"
-         />
-        <span class="font-serif-heading text-xl lg:text-2xl font-semibold tracking-tight text-[#213758]" id="nav-logo"><span class="font-semibold">CoreDraft</span><span class="font-light"> Studio</span></span>
+      <div class="flex items-center gap-4">
+       <img src="Assets/Logo.png" alt="CoreDraft Studio Logo" class="h-10 w-10 object-contain block" />
+       <span class="font-serif-heading text-xl lg:text-2xl font-semibold tracking-tight text-[#213758]"><span class="font-semibold">CoreDraft</span><span class="font-light"> Studio</span></span>
       </div>
-      <p class="text-sm text-[#111111]/50" id="contact-email">intake@coredraftstudio.com</p>
-      <p class="text-sm text-[#111111]/40">© 2026 CoreDraft Studio. All rights reserved.</p>
+      <p class="text-sm text-[#111111]/50">intake@coredraftstudio.com</p>
+      <p class="text-sm text-[#111111]/40">&copy; 2026 CoreDraft Studio. All rights reserved.</p>
      </div>
     </div>
    </footer>
+
   </div>
+
   <script>
-    // Default configuration
-    const defaultConfig = {
-      hero_headline: 'Structured Engineering Documentation for International Recognition',
-      hero_subheadline: 'We design, structure, and refine professional engineering documentation aligned with global accreditation frameworks.',
-      cta_button_text: 'Start Documentation Intake',
-      positioning_heading: 'Engineering Documentation Is Not Writing.',
-      contact_email: 'intake@coredraftstudio.com',
-      primary_color: '#213758',
-      secondary_color: '#F8F9FA',
-      text_color: '#111111',
-      accent_color: '#FFFFFF',
-      border_color: '#E5E7EB',
-      font_family: 'Cormorant Garamond',
-      font_size: 16
-    };
-
-    // Initialize Element SDK
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange: async (config) => {
-          // Update hero headline
-          const heroHeadline = document.getElementById('hero-headline');
-          if (heroHeadline) {
-            const headline = config.hero_headline || defaultConfig.hero_headline;
-            heroHeadline.innerHTML = headline.replace('for International Recognition', '<br class="hidden lg:block"><span class="text-white/90">for International Recognition</span>');
-          }
-          
-          // Update hero subheadline
-          const heroSubheadline = document.getElementById('hero-subheadline');
-          if (heroSubheadline) {
-            heroSubheadline.textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
-          }
-          
-          // Update CTA button text
-          const ctaText = document.getElementById('cta-text');
-          if (ctaText) {
-            ctaText.textContent = config.cta_button_text || defaultConfig.cta_button_text;
-          }
-          
-          // Update positioning heading
-          const positioningHeading = document.getElementById('positioning-heading');
-          if (positioningHeading) {
-            positioningHeading.textContent = config.positioning_heading || defaultConfig.positioning_heading;
-          }
-          
-          // Update contact email
-          const contactEmail = document.getElementById('contact-email');
-          if (contactEmail) {
-            contactEmail.textContent = config.contact_email || defaultConfig.contact_email;
-          }
-          
-          // Apply colors
-          const primaryColor = config.primary_color || defaultConfig.primary_color;
-          const textColor = config.text_color || defaultConfig.text_color;
-          
-          document.documentElement.style.setProperty('--primary-navy', primaryColor);
-          document.documentElement.style.setProperty('--text-dark', textColor);
-          
-          // Apply font family
-          const fontFamily = config.font_family || defaultConfig.font_family;
-          document.querySelectorAll('.font-serif-heading').forEach(el => {
-            el.style.fontFamily = `${fontFamily}, Georgia, serif`;
-          });
-          
-          // Apply font size scaling
-          const fontSize = config.font_size || defaultConfig.font_size;
-          document.documentElement.style.fontSize = `${fontSize}px`;
-        },
-        mapToCapabilities: (config) => ({
-          recolorables: [
-            {
-              get: () => config.primary_color || defaultConfig.primary_color,
-              set: (value) => {
-                config.primary_color = value;
-                window.elementSdk.setConfig({ primary_color: value });
-              }
-            },
-            {
-              get: () => config.secondary_color || defaultConfig.secondary_color,
-              set: (value) => {
-                config.secondary_color = value;
-                window.elementSdk.setConfig({ secondary_color: value });
-              }
-            },
-            {
-              get: () => config.text_color || defaultConfig.text_color,
-              set: (value) => {
-                config.text_color = value;
-                window.elementSdk.setConfig({ text_color: value });
-              }
-            },
-            {
-              get: () => config.accent_color || defaultConfig.accent_color,
-              set: (value) => {
-                config.accent_color = value;
-                window.elementSdk.setConfig({ accent_color: value });
-              }
-            },
-            {
-              get: () => config.border_color || defaultConfig.border_color,
-              set: (value) => {
-                config.border_color = value;
-                window.elementSdk.setConfig({ border_color: value });
-              }
-            }
-          ],
-          borderables: [],
-          fontEditable: {
-            get: () => config.font_family || defaultConfig.font_family,
-            set: (value) => {
-              config.font_family = value;
-              window.elementSdk.setConfig({ font_family: value });
-            }
-          },
-          fontSizeable: {
-            get: () => config.font_size || defaultConfig.font_size,
-            set: (value) => {
-              config.font_size = value;
-              window.elementSdk.setConfig({ font_size: value });
-            }
-          }
-        }),
-        mapToEditPanelValues: (config) => new Map([
-          ['hero_headline', config.hero_headline || defaultConfig.hero_headline],
-          ['hero_subheadline', config.hero_subheadline || defaultConfig.hero_subheadline],
-          ['cta_button_text', config.cta_button_text || defaultConfig.cta_button_text],
-          ['positioning_heading', config.positioning_heading || defaultConfig.positioning_heading],
-          ['contact_email', config.contact_email || defaultConfig.contact_email]
-        ])
-      });
-    }
-
     // Scroll animation observer
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
-
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -620,10 +454,7 @@
         }
       });
     }, observerOptions);
-
-    document.querySelectorAll('.fade-up').forEach(el => {
-      observer.observe(el);
-    });
+    document.querySelectorAll('.fade-up').forEach(el => { observer.observe(el); });
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -631,45 +462,10 @@
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d4fa4cb06c73dd5',t:'MTc3MjI3ODc5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-
+ </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
