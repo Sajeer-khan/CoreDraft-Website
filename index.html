@@ -12,7 +12,8 @@
   <link rel="icon" href="Assets/Logo.png" sizes="any">
   <style>
     :root { --primary-navy: #213758; --text-dark: #111111; --bg-light: #F8F9FA; --border-grey: #E5E7EB; --white: #FFFFFF; }
-    html, body { height: 100%; width: 100%; margin: 0; padding: 0; scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; }
+    body { width: 100%; margin: 0; padding: 0; }
     .font-serif-heading { font-family: 'Cormorant Garamond', Georgia, serif; }
     .font-sans-body { font-family: 'Inter', system-ui, sans-serif; }
     .blueprint-grid { position: absolute; inset: 0; overflow: hidden; opacity: 0.06; }
@@ -42,8 +43,7 @@
   <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
- <body class="h-full font-sans-body bg-white text-[#111111] overflow-x-hidden">
-  <div class="w-full h-full overflow-auto">
+ <body class="font-sans-body bg-white text-[#111111] overflow-x-hidden">
    <!-- Navigation -->
    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E5E7EB]">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -276,7 +276,6 @@
      </div>
     </div>
    </footer>
-  </div>
 
   <!-- Fade-up observer -->
   <script>
