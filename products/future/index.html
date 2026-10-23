@@ -37,9 +37,9 @@
 .future-feature-list{background:#f1f5f8;padding:110px 0 130px}
 .future-feature{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:480px;margin:0 0 28px;border:1px solid #d8e3e9;background:#fff;overflow:hidden;transition:box-shadow .4s,transform .4s}
 .future-feature:hover{box-shadow:0 30px 65px #213a591b;transform:translateY(-5px)}
-.future-feature:nth-child(2){grid-template-columns:1fr 1fr}
-.future-feature:nth-child(2) .feature-visual{grid-column:2;grid-row:1}
-.future-feature:nth-child(2) .feature-content{grid-column:1;grid-row:1}
+.future-feature:nth-of-type(2){grid-template-columns:1fr 1fr}
+.future-feature:nth-of-type(2) .feature-visual{grid-column:2;grid-row:1}
+.future-feature:nth-of-type(2) .feature-content{grid-column:1;grid-row:1}
 .feature-visual{position:relative;background:radial-gradient(circle at 66% 25%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 38%),linear-gradient(120deg,#18304e,#234463);min-height:470px;overflow:hidden;isolation:isolate}
 .feature-symbol{position:absolute;top:47%;left:48%;transform:translate(-50%,-50%);font-family:Georgia,serif;font-size:clamp(10rem,18vw,19rem);line-height:1;color:var(--accent);opacity:.9;animation:floatSymbol 7s ease-in-out infinite}
 @keyframes floatSymbol{0%,100%{transform:translate(-50%,-50%) rotate(-4deg)}50%{transform:translate(-49%,-54%) rotate(3deg)}}
@@ -109,8 +109,10 @@
 .future-final a{background:#213b59;color:#fff;display:inline-flex;gap:20px;padding:18px 23px;font-size:12px;font-weight:750;white-space:nowrap;align-items:center}
 .reveal{opacity:1;transform:none}
 .motion-on .reveal{opacity:0;transform:translateY(22px)}
+@media(max-width:960px){.site-nav .menu-toggle{display:inline-flex}.site-nav .nav-items{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid #dce5eb;box-shadow:0 20px 35px #122f4e1b;padding:12px 25px 23px}.site-nav .nav-items.open{display:flex}.site-nav .nav-items a{padding:12px 8px}.site-nav .nav-items .nav-cta{margin-top:8px;padding:14px;justify-content:space-between}}
+@media(max-width:660px){.site-nav .nav-items{top:67px}}
 @media(max-width:1050px){.feature-content h3{font-size:clamp(3.6rem,6vw,5.6rem)}.future-feature{min-height:410px}.feature-visual{min-height:410px}.idea-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:850px){.future-intro-inner,.future-feature,.future-feature:nth-child(2),.owner-panel,.tervian-panel{grid-template-columns:1fr}.future-feature:nth-child(2) .feature-visual,.future-feature:nth-child(2) .feature-content{grid-column:auto;grid-row:auto}.feature-visual{min-height:330px}.feature-content{padding:38px}.future-feature-list,.idea-zone,.owner-section,.tervian-section,.future-final{padding:75px 0}.future-intro{padding:78px 0}.future-notice .container,.future-final .container{display:block}.future-final a{margin-top:23px}}
+@media(max-width:850px){.future-intro-inner,.future-feature,.future-feature:nth-of-type(2),.owner-panel,.tervian-panel{grid-template-columns:1fr}.future-feature:nth-of-type(2) .feature-visual,.future-feature:nth-of-type(2) .feature-content{grid-column:auto;grid-row:auto}.feature-visual{min-height:330px}.feature-content{padding:38px}.future-feature-list,.idea-zone,.owner-section,.tervian-section,.future-final{padding:75px 0}.future-intro{padding:78px 0}.future-notice .container,.future-final .container{display:block}.future-final a{margin-top:23px}}
 @media(max-width:650px){.future-hero{min-height:0;padding:85px 0 77px}.future-hero h1{font-size:clamp(4.2rem,14vw,6.4rem)}.future-hero-foot{margin-top:58px}.future-intro h2,.section-head h2,.future-final h2{font-size:clamp(3.1rem,11vw,5rem)}.idea-grid{grid-template-columns:1fr}.feature-content h3{font-size:clamp(3.8rem,12vw,5.2rem)}.owner-copy{padding:29px}.owner-diagram{min-height:300px}.tervian-art{max-width:300px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal,.motion-on .reveal{opacity:1!important;transform:none!important}}
 </style>
