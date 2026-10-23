@@ -305,7 +305,33 @@ body { overflow-x:clip!important; }
 }
 @media(prefers-reduced-motion:reduce){.story-concept,.story-real-screen{transition:none!important}.story-scene:hover .story-concept,.story-scene:hover .story-real-screen{transform:none!important}}
 
-  </style>
+  
+/* Future portfolio preview: business concepts intentionally distinct from released products */
+.next-portfolio{background:radial-gradient(ellipse at 91% 0%,#2b507122,transparent 38%),linear-gradient(124deg,#11243d,#1b3754 58%,#19314d);color:#fff;padding:100px 0 105px;position:relative;overflow:hidden}
+.next-portfolio:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px);background-size:63px 63px;opacity:.75;pointer-events:none}
+.next-container{position:relative}
+.next-heading{max-width:870px;margin-bottom:44px}
+.next-heading .eyebrow{color:#8ae5d6}
+.next-heading h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.7rem,6.5vw,6.9rem);line-height:.97;letter-spacing:-.038em;font-weight:600;margin:16px 0 19px}
+.next-heading h2 em{font-weight:400;color:#a0e8de}
+.next-heading p{font-size:14px;line-height:1.85;color:#b0c5d5;max-width:650px}
+.next-concepts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.next-concept{padding:33px;background:#ffffff0c;border:1px solid #ffffff2b;min-height:285px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,background .3s}
+.next-concept:hover{transform:translateY(-6px);border-color:#a8e9db66;background:#ffffff17}
+.next-concept:after{content:"";width:170px;height:170px;border:1px solid #b6e8df2e;position:absolute;right:-100px;top:-95px;border-radius:50%}
+.next-number{font-size:10px;letter-spacing:.16em;color:#8cc6ce;font-weight:750}
+.next-concept h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.7rem,4vw,4.2rem);font-weight:650;line-height:1;margin:29px 0 12px}
+.next-concept p{font-size:12px;color:#b9c9d8;line-height:1.85;margin:0}
+.next-concept a{font-size:11px;color:#b9e9de;font-weight:750;margin-top:auto;padding-top:24px;text-decoration:none}
+.next-footer{display:flex;align-items:center;justify-content:space-between;gap:22px;border-top:1px solid #ffffff27;margin-top:30px;padding-top:28px}
+.next-footer p{font-size:12px;color:#bed0dc;max-width:600px;line-height:1.8}
+.next-footer a{display:inline-flex;padding:16px 19px;color:#17344d;background:#e7faf6;font-size:12px;font-weight:750;gap:22px;align-items:center;white-space:nowrap;transition:transform .2s}
+.next-footer a:hover{transform:translateY(-3px)}
+@media(max-width:850px){.next-concepts{grid-template-columns:1fr}.next-concept{min-height:230px}.next-footer{display:block}.next-footer a{margin-top:20px}}
+@media(max-width:767px){.next-portfolio{padding:65px 0 74px}.next-heading h2{font-size:clamp(3.5rem,12vw,5rem)}}
+@media(prefers-reduced-motion:reduce){.next-concept,.next-footer a{transition:none!important}.next-concept:hover,.next-footer a:hover{transform:none!important}}
+
+</style>
   <style>body { box-sizing: border-box; }</style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}.mobile-menu{display:grid!important}</style></noscript>
    <link rel="stylesheet" href="Assets/scrollytelling-motion.css?v=2" />
@@ -324,6 +350,7 @@ body { overflow-x:clip!important; }
     </a>
     <nav class="cd-desktop-nav hidden md:flex gap-7 items-center" aria-label="Main navigation">
      <a class="cd-nav-link" href="#products">Products</a>
+     <a class="cd-nav-link" href="#coming-next">Coming next</a>
      <a class="cd-nav-link" href="#approach">Our philosophy</a>
      <a class="cd-nav-link" href="#process">How we build</a>
      <a class="cd-nav-link" href="#services">Services</a>
@@ -335,7 +362,7 @@ body { overflow-x:clip!important; }
     </button>
    </div>
    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-     <a href="#products">Products</a><a href="#approach">Our philosophy</a><a href="#process">How we build</a><a href="#services">Services</a><a href="#contact">Contact</a>
+     <a href="#products">Products</a><a href="#coming-next">Coming next</a><a href="#approach">Our philosophy</a><a href="#process">How we build</a><a href="#services">Services</a><a href="#contact">Contact</a>
    </nav>
   </header>
   <main id="main">
@@ -626,6 +653,26 @@ body { overflow-x:clip!important; }
     </div>
   </section>
 
+
+   <section class="next-portfolio" id="coming-next" aria-labelledby="next-title">
+    <div class="site-container next-container">
+      <div class="next-heading reveal">
+        <span class="eyebrow">CoreDraft / Beyond today's portfolio</span>
+        <h2 id="next-title">The next problems<br><em>worth solving.</em></h2>
+        <p>We're exploring a new wave of practical business systems — inspired by the same principle as QuoteDesk: less busywork, stronger visibility and more time for the work that matters.</p>
+      </div>
+      <div class="next-concepts">
+        <article class="next-concept reveal"><span class="next-number">01 / PROJECT EXECUTION</span><h3>JobDesk<span style="color:#87dfd0">.</span></h3><p>See the whole job — from award to execution and commercial performance.</p><a href="products/future/#jobdesk">Explore the concept ↗</a></article>
+        <article class="next-concept reveal"><span class="next-number">02 / FIELD SERVICE</span><h3>ServiceDesk<span style="color:#87dfd0">.</span></h3><p>Keep recurring service commitments and customer follow-through connected.</p><a href="products/future/#servicedesk">Explore the concept ↗</a></article>
+        <article class="next-concept reveal"><span class="next-number">03 / SALES FOLLOW-UP</span><h3>LeadDesk<span style="color:#87dfd0">.</span></h3><p>Bring clearer next actions and better opportunity visibility to lean sales teams.</p><a href="products/future/#leaddesk">Explore the concept ↗</a></article>
+      </div>
+      <div class="next-footer reveal">
+        <p>Also exploring MarginDesk, CollectDesk, VendorDesk, StockDesk, ContractDesk, OwnerPulse and a separate mobile initiative, TERVIAN. These are concepts, not release announcements.</p>
+        <a href="products/future/">Explore future products <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+   </section>
+
    <section id="approach" class="section-pad philosophy" aria-labelledby="approach-heading">
      <div class="site-container">
        <div class="max-w-[720px] mb-11 reveal">
@@ -697,7 +744,7 @@ body { overflow-x:clip!important; }
   <footer class="bg-[#101f32] py-9">
    <div class="site-container flex flex-col lg:flex-row gap-7 justify-between items-start lg:items-center">
     <div class="flex items-center gap-3"><img src="Assets/Logo.png" alt="" width="29" height="29" class="w-7 h-7 object-contain opacity-75"><span class="text-[#b7c5d3] text-[13px]">CoreDraft Studio © 2026</span></div>
-    <div class="flex flex-wrap gap-x-7 gap-y-3"><a class="footer-link" href="#products">Products</a><a class="footer-link" href="#approach">Philosophy</a><a class="footer-link" href="#services">Specialist services</a><a class="footer-link" href="oem-qualification/">OEM qualification</a><a class="footer-link" href="mailto:intake@coredraftstudio.com">Contact</a></div>
+    <div class="flex flex-wrap gap-x-7 gap-y-3"><a class="footer-link" href="#products">Products</a><a class="footer-link" href="products/future/">Coming next</a><a class="footer-link" href="#approach">Philosophy</a><a class="footer-link" href="#services">Specialist services</a><a class="footer-link" href="oem-qualification/">OEM qualification</a><a class="footer-link" href="mailto:intake@coredraftstudio.com">Contact</a></div>
    </div>
   </footer>
   <script>
