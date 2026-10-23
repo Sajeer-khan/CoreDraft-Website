@@ -112,3 +112,23 @@ All homepage primary product CTAs navigate to dedicated product pages. Separate 
 ### Public statement safeguards
 
 Do not describe untested, gated or optional workflows as fully functional production modules. Public diagrams, narratives and sample-data screens should not disclose client identifiers, detailed execution internals or unverified business outcomes. Proposals are not committed release dates.
+
+## Emotional brand positioning — October 2026
+
+**North-star promise:** “Your business should work for you. Not the other way around.”
+
+### Narrative architecture
+1. **Recognition:** the owner is tired of chasing quotations, purchases, project updates, payroll or quality decisions.
+2. **Relief:** show the idea of scattered work becoming a clear, shared process with a real responsible next step.
+3. **Confidence:** connect each emotional promise to the corresponding existing product module and genuine screenshot.
+4. **Freedom:** close with the benefit of fewer interruptions and more room to lead, without guaranteed outcomes or unverified metrics.
+
+### Website implementation
+- New CSS/JS `Assets/emotional-story.css` and `Assets/emotional-story.js` provide a three-phase responsive chaos-to-clarity scroll visualization on the homepage. The graphic is explicitly illustrative, not a live product interface screenshot. Native scrolling and reduced-motion preference remain usable without advanced animation.
+- Every product page leads with the owner's emotional challenge, then has a three-part “what changes for you” section tied to actual modules and linked screenshot proof.
+- Product directory leads with owner questions instead of feature lists.
+- The future roadmap is framed around practical relief without falsely promising future releases.
+- Actual screenshots, 49 module descriptions, product maturity labels, anonymized clients and risk/validation qualifications remain preserved.
+
+### Editorial integrity
+Sell the outcome people desire; demonstrate what the software actually does; do not claim guaranteed staffing reductions, ROI, flawless automation, regulatory certification, or unsupervised controls.
