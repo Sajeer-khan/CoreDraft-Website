@@ -68,3 +68,30 @@ All five product detail pages use one shared accessible CSS/JS foundation and sh
 
 ### Links and deployment
 All homepage primary product CTAs navigate to dedicated product pages. Separate secondary CTAs remain available for enquiries. The product directory links all five products. The sitemap includes each page. This is a static Cloudflare Pages website (framework: none; root output directory), with progressive GSAP animation and reduced-motion/mobile fallbacks. Verify the production deployment after merging the release.
+
+## Future concepts and private explorations — October 2026
+
+A dedicated `/products/future/` page now groups prospective concepts without suggesting product availability or disclosing proprietary mechanics.
+
+**Proposed business software concepts (concept in exploration, not committed releases):**
+1. JobDesk — project/job execution coordination
+2. ServiceDesk — maintenance and field service operations
+3. LeadDesk — sales follow-through
+4. MarginDesk — profit visibility
+5. CollectDesk — receivables follow-up
+6. VendorDesk — supplier record coordination
+7. StockDesk — materials/inventory visibility
+8. ContractDesk — contract obligation oversight
+9. OwnerPulse — cross-product management exception visibility (could be a shared capability rather than separate SaaS)
+
+**Separate exploratory mobile product:** TERVIAN — private Android-first progression initiative, outside the SME SaaS category. No commercial association, release status, hosted service or production readiness claimed.
+
+Existing People & Compliance covers the previously proposed PeopleDesk category; the concept is not duplicated as another product.
+
+### Publication safeguards
+
+- Concepts are publicly described only at the problem/outcome level. No source code, architecture, approval matrices, detailed data models, algorithms, synthetic UI masquerading as a screenshot, delivery promises or dates.
+- Proposal visibility is not commitment to build or release. An idea may become a module, evolve, be renamed, or not be pursued.
+- “Concept in exploration” is intentionally different from current “On-demand customization” product positioning, while avoiding misleading claims that these ideas are operational systems.
+- TERVIAN is introduced as a separate private incubation project, without presenting it as a mature SaaS.
+- All new graphics are typographic/CSS-only abstract compositions, explicitly described as illustrative rather than product interfaces.
