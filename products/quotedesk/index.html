@@ -1,175 +1,144 @@
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width,initial-scale=1">
- <meta name="description" content="QuoteDesk by CoreDraft Studio simplifies quotation approvals, bid outcomes, controlled print packs, invoicing and completion evidence. Request a guided walkthrough.">
- <meta property="og:title" content="QuoteDesk | CoreDraft Studio">
- <meta property="og:description" content="A connected commercial workflow from quotation to completion.">
- <meta property="og:type" content="website">
- <meta property="og:url" content="https://coredraftstudio.com/products/quotedesk/">
- <meta property="og:image" content="https://coredraftstudio.com/Assets/Logo.png">
- <link rel="canonical" href="https://coredraftstudio.com/products/quotedesk/">
- <link rel="icon" href="../../Assets/Logo.png" sizes="any">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- <title>QuoteDesk | CoreDraft Studio</title>
- <style>
-  :root{--navy:#213758;--ink:#14243a;--muted:#647487;--line:#dde5ed;--bg:#f5f8fb;--mint:#95e2d4}
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-  ::selection{background:#a6e8de;color:#11243b}
-  a{text-decoration:none;color:inherit}
-  a:focus-visible,button:focus-visible{outline:3px solid #3aabbb;outline-offset:4px}
-  .container{width:min(1150px,calc(100% - 42px));margin:auto}
-  .serif{font-family:'Cormorant Garamond',Georgia,serif;letter-spacing:-.028em;font-weight:600;line-height:1.03}
-  .eyebrow{font-size:10px;text-transform:uppercase;font-weight:700;letter-spacing:.2em;line-height:1.7}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:16px 22px;background:var(--navy);color:white;font-size:13px;font-weight:700;transition:transform .2s,background .2s}
-  .btn:hover{transform:translateY(-2px);background:#12233b}
-  .btn.light{background:#fff;color:var(--navy)}
-  .btn.light:hover{background:#edf7f6}
-  .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-  .nav .inner{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-  .brand{display:flex;gap:11px;align-items:center;color:var(--navy);white-space:nowrap}
-  .brand img{width:38px;height:38px;object-fit:contain}
-  .brand span{font-size:25px}
-  .nav-links{display:flex;gap:28px;align-items:center;color:#607184;font-size:12px;font-weight:600}
-  .nav-links a:hover{color:var(--navy)}
-  .hero{background:radial-gradient(ellipse at 80% 20%,#36557a,transparent 45%),linear-gradient(135deg,#142740,#203756);color:white;position:relative;overflow:hidden;padding:100px 0}
-  .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px}
-  .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:65px;align-items:center;position:relative}
-  .hero h1{font-size:clamp(4.5rem,8vw,7.8rem);margin:0 0 16px}
-  .hero h1 em{font-weight:500;color:var(--mint)}
-  .hero p{color:#c3d1e0;font-size:15px;line-height:1.9;max-width:540px}
-  .hero-meta{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:27px}
-  .hero-meta span{padding:9px 12px;border:1px solid rgba(255,255,255,.25);color:#d9e6f1;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
-  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:31px}
-  .hero-secondary{border:1px solid rgba(255,255,255,.35);color:white;font-size:13px;font-weight:650;padding:15px 21px}
-  .hero-secondary:hover{background:rgba(255,255,255,.09)}
-  .visual{position:relative;background:#f9fbfe;border:1px solid #fff4;border-radius:12px;color:#193047;box-shadow:0 30px 70px #07162b63;overflow:hidden;transform:rotate(1.2deg)}
-  .visual-head{display:flex;justify-content:space-between;align-items:center;background:white;padding:17px 21px;border-bottom:1px solid #e7edf2;font-weight:700;font-size:12px}
-  .visual-body{padding:25px}
-  .visual-panel{background:white;border:1px solid #e6edf2;border-radius:10px;padding:19px;margin-bottom:12px}
-  .visual-label{font-size:9px;letter-spacing:.15em;color:#8b9bad;font-weight:700}
-  .visual-title{font-size:17px;font-weight:800;margin:8px 0 17px}
-  .visual-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-  .visual-tabs span{padding:9px 4px;text-align:center;border-radius:5px;background:#edf3f7;color:#476179;font-size:9px;font-weight:700}
-  .visual-tabs span.active{background:#dff3ed;color:#26785a}
-  .visual-rows{display:grid;gap:11px}
-  .visual-row{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:12px;background:#f5f8fa;border-radius:6px;font-size:11px}
-  .visual-row strong{color:#29465e}
-  .visual-row b{font-size:10px;color:#2a8169}
-  .visual-foot{font-size:10px;color:#8998a9;text-align:right}
-  .section{padding:94px 0}
-  .section-header{max-width:750px;margin-bottom:40px}
-  .section-header h2{font-size:clamp(2.8rem,5vw,4.5rem);color:var(--navy);margin:14px 0 14px}
-  .section-header p{color:var(--muted);line-height:1.85;font-size:14px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-  .feature{padding:30px;border:1px solid #dfe7ec;background:#fff}
-  .feature .number{font-family:Georgia,serif;font-size:24px;color:#84a1b4}
-  .feature h3{font-size:15px;color:var(--navy);margin:25px 0 10px}
-  .feature p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
-  .lifecycle{background:#f5f8fa}
-  .track{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-  .track-item{position:relative;padding:25px 24px;border-top:2px solid #cddae3;background:#fff;margin-right:2px}
-  .track-item:first-child{border-top-color:#6bb7ad}
-  .track-item small{color:#6e8a9e;font-size:10px;letter-spacing:.13em}
-  .track-item h3{color:var(--navy);font-size:15px;margin:15px 0 10px}
-  .track-item p{color:#68798a;font-size:12px;line-height:1.75}
-  .difference{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center}
-  .difference h2{font-size:clamp(3rem,5.5vw,4.8rem);color:var(--navy)}
-  .difference-copy{border-left:1px solid var(--line);padding-left:35px;color:#55697c;font-size:14px;line-height:2}
-  .difference-copy p:first-child{font-size:19px;color:var(--navy);line-height:1.6;font-weight:600}
-  .faq{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-  .faq article{border-top:1px solid var(--line);padding-top:23px}
-  .faq h3{font-size:14px;color:var(--navy)}
-  .faq p{font-size:13px;line-height:1.8;color:var(--muted)}
-  .cta{background:linear-gradient(110deg,#172940,#2a4668);padding:85px 0;color:#fff}
-  .cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:35px}
-  .cta h2{font-size:clamp(3rem,6vw,5rem);margin:12px 0}
-  .cta p{font-size:14px;color:#bbccd9;line-height:1.8}
-  .footer{background:#101e30;color:#aab8c7;padding:29px 0;font-size:12px}
-  .footer .inner{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;align-items:center}
-  .footer a:hover{color:white}
-  .reveal{opacity:0;transform:translateY(13px);transition:opacity .55s ease,transform .55s ease}
-  .reveal.visible{opacity:1;transform:none}
-  @media(max-width:900px){.hero-grid,.difference{grid-template-columns:1fr}.hero{padding:75px 0}.visual{max-width:650px}.grid{grid-template-columns:repeat(2,1fr)}.track{grid-template-columns:repeat(2,1fr);gap:7px}.nav-links{gap:16px}}
-  @media(max-width:620px){.nav-links .optional{display:none}.nav-links{gap:15px}.brand span{font-size:20px}.brand img{width:32px;height:32px}.hero h1{font-size:clamp(4.2rem,16vw,6rem)}.hero-grid{gap:44px}.section{padding:64px 0}.grid,.track,.faq{grid-template-columns:1fr}.difference-copy{padding-left:21px}.cta .wrap{display:block}.cta .btn{margin-top:20px}.visual-body{padding:14px}.visual-tabs span{font-size:8px;padding:8px 1px}.nav .inner{min-height:66px}}
-  @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
- </style>
- <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14253e">
+  <title>QuoteDesk | Commercial operations | CoreDraft Studio</title>
+  <meta name="description" content="A connected workspace for businesses that quote work, secure purchase orders, issue commercial documents, invoice in stages and close with evidence. Explore modules, screenshots and on-demand business customization from CoreDraft Studio.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="QuoteDesk — Commercial operations | CoreDraft Studio">
+  <meta property="og:description" content="A connected workspace for businesses that quote work, secure purchase orders, issue commercial documents, invoice in stages and close with evidence.">
+  <meta property="og:url" content="https://coredraftstudio.com/products/quotedesk/">
+  <meta property="og:image" content="https://coredraftstudio.com/Assets/Logo.png">
+  <link rel="canonical" href="https://coredraftstudio.com/products/quotedesk/">
+  <link rel="icon" href="../../Assets/Logo.png" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="../../Assets/product-detail.css?v=1" rel="stylesheet">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script defer src="../../Assets/product-detail.js?v=1"></script>
 </head>
 <body>
- <a href="#main" style="position:absolute;left:-9999px" onfocus="this.style.left='10px'" onblur="this.style.left='-9999px'">Skip to content</a>
- <header class="nav"><div class="container inner">
-  <a class="brand" href="../../"><img alt="" src="../../Assets/Logo.png"><span class="serif">CoreDraft Studio</span></a>
-  <nav aria-label="Main navigation" class="nav-links"><a class="optional" href="../../#products">All products</a><a class="optional" href="../../#approach">Our approach</a><a href="../../#services">Services</a><a href="#contact">Contact</a></nav>
- </div></header>
- <main id="main">
-  <section class="hero">
-   <div class="container hero-grid">
-    <div>
-     <div class="eyebrow" style="color:#a0e5d9;margin-bottom:21px">CoreDraft Studio / Product 01</div>
-     <div class="hero-meta"><span>In active company use</span><span>Guided walkthrough by enquiry</span></div>
-     <h1 class="serif">QuoteDesk<em>.</em></h1>
-     <p style="font-size:19px;color:#fff;line-height:1.5;margin-top:0">A clearer way to manage the commercial work behind every job.</p>
-     <p>Prepare quotations, route approvals, record customer outcomes, issue controlled paperwork and manage invoicing — without stitching the story together from scattered documents.</p>
-     <div class="hero-actions"><a class="btn light" href="mailto:intake@coredraftstudio.com?subject=QuoteDesk%20Walkthrough%20Enquiry">Request a walkthrough ↗</a><a class="hero-secondary" href="#capabilities">Explore capabilities ↓</a></div>
-    </div>
-    <div>
-     <div class="visual" role="img" aria-label="Conceptual illustration of the QuoteDesk workflow, not a screenshot of the application">
-      <div class="visual-head"><span>QuoteDesk / Commercial flow</span><span style="color:#8ca0b1;font-size:10px">Illustrative interface</span></div>
-      <div class="visual-body">
-       <div class="visual-panel"><div class="visual-label">COMMERCIAL LIFECYCLE</div><div class="visual-title">Everything connected.</div><div class="visual-tabs"><span class="active">Quote</span><span>Approval</span><span>Order</span><span>Invoice</span></div></div>
-       <div class="visual-panel"><div class="visual-label" style="margin-bottom:15px">IMPORTANT RECORDS</div>
-        <div class="visual-rows"><div class="visual-row"><strong>Quotation revision</strong><b>Controlled</b></div><div class="visual-row"><strong>Approved issue</strong><b>Recorded</b></div><div class="visual-row"><strong>Customer purchase order</strong><b>Linked</b></div><div class="visual-row"><strong>Receiving evidence</strong><b>Traceable</b></div></div>
-       </div><div class="visual-foot">Product workflow illustration · not a production screenshot</div>
+  <a href="#main" class="sr-only">Skip to content</a>
+  <div class="page-pulse" aria-hidden="true"><b></b></div>
+  <header class="site-nav"><div class="site-nav-inner container">
+  <a class="brand" href="../../" aria-label="CoreDraft Studio homepage"><img src="../../Assets/Logo.png" alt="" width="39" height="39"><span class="editorial">CoreDraft Studio</span></a>
+  <button type="button" class="menu-toggle" aria-label="Open menu" aria-controls="product-menu" aria-expanded="false"><svg aria-hidden="true" width="21" height="21" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav-items" id="product-menu" aria-label="Product navigation"><a href="../">All products</a><a href="#capabilities">Capabilities</a><a href="#gallery">Screenshots</a><a href="#fit">Our approach</a><a class="nav-cta" href="#contact">Request a private walkthrough <span aria-hidden="true">↗</span></a></nav>
+</div></header>
+  <main id="main">
+    <section class="hero" style="--accent:#9ce8d5" aria-labelledby="hero-title">
+      <span class="hero-glow a" aria-hidden="true"></span><span class="hero-glow b" aria-hidden="true"></span><span class="hero-glow c" aria-hidden="true"></span>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow hero-label">CoreDraft Studio / Commercial operations</div>
+          <h1 class="editorial" id="hero-title">QuoteDesk<span class="dot">.</span></h1>
+          <h2>One commercial story.<br>From quote to close.</h2>
+          <p class="hero-intro">A connected workspace for businesses that quote work, secure purchase orders, issue commercial documents, invoice in stages and close with evidence.</p>
+          <div class="hero-actions"><a class="btn-primary" href="#gallery">Explore real interfaces <span aria-hidden="true">↗</span></a><a class="btn-outline" href="mailto:intake@coredraftstudio.com?subject=QuoteDesk%20%7C%20Private%20walkthrough">Discuss customization <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-meta"><span>Live business use</span><span>On-demand customization</span><span>Guided onboarding</span></div>
+        </div>
+        <div class="hero-preview">
+          <div class="browser">
+             <div class="browser-bar"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><p>QuoteDesk / Selected interface</p></div>
+             <div class="browser-window"><img src="../../Assets/product-screens/quotedesk-editor.webp" alt="Real interface excerpt illustrating a quotation editing workspace." width="800" height="580" decoding="async"><div class="watermark" aria-hidden="true">CoreDraft Studio</div><span class="media-mark">SANITIZED UI PREVIEW</span></div>
+          </div>
+          <div class="hero-chip first" aria-hidden="true">Active in business operations</div>
+          <div class="hero-chip second" aria-hidden="true">Adapted to real workflows</div>
+        </div>
       </div>
+    </section>
+    <div class="page-marquee" aria-hidden="true"><div><span>Better visibility</span><i>✳</i><span>Less busywork</span><i>✳</i><span>Thoughtful controls</span><i>✳</i><span>Designed for operators</span><i>✳</i><span>Better visibility</span><i>✳</i><span>Less busywork</span><i>✳</i><span>Thoughtful controls</span><i>✳</i><span>Designed for operators</span><i>✳</i><span>Better visibility</span><i>✳</i><span>Less busywork</span><i>✳</i><span>Thoughtful controls</span><i>✳</i><span>Designed for operators</span><i>✳</i><span>Better visibility</span><i>✳</i><span>Less busywork</span><i>✳</i><span>Thoughtful controls</span><i>✳</i><span>Designed for operators</span><i>✳</i></div></div>
+    <section class="intro" aria-labelledby="challenge-title"><div class="container intro-grid">
+       <div class="reveal"><div class="eyebrow" style="color:#7393a7">The problem we address</div><h2 class="editorial" id="challenge-title">The work isn't lost at quotation.<br><em>It's lost between the steps.</em></h2></div>
+       <div class="intro-main reveal"><p>Quotation files, approvals, purchase orders, invoices and delivery acknowledgements often end up in different folders or chats. Each handoff adds uncertainty and creates another place for a job to stall.</p><p><strong>QuoteDesk connects the commercial record across the journey, making it easier to prepare, approve, issue, track and close work with clear ownership.</strong></p><div class="intro-impact"><span>↗ One commercial record across the lifecycle</span><span>↗ Fewer untracked handoffs and document revisions</span><span>↗ Better owner visibility into wins, pending actions and closure</span></div></div>
+    </div></section>
+    <section class="modules" id="capabilities" aria-labelledby="capabilities-title"><div class="container modules-inner">
+      <div class="section-heading reveal"><div class="eyebrow">The capability landscape</div><h2 class="editorial" id="capabilities-title">A complete overview.<br><em style="font-weight:400">Without the unnecessary complexity.</em></h2><p>Modules are described from the user's perspective. Exact controls, automations, configurations and integrations are defined during a private implementation discussion.</p></div>
+      <div class="modules-grid"><article class="module reveal"><div class="module-n">01</div><h3>Quotation workspace</h3><p>Build detailed goods and service offers with configurable commercial terms, item structures and tax presentation.</p></article>
+<article class="module reveal"><div class="module-n">02</div><h3>Approvals and revisions</h3><p>Keep document review, changes and responsible approvals in a controlled business process.</p></article>
+<article class="module reveal"><div class="module-n">03</div><h3>Bid outcomes and purchase orders</h3><p>Record customer decisions, conversion results and supporting order evidence in one commercial history.</p></article>
+<article class="module reveal"><div class="module-n">04</div><h3>Document issue controls</h3><p>Keep the official issuance of invoices and fulfillment records traceable.</p></article>
+<article class="module reveal"><div class="module-n">05</div><h3>Partial and running invoices</h3><p>Support agreed commercial milestones, partial quantities and stage-based invoicing.</p></article>
+<article class="module reveal"><div class="module-n">06</div><h3>Delivery and service paperwork</h3><p>Organize goods delivery and service completion documentation alongside the underlying transaction.</p></article>
+<article class="module reveal"><div class="module-n">07</div><h3>Customer receiving and closure</h3><p>Connect acknowledgement evidence to the relevant work before the commercial lifecycle is closed.</p></article>
+<article class="module reveal"><div class="module-n">08</div><h3>Management dashboard</h3><p>Surface open work, bottlenecks, outstanding actions and quotation-to-order performance.</p></article>
+<article class="module reveal"><div class="module-n">09</div><h3>Business roles and access</h3><p>Configure responsibilities and visibility for sales, management and supporting personnel.</p></article></div>
+    </div></section>
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title"><div class="container">
+      <div class="section-heading reveal"><div class="eyebrow">Behind the interface</div><h2 class="editorial" id="gallery-title">Designed to be used.<br><em style="font-weight:400">Not just demonstrated.</em></h2><p>Selected authentic interface screenshots reveal the design language and user experience. Sensitive records and proprietary implementation details remain outside the public showcase.</p>
+      <div class="gallery-note">These are sanitized historical or sample-data captures. A screen's appearance alone does not establish a module's current deployment state. Detailed workflows are shown in private demonstrations.</div></div>
+      <article class="gallery-step" aria-labelledby="screen-heading-1">
+   <div class="shot-copy reveal">
+      <div class="step-index">01 <span style="font-size:12px;vertical-align:middle;color:#6287a0">/ 03</span></div>
+      <div class="eyebrow">Interface glimpse 1</div>
+      <h3 id="screen-heading-1">Quotation workspace</h3>
+      <p>Prepare a commercial offer without rebuilding the entire document process.</p>
+   </div>
+   <figure class="shot reveal">
+     <div class="shot-frame"><div class="shot-head"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span>QuoteDesk / Interface preview</span></div>
+       <div class="shot-image"><img loading="lazy" decoding="async" width="960" height="640" src="../../Assets/product-screens/quotedesk-editor.webp" alt="Real interface excerpt illustrating a quotation editing workspace."><div class="watermark" aria-hidden="true">CoreDraft Studio</div><span class="shot-label">SELECTED PRODUCT CAPTURE</span></div>
      </div>
-    </div>
+     <div class="shot-annotation" aria-hidden="true">Commercial operations</div>
+     <figcaption class="gallery-privacy">Real interface excerpt illustrating a quotation editing workspace. · Public-safe illustration of the interface; confidential rules and underlying records are not shown.</figcaption>
+     <span class="shot-index" aria-hidden="true">COREDRAFT / 01</span>
+   </figure>
+  </article>
+<article class="gallery-step" aria-labelledby="screen-heading-2">
+   <div class="shot-copy reveal">
+      <div class="step-index">02 <span style="font-size:12px;vertical-align:middle;color:#6287a0">/ 03</span></div>
+      <div class="eyebrow">Interface glimpse 2</div>
+      <h3 id="screen-heading-2">Approval and workflow view</h3>
+      <p>Trace the important steps without relying on scattered messages.</p>
    </div>
-  </section>
-  <section id="capabilities" class="section">
-   <div class="container"><div class="section-header reveal"><div class="eyebrow" style="color:#698ba2">One connected commercial process</div><h2 class="serif">Less paperwork.<br><em style="font-weight:400">More control.</em></h2><p>QuoteDesk was built around the day-to-day work of a business preparing quotations, delivering goods and services, and keeping a clear record of what happened.</p></div>
-   <div class="grid reveal">
-    <article class="feature"><div class="number">01</div><h3>Quotations &amp; revisions</h3><p>Prepare structured quotations, revise drafts and keep the commercial record organized.</p></article>
-    <article class="feature"><div class="number">02</div><h3>Approval workflow</h3><p>Control the transition from draft to approved issue with responsible roles and traceable decisions.</p></article>
-    <article class="feature"><div class="number">03</div><h3>Customer outcomes &amp; POs</h3><p>Record wins, losses, reasons and purchase orders so quotation activity does not disappear after submission.</p></article>
-    <article class="feature"><div class="number">04</div><h3>Controlled issue packets</h3><p>Create invoice and goods or service records with controlled issuance and supporting documentation.</p></article>
-    <article class="feature"><div class="number">05</div><h3>Flexible invoicing</h3><p>Handle full and partial billing with links back to the originating quotation and customer order.</p></article>
-    <article class="feature"><div class="number">06</div><h3>Evidence-based closure</h3><p>Preserve receiving and completion evidence before treating commercial work as closed.</p></article>
-   </div></div>
-  </section>
-  <section class="section lifecycle"><div class="container"><div class="section-header reveal"><div class="eyebrow" style="color:#698ba2">From first draft to final record</div><h2 class="serif">The entire story<br><em style="font-weight:400">stays together.</em></h2><p>One process, with the documents and decisions connected across the lifecycle.</p></div>
-   <div class="track reveal">
-    <div class="track-item"><small>STEP / 01</small><h3>Prepare</h3><p>Build the quotation and submit it for approval.</p></div>
-    <div class="track-item"><small>STEP / 02</small><h3>Win</h3><p>Capture the customer response and purchase order.</p></div>
-    <div class="track-item"><small>STEP / 03</small><h3>Deliver</h3><p>Issue the appropriate billing and fulfillment records.</p></div>
-    <div class="track-item"><small>STEP / 04</small><h3>Close</h3><p>Link the required evidence and complete the record.</p></div>
-   </div></div>
-  </section>
-  <section class="section"><div class="container difference reveal">
-   <div><div class="eyebrow" style="color:#6e8ba2;margin-bottom:16px">Built for business owners and lean teams</div><h2 class="serif">Stop managing the<br><em style="font-weight:400">paper trail.</em></h2></div>
-   <div class="difference-copy"><p>Commercial operations should not depend on a particular person remembering every document, approval and follow-up.</p><p>QuoteDesk focuses on reducing those gaps with clear states, linked records and a more consistent way for teams to move work forward.</p><p>It also gives management a clearer view of the quotation pipeline, outcomes and lifecycle statuses without maintaining a separate manual tracking system.</p></div>
-  </div></section>
-  <section class="section" style="background:#f7fafc"><div class="container">
-   <div class="section-header reveal"><div class="eyebrow" style="color:#698ba2">Availability &amp; fit</div><h2 class="serif">A practical conversation<br><em style="font-weight:400">before a product promise.</em></h2></div>
-   <div class="faq reveal">
-     <article><h3>Is QuoteDesk publicly available?</h3><p>QuoteDesk is actively used in business operations. Configuration, onboarding and workflow customization are discussed directly with each organization.</p></article>
-     <article><h3>Who is it designed for?</h3><p>Project contractors, industrial suppliers and service businesses that regularly prepare quotations, issue commercial documents and manage customer orders.</p></article>
-     <article><h3>Can I request a demonstration?</h3><p>Yes. Contact CoreDraft Studio to enquire about a guided walkthrough and discuss how your existing workflow compares.</p></article>
-     <article><h3>Are pricing and implementation packages published?</h3><p>On-demand customization and implementation scope are discussed directly. Contact us to explore a configuration for your business.</p></article>
+   <figure class="shot reveal">
+     <div class="shot-frame"><div class="shot-head"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span>QuoteDesk / Interface preview</span></div>
+       <div class="shot-image"><img loading="lazy" decoding="async" width="960" height="640" src="../../Assets/product-screens/quotedesk-workflow.webp" alt="Historical sample-data capture showing QuoteDesk's commercial workflow interface."><div class="watermark" aria-hidden="true">CoreDraft Studio</div><span class="shot-label">SELECTED PRODUCT CAPTURE</span></div>
+     </div>
+     <div class="shot-annotation" aria-hidden="true">Commercial operations</div>
+     <figcaption class="gallery-privacy">Historical sample-data capture showing QuoteDesk's commercial workflow interface. · Public-safe illustration of the interface; confidential rules and underlying records are not shown.</figcaption>
+     <span class="shot-index" aria-hidden="true">COREDRAFT / 02</span>
+   </figure>
+  </article>
+<article class="gallery-step" aria-labelledby="screen-heading-3">
+   <div class="shot-copy reveal">
+      <div class="step-index">03 <span style="font-size:12px;vertical-align:middle;color:#6287a0">/ 03</span></div>
+      <div class="eyebrow">Interface glimpse 3</div>
+      <h3 id="screen-heading-3">Review and controlled issue</h3>
+      <p>Give stakeholders a clear view of review and document handling.</p>
    </div>
-  </div></section>
-  <section id="contact" class="cta"><div class="container wrap"><div>
-   <div class="eyebrow" style="color:#a2dfd7">Find out if QuoteDesk fits your business</div>
-   <h2 class="serif">Let's talk about<br><em style="font-weight:400;color:#a4e4d8">your workflow.</em></h2>
-   <p>Enquire about a walkthrough or share your operational challenges.</p>
-  </div><a class="btn light" href="mailto:intake@coredraftstudio.com?subject=QuoteDesk%20Walkthrough%20Enquiry">Request a walkthrough ↗</a></div></section>
- </main>
- <footer class="footer"><div class="container inner"><span>© 2026 CoreDraft Studio · <a href="../../">Back to CoreDraft Studio</a></span><span><a href="../../#products">Products</a> · <a href="../../#services">Services</a> · <a href="mailto:intake@coredraftstudio.com">intake@coredraftstudio.com</a></span></div></footer>
- <script>(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(el){el.classList.add('visible')});return}var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.08});els.forEach(function(el){observer.observe(el)})})()</script>
+   <figure class="shot reveal">
+     <div class="shot-frame"><div class="shot-head"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span>QuoteDesk / Interface preview</span></div>
+       <div class="shot-image"><img loading="lazy" decoding="async" width="960" height="640" src="../../Assets/product-screens/quotedesk-review.webp" alt="Historical cropped interface capture illustrating controlled review."><div class="watermark" aria-hidden="true">CoreDraft Studio</div><span class="shot-label">SELECTED PRODUCT CAPTURE</span></div>
+     </div>
+     <div class="shot-annotation" aria-hidden="true">Commercial operations</div>
+     <figcaption class="gallery-privacy">Historical cropped interface capture illustrating controlled review. · Public-safe illustration of the interface; confidential rules and underlying records are not shown.</figcaption>
+     <span class="shot-index" aria-hidden="true">COREDRAFT / 03</span>
+   </figure>
+  </article>
+    </div></section>
+    <section class="feature-band" aria-labelledby="feature-title"><div class="container">
+      <div class="section-heading reveal"><div class="eyebrow">Built around outcomes</div><h2 class="editorial" id="feature-title">Commercial control should<br>feel effortless.</h2><p>Used in real company operations. Implementation and configuration are arranged directly.</p></div>
+      <div class="feature-grid"><article class="feature reveal"><span class="feature-mark" aria-hidden="true">↗</span><div><h3>Faster preparation</h3><p>Carry relevant information forward rather than drafting the same commercial record repeatedly.</p></div></article>
+<article class="feature reveal"><span class="feature-mark" aria-hidden="true">↗</span><div><h3>Better accountability</h3><p>Make important approvals and decisions easier to locate later.</p></div></article>
+<article class="feature reveal"><span class="feature-mark" aria-hidden="true">↗</span><div><h3>More usable visibility</h3><p>See what is waiting for someone else's action.</p></div></article>
+<article class="feature reveal"><span class="feature-mark" aria-hidden="true">↗</span><div><h3>Flexible deployment conversations</h3><p>Discuss roles, document layouts and workflow adaptation around how your business actually operates.</p></div></article></div>
+    </div></section>
+    <section class="guardrail" id="fit" aria-labelledby="fit-title"><div class="container guardrail-grid">
+      <div class="reveal"><div class="eyebrow" style="color:#638ca2">Your operation. Your context.</div><h2 id="fit-title" class="editorial">Not another<br><em style="font-weight:400">one-size-fits-all ERP.</em></h2></div>
+      <div class="reveal"><p>Our approach begins with how your team actually works. We identify the repetitive administrative steps, define the controls that matter, and discuss an implementation that fits—not a longer software checklist.</p><p>QuoteDesk is actively used in business operations. The public pages show selected sanitized interface excerpts, not client records or the complete implementation rules. Company-specific workflows and integrations are demonstrated privately.</p><div class="guardrail-links"><a href="mailto:intake@coredraftstudio.com?subject=QuoteDesk%20%7C%20Private%20walkthrough">Request a private walkthrough ↗</a><a href="../">Explore other products ↗</a></div></div>
+    </div></section>
+    <section class="final-cta" id="contact" aria-labelledby="contact-title"><div class="container final-inner">
+      <div class="final-copy reveal"><div class="eyebrow" style="color:#99e1d7">Made for your real workflow</div><h2 id="contact-title" class="editorial">Let's discuss what<br><em style="font-weight:400;color:#abebe0">your business needs.</em></h2><p>Explore a guided product walkthrough or request on-demand configuration. We discuss deeper workflows and implementation details privately.</p></div>
+      <div class="final-buttons reveal"><a class="btn-primary" href="mailto:intake@coredraftstudio.com?subject=QuoteDesk%20%7C%20Private%20walkthrough">Enquire about QuoteDesk <span aria-hidden="true">↗</span></a><a class="btn-outline" href="../procureflow/">Explore next product <span aria-hidden="true">→</span></a></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner">
+     <div>© 2026 CoreDraft Studio · <a href="../../">Back to homepage</a></div>
+     <nav class="links" aria-label="Other products"><a href="../procureflow/">ProcureFlow</a><a href="../pharmadocs/">PharmaDocs</a><a href="../people-compliance/">People &amp; Compliance</a><a href="../construction-control/">Construction Control</a><a href="mailto:intake@coredraftstudio.com">Contact</a></nav>
+  </div></footer>
 </body>
 </html>
