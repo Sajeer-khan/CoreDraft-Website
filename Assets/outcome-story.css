@@ -1,0 +1,25 @@
+
+/* Shared problem-to-outcome narrative. Public-safe: no proprietary workflow internals. */
+.outcome-section{background:#fff;padding:106px 0 112px;color:#233e57;position:relative;isolation:isolate}
+.outcome-section:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 85% 0%,#8fd8cc13,transparent 37%);z-index:-1}
+.outcome-top{display:flex;justify-content:space-between;align-items:end;gap:45px;margin-bottom:39px}
+.outcome-heading{max-width:820px}
+.outcome-heading .eyebrow{color:#58899e}
+.outcome-heading h2{font-size:clamp(3.3rem,5.6vw,5.7rem);margin:17px 0 0;color:#223d57}
+.outcome-heading h2 em{font-weight:400}
+.outcome-summary{font-size:13px;line-height:1.85;color:#6a7f8e;max-width:350px;margin:0}
+.outcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.outcome-card{position:relative;background:#f4f7f9;border:1px solid #dae5eb;padding:30px;min-height:290px;display:flex;flex-direction:column;overflow:hidden;transition:background .3s,transform .3s,box-shadow .3s}
+.outcome-card:hover{background:#eef6f6;transform:translateY(-5px);box-shadow:0 24px 45px #213a4d10}
+.outcome-card:before{content:"";position:absolute;right:-70px;top:-75px;width:160px;height:160px;border:1px solid #8fbcbd65;border-radius:50%;pointer-events:none}
+.outcome-card .outcome-id{font-family:Georgia,serif;font-size:25px;color:#739daf}
+.outcome-card .outcome-pain{font-size:10px;font-weight:750;letter-spacing:.13em;color:#8094a5;text-transform:uppercase;margin-top:23px}
+.outcome-card h3{font-size:17px;line-height:1.38;color:#213d57;margin:11px 0 12px;font-weight:750}
+.outcome-card p{color:#63798c;font-size:12px;line-height:1.88;margin:0}
+.outcome-card .outcome-connection{margin-top:auto;padding-top:25px;font-size:11px;font-weight:700;color:#357883}
+.outcome-honesty{border-top:1px solid #dce7ed;margin-top:28px;padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.outcome-honesty p{font-size:11px;line-height:1.75;color:#7c8d99;max-width:810px;margin:0}
+.outcome-honesty a{font-size:12px;color:#2b6175;font-weight:740;white-space:nowrap;border-bottom:1px solid #82aeb5;padding-bottom:6px}
+@media(max-width:960px){.outcome-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-top{display:block}.outcome-summary{max-width:600px;margin-top:19px}}
+@media(max-width:650px){.outcome-section{padding:71px 0 77px}.outcome-heading h2{font-size:clamp(3.25rem,12vw,4.8rem)}.outcome-grid{grid-template-columns:1fr}.outcome-card{min-height:235px}.outcome-honesty{display:block}.outcome-honesty a{display:inline-block;margin-top:17px}}
+@media(prefers-reduced-motion:reduce){.outcome-card{transition:none!important}.outcome-card:hover{transform:none!important}}
