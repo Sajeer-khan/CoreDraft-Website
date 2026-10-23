@@ -25,13 +25,15 @@ The repository homepage and motion engine support the following assets. They are
 - ProcureFlow: `procureflow-overview.webp`, `procureflow-requisitions.webp`, `procureflow-pipeline.webp`
 - PharmaDocs: `pharmadocs-overview.webp`, `pharmadocs-authoring.webp`, `pharmadocs-governance.webp`
 
-The historical sample-data captures came from existing application source previews and user Library screenshots; they are not freshly authenticated production captures. The three ProcureFlow files are crops of the same local dashboard screenshot and do not represent three separate product screens. QuoteDesk screenshots are cropped / redacted to remove company, staff and sample customer identification. All are optimized WebP assets.
+The screenshot assets come from existing application source previews and historical user screenshots; they are not fresh customer-production captures. ProcureFlow shows three crops from one local demonstration dashboard, not three independent views. QuoteDesk and People & Compliance screenshots have been cropped and/or redacted to avoid exposing company identifiers, payroll figures, names and addresses. All are optimized WebP assets.
+
+- People & Compliance: `people-overview.webp`, `people-payroll.webp`, `people-master.webp`
 
 **Important:** Screenshot files in the separate ZIP have not been committed to GitHub because the available GitHub connector cannot transfer local binary files. The motion-enabled homepage uses a graceful editorial fallback for any missing asset, without broken images or misleading claims. Upload the supplied assets to the corresponding repository paths to activate real screenshots automatically on the next Cloudflare Git deployment.
 
-## People & Compliance
+## People & Compliance screenshots
 
-No suitable sanitized standalone image was located. Its chapter uses a dedicated animated workflow composition rather than a misleading screenshot from a different product. Capture three synthetic-data screens from the actual People & Compliance module before presenting them as product screenshots.
+Three redacted historical captures of the existing business-operations UI are included in the separate upload pack. These show the overview, payroll controls, and regulatory-readiness layout, not a publicly exposed tenant or subscriber interface. The original images contained sensitive company and compensation data, which are removed or obscured in the supplied files.
 
 ## Scrollytelling behaviors
 
