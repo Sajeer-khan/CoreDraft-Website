@@ -3,11 +3,11 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoreDraft Studio | Business Software That Removes the Busywork</title>
-  <meta name="description" content="CoreDraft Studio builds practical SaaS products for leaner business operations, stronger controls, and owner-level visibility. Discover QuoteDesk, our first featured product.">
+  <title>CoreDraft Studio | Products Built Around Real Business Problems</title>
+  <meta name="description" content="Explore CoreDraft Studio SaaS products: QuoteDesk, ProcureFlow, PharmaDocs, People &amp; Compliance and Construction Control. Software that removes operational busywork.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="CoreDraft Studio — Run lean. See everything. Move forward.">
-  <meta property="og:description" content="Focused business software that removes busywork and gives owners more visibility. Explore QuoteDesk.">
+  <meta property="og:description" content="Discover five purpose-built software product stories in an immersive scroll experience.">
   <meta property="og:url" content="https://coredraftstudio.com/">
   <meta property="og:image" content="https://coredraftstudio.com/Assets/Logo.png">
   <link rel="canonical" href="https://coredraftstudio.com/">
@@ -184,6 +184,127 @@
     .reveal,.fade-up{opacity:1!important;transform:none!important}
   }
 
+
+
+/* Scrollytelling product collection — authentic screenshot slots and responsive sticky chapters */
+body { overflow-x:clip!important; }
+.story-section{background:#f5f7f9;color:#1a2c42}
+.story-preface{padding-top:112px;padding-bottom:76px;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(220px,.65fr);gap:65px;align-items:end}
+.story-preface .eyebrow{color:#607d97}
+.story-preface h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.8rem,7.1vw,7rem);line-height:.96;letter-spacing:-.035em;font-weight:600;color:#213758;margin:20px 0 26px}
+.story-preface h2 em{font-weight:400}
+.story-preface-intro p{font-size:15px;line-height:1.9;color:#63758a;max-width:635px}
+.story-preface-side{border-top:1px solid #b5c5d4;padding-top:19px}
+.story-preface-side span{font-family:Georgia,serif;font-size:24px;color:#6d8ba5}
+.story-preface-side p{font-size:12px;color:#718093;line-height:1.85;margin-top:16px}
+.story-product-index{position:sticky;top:73px;z-index:38;background:#f9fbfcf7;border-top:1px solid #dce5eb;border-bottom:1px solid #dce5eb;backdrop-filter:blur(14px)}
+.story-index-scroll{display:flex;align-items:center;overflow-x:auto;scrollbar-width:thin;gap:3px}
+.story-product-index a{padding:19px 18px;white-space:nowrap;color:#637489;font-size:12px;font-weight:650;transition:color .2s,background .2s;text-decoration:none;border-bottom:2px solid transparent}
+.story-product-index a span{font-size:9px;color:#91a1b1;letter-spacing:.1em;margin-right:9px}
+.story-product-index a:hover{color:#213758;background:#e8eef3}
+.story-product-index a.active{color:#213758;border-color:#79b2ac;background:#eaf2f4}
+.story-progress{height:2px;width:0;background:#73baaf;transition:width .24s;position:absolute;bottom:0;left:0}
+.story-chapter{scroll-margin-top:160px;display:grid;grid-template-columns:minmax(320px,43%) minmax(0,57%);gap:clamp(25px,4.4vw,68px);max-width:1440px;width:calc(100% - 70px);margin-inline:auto;min-height:1150px;padding:75px 0 105px;border-bottom:1px solid #dbe4ec}
+.story-chapter:nth-child(even){background:#f8fafb;box-shadow:0 0 0 36px #f8fafb}
+.story-chapter-copy{align-self:start;position:sticky;top:169px;min-height:calc(100vh - 190px);display:flex;flex-direction:column;max-width:520px}
+.story-chapter-top{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:clamp(20px,3vh,38px)}
+.story-counter{font-size:10px;letter-spacing:.17em;font-weight:800;color:#788ba1}
+.story-badge{font-size:9px;text-transform:uppercase;font-weight:750;letter-spacing:.06em;padding:8px 10px;border-radius:99px;border:1px solid #c8d4dd;color:#5c7080;white-space:nowrap}
+.story-badge.live{color:#287459;border-color:#b1dfd1;background:#e7f5ef}
+.story-badge.testing{color:#486c9b;border-color:#c8d9ed;background:#edf4fc}
+.story-badge.develop{color:#755c89;border-color:#d7c9e8;background:#f4eff9}
+.story-badge.internal{color:#8d633a;border-color:#ead5b9;background:#fbf3e9}
+.story-overline{text-transform:uppercase;font-size:10px;letter-spacing:.19em;font-weight:750;color:#6b87a2}
+.story-chapter-text h3{font-family:'Cormorant Garamond',Georgia,serif;color:#213758;font-weight:650;font-size:clamp(3.8rem,5.9vw,6.65rem);line-height:.95;letter-spacing:-.055em;margin:15px 0 25px;overflow-wrap:break-word}
+.story-title-dot{color:#5faeaa}
+.story-promise{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.6rem,2.2vw,2.3rem);line-height:1.2;font-weight:600;color:#283f58;letter-spacing:-.01em;margin:0 0 20px}
+.story-intro{color:#617389;font-size:13px;line-height:1.85;max-width:480px}
+.story-bestfor{margin:22px 0;border-top:1px solid #d5dfe7;border-bottom:1px solid #d5dfe7;padding:14px 0;color:#7c91a4;font-size:9px;letter-spacing:.16em;font-weight:800}
+.story-bestfor span{font-size:12px;letter-spacing:normal;font-weight:650;color:#314d66;margin-left:10px}
+.story-outcomes{display:grid;gap:7px;margin:0 0 24px}
+.story-outcomes p{font-size:12px;color:#465c72;font-weight:560;line-height:1.6}
+.story-outcomes p span{color:#3b9d96;font-weight:800;margin-right:7px}
+.story-actions{display:flex;flex-wrap:wrap;gap:9px}
+.story-primary{display:inline-flex;gap:20px;align-items:center;justify-content:space-between;background:#213758;color:#fff;font-size:11px;font-weight:700;min-height:43px;padding:13px 17px;transition:transform .2s}
+.story-primary:hover{background:#182a43;transform:translateY(-2px)}
+.story-secondary{display:inline-flex;gap:12px;align-items:center;color:#2d4c69;font-size:11px;font-weight:700;border-bottom:1px solid #8ea7b9;padding:12px 1px}
+.story-secondary:hover{color:#19344a}
+.story-caveat{font-size:10px!important;color:#8b7381!important;line-height:1.7!important;margin-top:15px!important}
+.story-chapter-bottom{margin-top:auto;padding-top:26px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #dce4ea;font-size:9px;font-weight:700;letter-spacing:.12em;color:#91a1af}
+.story-chapter-bottom span:last-child{font-size:21px;color:#668da4}
+.story-scenes{display:grid;gap:65px;padding-top:2px}
+.story-scene{margin:0;padding:0;min-height:72vh;display:flex;flex-direction:column;justify-content:center;gap:0}
+.story-media{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 24px 60px rgba(28,50,76,.09);background:#dce5ec;min-height:300px}
+.story-concept{position:relative;min-height:clamp(340px,40vw,540px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:radial-gradient(circle at 95% 0%,color-mix(in srgb,var(--chapter-accent),transparent 62%) 0%,transparent 35%),linear-gradient(140deg,#182f4b 0%,#284563 68%,#1d344e 100%);color:#fff}
+.story-concept:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:53px 53px;mask-image:linear-gradient(to left,#000,transparent)}
+.story-concept:after{content:"";position:absolute;width:400px;height:400px;border:1px solid rgba(255,255,255,.14);border-radius:50%;right:-180px;bottom:-210px}
+.story-concept-inner{z-index:1;position:relative;padding:clamp(25px,5vw,52px)}
+.story-concept-type{font-size:10px;letter-spacing:.18em;font-weight:700;color:#b5c9d7;text-transform:uppercase}
+.story-concept-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(7rem,19vw,17rem);line-height:.85;letter-spacing:-.11em;font-weight:600;color:var(--chapter-accent);opacity:.9;display:block;margin:30px 0 20px;transform:translateX(-.045em)}
+.story-concept-head{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.7rem,3vw,3.1rem);font-weight:600;line-height:1.1;max-width:390px}
+.story-concept-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:24px}
+.story-concept-tags span{border:1px solid rgba(255,255,255,.25);padding:9px 11px;font-size:10px;color:#d8e6ef;background:rgba(255,255,255,.04)}
+.story-concept-disclaimer{z-index:2;position:relative;font-size:9px;color:#aabed0;padding:17px 32px;border-top:1px solid rgba(255,255,255,.13);letter-spacing:.03em}
+.story-real-screen{background:#fff;border:1px solid #d7e1e9}
+.story-screen-toolbar{height:40px;background:#fff;border-bottom:1px solid #dce5ec;display:flex;gap:12px;align-items:center;padding:0 14px;font-size:9px;font-weight:750;color:#71849a;letter-spacing:.1em}
+.story-window-dots{display:flex;gap:4px}
+.story-window-dots span{width:6px;height:6px;border-radius:50%;background:#cfd9e1}
+.story-window-tag{margin-left:auto;font-size:9px;letter-spacing:0;color:#426e86;background:#e9f1f5;padding:4px 7px}
+.story-real-screen img{display:block;width:100%;height:auto;max-height:none}
+.story-scene-caption{padding:23px 5px 0;border-top:1px solid #d9e3e9;margin-top:20px}
+.story-scene-step .eyebrow{color:#6484a1;font-size:9px}
+.story-scene-caption h4{font-size:clamp(16px,1.6vw,20px);font-weight:750;color:#223c56;margin:10px 0 7px;line-height:1.4}
+.story-scene-caption p{color:#6f8091;font-size:12px;line-height:1.8;max-width:610px}
+.story-outro{padding:95px 0 110px;display:flex;justify-content:space-between;gap:40px;align-items:end}
+.story-outro .eyebrow{color:#6f8ca3}
+.story-outro h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:650;font-size:clamp(3rem,5.5vw,5.3rem);line-height:1.04;color:#213758;margin:18px 0 14px;letter-spacing:-.025em}
+.story-outro h3 em{font-weight:400}
+.story-outro p{max-width:640px;color:#6b7d8e;font-size:13px;line-height:1.85}
+.story-outro>a{flex-shrink:0;padding:16px 20px;background:#213758;color:#fff;font-size:12px;font-weight:700;display:flex;justify-content:space-between;gap:20px}
+.story-outro>a:hover{background:#142740}
+.story-concept,.story-real-screen{transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.story-scene:hover .story-concept,.story-scene:hover .story-real-screen{transform:translateY(-4px)}
+@media(max-width:1130px){
+.story-chapter{width:calc(100% - 42px);grid-template-columns:minmax(300px,42%) minmax(0,58%);gap:30px}
+.story-chapter-text h3{font-size:clamp(3.3rem,6vw,5.4rem)}
+.story-promise{font-size:clamp(1.45rem,2.6vw,2rem)}
+.story-chapter-copy{top:165px;min-height:calc(100vh - 190px)}
+.story-bestfor span{display:block;margin:8px 0 0}
+}
+@media(max-width:840px){
+.story-preface{grid-template-columns:1fr;gap:25px;padding-top:73px;padding-bottom:50px}
+.story-preface-side{max-width:470px}
+.story-chapter{display:block;width:calc(100% - 44px);padding:63px 0 68px;min-height:0}
+.story-chapter:nth-child(even){box-shadow:none}
+.story-chapter-copy{position:static;min-height:0;max-width:none;margin-bottom:40px}
+.story-chapter-text h3{font-size:clamp(3.7rem,10vw,5.8rem)}
+.story-chapter-bottom{display:none}
+.story-scenes{gap:45px}
+.story-scene{min-height:0}
+.story-concept{min-height:390px}
+.story-outro{display:block;padding:65px 0 85px}
+.story-outro>a{margin-top:28px;display:inline-flex}
+}
+@media(max-width:767px){
+.story-product-index{top:73px}
+.story-product-index a{padding:16px 13px;font-size:11px}
+.story-chapter{scroll-margin-top:120px}
+.story-badge{white-space:normal;text-align:center;font-size:8px}
+.story-counter{font-size:9px}
+.story-chapter-top{align-items:start}
+.story-scene-caption{margin-top:14px}
+.story-preface h2{font-size:clamp(3.5rem,11vw,5.5rem)}
+.story-concept{min-height:315px}
+.story-concept-num{font-size:8rem;margin:17px 0 13px}
+.story-concept-head{font-size:2rem}
+.story-concept-disclaimer{padding:13px 18px}
+.story-concept-inner{padding:25px}
+.story-bestfor span{font-size:12px}
+.story-chapter-text h3{overflow-wrap:anywhere}
+.story-scene-caption h4{font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){.story-concept,.story-real-screen{transition:none!important}.story-scene:hover .story-concept,.story-scene:hover .story-real-screen{transform:none!important}}
+
   </style>
   <style>body { box-sizing: border-box; }</style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}.mobile-menu{display:grid!important}</style></noscript>
@@ -257,55 +378,248 @@
      <div class="trust-item">Controls built into everyday work</div>
    </div></div>
 
-   <section id="products" class="section-pad bg-white" aria-labelledby="products-heading">
-    <div class="site-container">
-     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-11 reveal">
-      <div class="max-w-[770px]">
-        <div class="eyebrow text-[#5c7894] mb-5">Our software / Product 01</div>
-        <h2 id="products-heading" class="section-title text-[#213758] mb-5">A better way to run<br><em class="font-normal">the business behind the work.</em></h2>
-        <p class="max-w-[640px] text-[#687786] text-[15px] leading-8">We begin with one tangible problem, build around actual workflows, and introduce products as they become ready. First up: the commercial paperwork and approvals that slow businesses down.</p>
+ 
+  <section id="products" class="story-section" aria-labelledby="story-products-title">
+    <div class="story-preface site-container">
+      <div class="story-preface-intro reveal">
+        <span class="eyebrow">The CoreDraft product portfolio</span>
+        <h2 id="story-products-title">Built for the work<br><em>behind the business.</em></h2>
+        <p>Five focused product stories. One idea: remove the administrative drag, connect the important decisions and make businesses easier to run.</p>
       </div>
-      <span class="eyebrow text-[#698197] border-l-2 border-[#8bcdbf] pl-4">Focused products. Thoughtful growth.</span>
-     </div>
-     <article class="product-card reveal" aria-labelledby="quotedesk-heading">
-       <div class="product-copy">
-         <div class="flex items-center gap-3 flex-wrap mb-9">
-          <span class="eyebrow text-[#52738f]">01 / Featured product</span>
-          <span class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 bg-[#e7f5ef] text-[#32715c] rounded-full">In operational use</span>
-         </div>
-         <h3 id="quotedesk-heading" class="display-title text-[clamp(3.5rem,5vw,5.2rem)] text-[#213758] mb-4">QuoteDesk<span class="text-[#74a5a2]">.</span></h3>
-         <p class="text-[17px] font-semibold text-[#29445e] mb-5 leading-7">From quotation to completion. Without the administrative chaos.</p>
-         <p class="text-[14px] text-[#667688] leading-8 mb-7">A structured commercial workflow for teams that quote, win, deliver and invoice. QuoteDesk brings approvals, customer outcomes, controlled documents and billing into a traceable process — with clearer visibility for owners.</p>
-         <div class="grid grid-cols-2 gap-3 mb-9 text-[12px] font-semibold text-[#41586f]">
-           <div>✓ Quotation approvals</div><div>✓ Controlled paperwork</div>
-           <div>✓ PO outcome tracking</div><div>✓ Invoicing &amp; closure</div>
-         </div>
-         <div class="flex flex-wrap gap-3"><a class="button-dark" href="products/quotedesk/">Explore QuoteDesk <span aria-hidden="true">↗</span></a><a class="button-dark" style="background:#eef3f6;color:#213758" href="mailto:intake@coredraftstudio.com?subject=QuoteDesk%20Walkthrough%20Enquiry">Request a walkthrough <span aria-hidden="true">↗</span></a></div>
-         <p class="text-[11px] text-[#7f8d9b] mt-5 leading-6">Deployed for live internal business operations. General self-service availability has not been announced.</p>
-       </div>
-       <div class="product-illustration" aria-label="Diagram of the QuoteDesk commercial workflow">
-        <div class="product-flow">
-          <div class="product-flow-header"><span>QUOTE → CLOSE</span><span class="text-[#6e8194]">A connected workflow</span></div>
-          <div class="flow-steps">
-            <div class="flow-step"><span class="flow-num">01</span><div><strong>Prepare &amp; approve</strong><small>Structured quotation and controlled sign-off</small></div><span class="flow-check">✓</span></div>
-            <div class="flow-step"><span class="flow-num">02</span><div><strong>Record the outcome</strong><small>Win, loss, purchase order and supporting files</small></div><span class="flow-check">✓</span></div>
-            <div class="flow-step"><span class="flow-num">03</span><div><strong>Invoice &amp; deliver</strong><small>Partial billing, issued documents, customer records</small></div><span class="flow-check">✓</span></div>
-            <div class="flow-step"><span class="flow-num">04</span><div><strong>Close with evidence</strong><small>Traceable completion and receiving documents</small></div><span class="flow-check">✓</span></div>
-          </div>
-        </div>
-       </div>
-     </article>
-     <div class="benefit-grid reveal">
-       <div class="benefit-card"><span class="benefit-number">01 / TIME</span><h3>Stop preparing the same thing twice</h3><p>Carry information forward through the workflow instead of rebuilding documents at every step.</p></div>
-       <div class="benefit-card"><span class="benefit-number">02 / CONTROL</span><h3>Make the right steps unavoidable</h3><p>Approvals, supporting evidence and controlled issue records become part of the normal process.</p></div>
-       <div class="benefit-card"><span class="benefit-number">03 / VISIBILITY</span><h3>Know what needs your attention</h3><p>See the status of commercial work without assembling updates from scattered chats and spreadsheets.</p></div>
-     </div>
-     <div class="future-card mt-9 reveal">
-       <div><div class="eyebrow text-[#63819c] mb-2">What's next</div><h3 class="font-serif-heading text-[29px] font-semibold text-[#213758] leading-tight">More purpose-built products are on the way.</h3><p class="text-[13px] text-[#66788a] mt-2 leading-6">We'll reveal each product individually, as its workflows and availability are ready to present.</p></div>
-       <a href="mailto:intake@coredraftstudio.com?subject=CoreDraft%20Product%20Updates" class="button-dark shrink-0 mt-5 lg:mt-0">Ask about upcoming products <span aria-hidden="true">↗</span></a>
-     </div>
+      <div class="story-preface-side reveal"><span>01 — 05</span><p>Explore each chapter to see the problem, the workflow and its current stage of development. Real interface screenshots are identified explicitly wherever available.</p></div>
     </div>
-   </section>
+    <nav class="story-product-index" aria-label="Jump between products"><div class="site-container story-index-scroll">
+       <a href="#story-quotedesk" data-story-tab="quotedesk"><span>01</span> QuoteDesk</a><a href="#story-procureflow" data-story-tab="procureflow"><span>02</span> ProcureFlow</a><a href="#story-pharmadocs" data-story-tab="pharmadocs"><span>03</span> PharmaDocs</a><a href="#story-peopledesk" data-story-tab="peopledesk"><span>04</span> People &amp; Compliance</a><a href="#story-construction" data-story-tab="construction"><span>05</span> Construction Control</a>
+    </div><div class="story-progress" id="story-progress"></div></nav>
+    <div class="story-chapters">
+      <article class="story-chapter" id="story-quotedesk" data-product="quotedesk" style="--chapter-accent:#8ed9c7" aria-labelledby="story-title-quotedesk">
+   <div class="story-chapter-copy">
+    <div class="story-chapter-top"><span class="story-counter">PRODUCT 01 / 05</span><span class="story-badge live">Live · internal operations</span></div>
+    <div class="story-chapter-text">
+     <div class="story-overline">Commercial operations</div>
+     <h3 id="story-title-quotedesk">QuoteDesk<span class="story-title-dot">.</span></h3>
+     <p class="story-promise">Win the job. Keep the entire commercial story connected.</p>
+     <p class="story-intro">Quotations are only the beginning. The approvals, customer decisions, purchase orders, invoice requests and receiving records that follow should never disappear into email threads and spreadsheets.</p>
+     <div class="story-bestfor">BUILT FOR <span>Industrial suppliers, contractors and service businesses</span></div>
+     <div class="story-outcomes"><p><span aria-hidden="true">↗</span> One continuous quote-to-closure record</p><p><span aria-hidden="true">↗</span> Accountable approvals and controlled paperwork</p><p><span aria-hidden="true">↗</span> Clearer PO conversion and lifecycle visibility</p></div>
+     <div class="story-actions"><a href="products/quotedesk/" class="story-primary">Explore QuoteDesk <span aria-hidden="true">↗</span></a><a href="mailto:intake@coredraftstudio.com?subject=QuoteDesk%20Walkthrough%20Enquiry" class="story-secondary">Request a walkthrough <span aria-hidden="true">→</span></a></div>
+     
+    </div>
+    <div class="story-chapter-bottom"><span>SCROLL TO EXPLORE THE WORKFLOW</span><span aria-hidden="true">↓</span></div>
+   </div>
+   <div class="story-scenes" aria-label="QuoteDesk product story">
+    <figure class="story-scene reveal" data-scene="1">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Commercial operations / Capability 01</div>
+    <span class="story-concept-num" aria-hidden="true">01</span>
+    <div class="story-concept-head">Quotation workspace</div>
+    <div class="story-concept-tags"><span>Structured authoring</span><span>Review and approval</span><span>Controlled issue copies</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">01 / Start with structure</span></span><h4>Turn scattered quote preparation into a governed process.</h4><p>Create and revise quotations with line items, taxes, clear approvals and traceable issue records.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="2">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Commercial operations / Capability 02</div>
+    <span class="story-concept-num" aria-hidden="true">02</span>
+    <div class="story-concept-head">Bid outcome &amp; purchase order</div>
+    <div class="story-concept-tags"><span>Win/loss intelligence</span><span>Purchase order evidence</span><span>Follow-up accountability</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">02 / Know the outcome</span></span><h4>A submitted quotation is not the end of the story.</h4><p>Capture customer acceptance, rejections and reasons. Link the actual purchase order and supporting evidence to the originating quotation.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="3">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Commercial operations / Capability 03</div>
+    <span class="story-concept-num" aria-hidden="true">03</span>
+    <div class="story-concept-head">Invoice &amp; closure</div>
+    <div class="story-concept-tags"><span>Partial invoicing</span><span>Issued commercial records</span><span>Receiving evidence</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">03 / Close with confidence</span></span><h4>From billing to receiving, keep the paper trail in one place.</h4><p>Manage full or partial invoicing and the issue of delivery, service and receiving documents — with a clear record of completion.</p></figcaption>
+   </figure>
+   </div>
+  </article>
+<article class="story-chapter" id="story-procureflow" data-product="procureflow" style="--chapter-accent:#a8c9f0" aria-labelledby="story-title-procureflow">
+   <div class="story-chapter-copy">
+    <div class="story-chapter-top"><span class="story-counter">PRODUCT 02 / 05</span><span class="story-badge testing">In browser testing</span></div>
+    <div class="story-chapter-text">
+     <div class="story-overline">Procurement control</div>
+     <h3 id="story-title-procureflow">ProcureFlow<span class="story-title-dot">.</span></h3>
+     <p class="story-promise">Purchasing without the follow-up maze.</p>
+     <p class="story-intro">Requisitions, quotations and approvals are too important to live in separate chats, shared sheets and someone's memory. ProcureFlow brings purchasing decisions into a process the whole authorized team can see.</p>
+     <div class="story-bestfor">BUILT FOR <span>Purchasing teams, engineering firms and growing SMEs</span></div>
+     <div class="story-outcomes"><p><span aria-hidden="true">↗</span> A clear route from requisition to PO</p><p><span aria-hidden="true">↗</span> Less uncertainty about who must approve next</p><p><span aria-hidden="true">↗</span> Better visibility into procurement bottlenecks</p></div>
+     <div class="story-actions"><a href="mailto:intake@coredraftstudio.com?subject=ProcureFlow%20Enquiry" class="story-primary">Discuss ProcureFlow <span aria-hidden="true">↗</span></a><a href="mailto:intake@coredraftstudio.com?subject=ProcureFlow%20Enquiry" class="story-secondary">Ask about testing <span aria-hidden="true">→</span></a></div>
+     
+    </div>
+    <div class="story-chapter-bottom"><span>SCROLL TO EXPLORE THE WORKFLOW</span><span aria-hidden="true">↓</span></div>
+   </div>
+   <div class="story-scenes" aria-label="ProcureFlow product story">
+    <figure class="story-scene reveal" data-scene="1">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Procurement control / Capability 01</div>
+    <span class="story-concept-num" aria-hidden="true">01</span>
+    <div class="story-concept-head">Requisition authoring</div>
+    <div class="story-concept-tags"><span>Request details</span><span>Team submissions</span><span>Reviewable records</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">01 / Request</span></span><h4>Every purchase starts with a request people can understand.</h4><p>Capture requirements, quantities, supporting information and intended spend within a structured requisition.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="2">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Procurement control / Capability 02</div>
+    <span class="story-concept-num" aria-hidden="true">02</span>
+    <div class="story-concept-head">Approval queue</div>
+    <div class="story-concept-tags"><span>Assigned decisions</span><span>Role-aware queues</span><span>Visible status changes</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">02 / Decide</span></span><h4>Approvals should move through people, not inboxes.</h4><p>Route submitted requests through the appropriate reviewer and approval steps, with a clear decision history.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="3">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Procurement control / Capability 03</div>
+    <span class="story-concept-num" aria-hidden="true">03</span>
+    <div class="story-concept-head">RFQ to order lifecycle</div>
+    <div class="story-concept-tags"><span>Supplier comparison</span><span>PO preparation</span><span>Invoice handoff</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">03 / Buy</span></span><h4>Keep the supplier decision linked to its origin.</h4><p>Organize RFQs, commercial comparison, purchase orders and invoice coordination within a connected procurement journey.</p></figcaption>
+   </figure>
+   </div>
+  </article>
+<article class="story-chapter" id="story-pharmadocs" data-product="pharmadocs" style="--chapter-accent:#cfbafe" aria-labelledby="story-title-pharmadocs">
+   <div class="story-chapter-copy">
+    <div class="story-chapter-top"><span class="story-counter">PRODUCT 03 / 05</span><span class="story-badge develop">In development · validation pending</span></div>
+    <div class="story-chapter-text">
+     <div class="story-overline">Pharmaceutical quality</div>
+     <h3 id="story-title-pharmadocs">PharmaDocs<span class="story-title-dot">.</span></h3>
+     <p class="story-promise">Quality workflows deserve more than disconnected files.</p>
+     <p class="story-intro">Regulated quality work spans documents, training, investigations, corrective actions and audits. PharmaDocs is being developed to bring these related activities into a controlled, reviewable digital environment.</p>
+     <div class="story-bestfor">BUILT FOR <span>Pharmaceutical quality assurance and regulated operations</span></div>
+     <div class="story-outcomes"><p><span aria-hidden="true">↗</span> Connected document and quality-event workflows</p><p><span aria-hidden="true">↗</span> Clear roles, review decisions and traceability</p><p><span aria-hidden="true">↗</span> Built with regulated-use expectations in mind</p></div>
+     <div class="story-actions"><a href="mailto:intake@coredraftstudio.com?subject=PharmaDocs%20eQMS%20Enquiry" class="story-primary">Discuss PharmaDocs <span aria-hidden="true">↗</span></a><a href="mailto:intake@coredraftstudio.com?subject=PharmaDocs%20eQMS%20Enquiry" class="story-secondary">Enquire about preview <span aria-hidden="true">→</span></a></div>
+     <p class="story-caveat">Under development. The system is not represented as GxP-validated or cleared for regulated production use.</p>
+    </div>
+    <div class="story-chapter-bottom"><span>SCROLL TO EXPLORE THE WORKFLOW</span><span aria-hidden="true">↓</span></div>
+   </div>
+   <div class="story-scenes" aria-label="PharmaDocs product story">
+    <figure class="story-scene reveal" data-scene="1">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Pharmaceutical quality / Capability 01</div>
+    <span class="story-concept-num" aria-hidden="true">01</span>
+    <div class="story-concept-head">Document lifecycle</div>
+    <div class="story-concept-tags"><span>Author and review</span><span>Effective records</span><span>Training links</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">01 / Document</span></span><h4>Controlled documents, from draft to effective use.</h4><p>Create, revise, review and distribute documents with controlled states, annotations and associated training workflows.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="2">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Pharmaceutical quality / Capability 02</div>
+    <span class="story-concept-num" aria-hidden="true">02</span>
+    <div class="story-concept-head">Quality event workspace</div>
+    <div class="story-concept-tags"><span>Investigations</span><span>CAPA dependencies</span><span>Effectiveness review</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">02 / Investigate</span></span><h4>Give every quality event a connected path to resolution.</h4><p>Bring deviations, OOS/OOT, change controls and CAPA into structured investigations with accountable reviews and effectiveness follow-up.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="3">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">Pharmaceutical quality / Capability 03</div>
+    <span class="story-concept-num" aria-hidden="true">03</span>
+    <div class="story-concept-head">Quality oversight</div>
+    <div class="story-concept-tags"><span>Audit &amp; suppliers</span><span>Reporting</span><span>Traceable decisions</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">03 / Oversee</span></span><h4>Make quality intelligence part of the daily system.</h4><p>Connect audits, supplier quality, evidence and management reporting so reviewers can understand both individual events and patterns.</p></figcaption>
+   </figure>
+   </div>
+  </article>
+<article class="story-chapter" id="story-peopledesk" data-product="peopledesk" style="--chapter-accent:#e4b8a5" aria-labelledby="story-title-peopledesk">
+   <div class="story-chapter-copy">
+    <div class="story-chapter-top"><span class="story-counter">PRODUCT 04 / 05</span><span class="story-badge internal">Internal capability · evolving</span></div>
+    <div class="story-chapter-text">
+     <div class="story-overline">HR, payroll &amp; governance</div>
+     <h3 id="story-title-peopledesk">People &amp; Compliance<span class="story-title-dot">.</span></h3>
+     <p class="story-promise">Pay people accurately. Keep the controls visible.</p>
+     <p class="story-intro">Payroll and statutory administration become fragile when salary components, approvals and company records are managed separately. This developing capability focuses on reliable payroll preparation and a clearer owner view of obligations.</p>
+     <div class="story-bestfor">BUILT FOR <span>Owner-managed businesses and lean administration teams</span></div>
+     <div class="story-outcomes"><p><span aria-hidden="true">↗</span> Structured salary components and payroll periods</p><p><span aria-hidden="true">↗</span> Separation of master data and payroll records</p><p><span aria-hidden="true">↗</span> Visibility into administrative obligations</p></div>
+     <div class="story-actions"><a href="mailto:intake@coredraftstudio.com?subject=People%20and%20Compliance%20System%20Enquiry" class="story-primary">Ask about this capability <span aria-hidden="true">↗</span></a><a href="mailto:intake@coredraftstudio.com?subject=People%20and%20Compliance%20System%20Enquiry" class="story-secondary">Discuss a workflow <span aria-hidden="true">→</span></a></div>
+     <p class="story-caveat">Currently an internal capability under development, not a separate publicly available subscription.</p>
+    </div>
+    <div class="story-chapter-bottom"><span>SCROLL TO EXPLORE THE WORKFLOW</span><span aria-hidden="true">↓</span></div>
+   </div>
+   <div class="story-scenes" aria-label="People &amp; Compliance product story">
+    <figure class="story-scene reveal" data-scene="1">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">HR, payroll &amp; governance / Capability 01</div>
+    <span class="story-concept-num" aria-hidden="true">01</span>
+    <div class="story-concept-head">People &amp; pay setup</div>
+    <div class="story-concept-tags"><span>Employee records</span><span>Salary components</span><span>Master-data controls</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">01 / Configure</span></span><h4>One controlled record for people and pay structure.</h4><p>Maintain employee information and salary components with deliberate controls over master-data changes.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="2">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">HR, payroll &amp; governance / Capability 02</div>
+    <span class="story-concept-num" aria-hidden="true">02</span>
+    <div class="story-concept-head">Payroll review</div>
+    <div class="story-concept-tags"><span>Period preparation</span><span>Review states</span><span>Component changes</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">02 / Process</span></span><h4>Prepare payroll with a more reliable trail.</h4><p>Make payroll calculation and review more consistent, with attention to revisions and the difference between draft and locked periods.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="3">
+    <div class="story-media"><div class="story-concept" aria-label="Editorial feature illustration, not a software screenshot">
+    <div class="story-concept-inner"><div class="story-concept-type">HR, payroll &amp; governance / Capability 03</div>
+    <span class="story-concept-num" aria-hidden="true">03</span>
+    <div class="story-concept-head">Company compliance</div>
+    <div class="story-concept-tags"><span>Company information</span><span>Obligation tracking</span><span>Evidence of action</span></div></div>
+    <div class="story-concept-disclaimer">Editorial illustration · Verified interface capture pending</div>
+   </div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">03 / Oversee</span></span><h4>Give owners a clearer picture of outstanding administration.</h4><p>Bring company records and compliance tasks into a visible, trackable workspace. Statutory filings and remittances remain subject to separate verification.</p></figcaption>
+   </figure>
+   </div>
+  </article>
+<article class="story-chapter" id="story-construction" data-product="construction" style="--chapter-accent:#efcc91" aria-labelledby="story-title-construction">
+   <div class="story-chapter-copy">
+    <div class="story-chapter-top"><span class="story-counter">PRODUCT 05 / 05</span><span class="story-badge develop">Development preview</span></div>
+    <div class="story-chapter-text">
+     <div class="story-overline">Project &amp; construction operations</div>
+     <h3 id="story-title-construction">Construction Control<span class="story-title-dot">.</span></h3>
+     <p class="story-promise">See the project. Understand the numbers behind it.</p>
+     <p class="story-intro">Projects don't fail inside spreadsheets; they fail when site progress, costs, supplier obligations and documentation drift apart. Construction Control brings those operational threads into a more visible workflow.</p>
+     <div class="story-bestfor">BUILT FOR <span>Civil contractors, project owners and field-execution teams</span></div>
+     <div class="story-outcomes"><p><span aria-hidden="true">↗</span> More transparent project cost and finance workflows</p><p><span aria-hidden="true">↗</span> Traceable client billing and receivables</p><p><span aria-hidden="true">↗</span> Connected evidence and review steps</p></div>
+     <div class="story-actions"><a href="mailto:intake@coredraftstudio.com?subject=Construction%20Control%20Preview%20Enquiry" class="story-primary">Discuss Construction Control <span aria-hidden="true">↗</span></a><a href="mailto:intake@coredraftstudio.com?subject=Construction%20Control%20Preview%20Enquiry" class="story-secondary">Ask about development <span aria-hidden="true">→</span></a></div>
+     <p class="story-caveat">Actual screenshots from offline development previews, using fictional records. They do not establish that production integrations are live.</p>
+    </div>
+    <div class="story-chapter-bottom"><span>SCROLL TO EXPLORE THE WORKFLOW</span><span aria-hidden="true">↓</span></div>
+   </div>
+   <div class="story-scenes" aria-label="Construction Control product story">
+    <figure class="story-scene reveal" data-scene="1">
+    <div class="story-media"><div class="story-real-screen"><div class="story-screen-toolbar"><div class="story-window-dots" aria-hidden="true"><span></span><span></span><span></span></div><span>REAL DEVELOPMENT SCREENSHOT</span><span class="story-window-tag">Preview</span></div><img src="Assets/product-screens/construction-expense-preview.png" width="1440" height="1050" loading="lazy" decoding="async" alt="Actual Construction Control development screenshot showing employee expense claims, review workflow and project cost center fields"></div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">01 / Track expenditure</span></span><h4>From expense claims to accountable review.</h4><p>A real development-workspace capture showing how project expenses can move through documented verification and approval stages.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="2">
+    <div class="story-media"><div class="story-real-screen"><div class="story-screen-toolbar"><div class="story-window-dots" aria-hidden="true"><span></span><span></span><span></span></div><span>REAL DEVELOPMENT SCREENSHOT</span><span class="story-window-tag">Preview</span></div><img src="Assets/product-screens/construction-billing-preview.png" width="1440" height="1050" loading="lazy" decoding="async" alt="Actual Construction Control development screenshot showing RA billing, certificate deductions and accounts receivable aging"></div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">02 / Follow commercial exposure</span></span><h4>Understand what is billed — and what is still outstanding.</h4><p>A real development screenshot of running-account billing, receivable aging and deductions such as retention and recoveries.</p></figcaption>
+   </figure>
+<figure class="story-scene reveal" data-scene="3">
+    <div class="story-media"><div class="story-real-screen"><div class="story-screen-toolbar"><div class="story-window-dots" aria-hidden="true"><span></span><span></span><span></span></div><span>REAL DEVELOPMENT SCREENSHOT</span><span class="story-window-tag">Preview</span></div><img src="Assets/product-screens/construction-evidence-preview.png" width="1440" height="1050" loading="lazy" decoding="async" alt="Actual Construction Control offline development screenshot of evidence upload lifecycle and independent review status"></div></div>
+    <figcaption class="story-scene-caption"><span class="story-scene-step"><span class="eyebrow">03 / Keep evidence connected</span></span><h4>Follow the evidence trail before records are approved.</h4><p>An actual offline design-review capture of the evidence lifecycle, including integrity and independent review concepts.</p></figcaption>
+   </figure>
+   </div>
+  </article>
+    </div>
+    <div class="site-container story-outro reveal">
+      <div><span class="eyebrow">The portfolio evolves</span><h3>Purpose-built software.<br><em>Introduced when ready.</em></h3><p>We're developing these systems with a practical bias toward business outcomes. Public availability, demonstrations and rollout arrangements vary by product.</p></div>
+      <a href="mailto:intake@coredraftstudio.com?subject=CoreDraft%20Products%20Enquiry">Ask about the product portfolio <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
 
    <section id="approach" class="section-pad philosophy" aria-labelledby="approach-heading">
      <div class="site-container">
@@ -399,6 +713,27 @@
     var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:.08});
     els.forEach(function(el){observer.observe(el);});
    })();
+  </script>
+
+  <script>
+    (function(){
+      var chapters=Array.prototype.slice.call(document.querySelectorAll('.story-chapter'));
+      var links=Array.prototype.slice.call(document.querySelectorAll('[data-story-tab]'));
+      var progress=document.getElementById('story-progress');
+      var container=document.querySelector('.story-section');
+      if(!chapters.length)return;
+      function onScroll(){
+        var position=window.innerHeight*.37;
+        var current=chapters[0].dataset.product;
+        for(var i=0;i<chapters.length;i++)if(chapters[i].getBoundingClientRect().top<=position)current=chapters[i].dataset.product;
+        links.forEach(function(link){var active=link.dataset.storyTab===current;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')});
+        if(progress&&container){var rect=container.getBoundingClientRect();var range=Math.max(1,container.offsetHeight-window.innerHeight);var part=Math.max(0,Math.min(1,-rect.top/range));progress.style.width=(part*100).toFixed(2)+'%';}
+      }
+      var scheduled=false;
+      window.addEventListener('scroll',function(){if(!scheduled){scheduled=true;requestAnimationFrame(function(){onScroll();scheduled=false})}},{passive:true});
+      window.addEventListener('resize',onScroll,{passive:true});
+      onScroll();
+    })();
   </script>
  </body>
 </html>
