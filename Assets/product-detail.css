@@ -206,3 +206,13 @@ a:focus-visible,button:focus-visible{outline:3px solid #4ec4bd;outline-offset:4p
  .hero-glow,.hero-preview,.shot,.shot-frame,.browser{transform:none!important}
  .page-marquee>div{animation:none!important}
 }
+
+/* Product-detail navigation now includes problem-first discovery. Collapse earlier for mid-size displays. */
+@media(max-width:1100px){
+ .site-nav .menu-toggle{display:inline-flex}
+ .site-nav .nav-items{display:none;position:absolute;top:76px;left:0;right:0;gap:0;background:#fff;border-bottom:1px solid #dfe6ed;box-shadow:0 23px 37px #21344c17;padding:11px 30px 22px;flex-direction:column;align-items:stretch}
+ .site-nav .nav-items.open{display:flex}
+ .site-nav .nav-items a{padding:12px 8px}
+ .site-nav .nav-items .nav-cta{margin-top:8px;justify-content:space-between;padding:13px 17px}
+}
+@media(max-width:660px){.site-nav .nav-items{top:67px}}
