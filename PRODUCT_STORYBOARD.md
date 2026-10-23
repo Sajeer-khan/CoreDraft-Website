@@ -45,3 +45,26 @@ Three redacted historical captures of the existing business-operations UI are in
 ## Final QA
 
 Verify full page at 1440px desktop and 390px mobile; refresh with JavaScript disabled; keyboard traversal; prefers-reduced-motion; network offline to ensure native fallback; and absence of private identifiers within any screenshot before public promotion.
+
+## Dedicated product pages — October 2026
+
+Public landing pages:
+- `/products/`: Product directory
+- `/products/quotedesk/`: Commercial operations (9 user-facing capability groups)
+- `/products/procureflow/`: Procurement (10 capability groups)
+- `/products/pharmadocs/`: Pharmaceutical quality eQMS (10 capability groups)
+- `/products/people-compliance/`: People and compliance (10 capability groups)
+- `/products/construction-control/`: Construction operations and finance (10 capability groups)
+
+All five product detail pages use one shared accessible CSS/JS foundation and show three sanitized interface screenshots each, consistent with the 15 actual published screenshot assets. The screenshots are kept at a limited public-safe level of detail. Module inventories are capability descriptions, not promises of independently verified live functionality. QuoteDesk and Construction Control are described as in active business use; the other three are available for on-demand customization discussions.
+
+### Intellectual-property disclosure policy
+- Public pages **can communicate product ideas and UI patterns**, and screenshots can be copied by visitors; there is no technical way to make a public visual completely AI-unreproducible.
+- Do not publish source code, protected architecture, SQL/schema, API specifications, credential information, exact approval matrices, price algorithms, data fixtures or operational playbooks.
+- Do not claim public screenshot watermark overlays are a security boundary; visitors can still inspect browser-delivered media.
+- Retain full workflows and configuration specifications for private demonstrations, with confidentiality terms where appropriate.
+- Images should contain fictional or redacted data and omit identifiable customers and internal financial detail.
+- Product capability descriptions are intended for scoping; applicable regulated validation remains a separate obligation.
+
+### Links and deployment
+All homepage primary product CTAs navigate to dedicated product pages. Separate secondary CTAs remain available for enquiries. The product directory links all five products. The sitemap includes each page. This is a static Cloudflare Pages website (framework: none; root output directory), with progressive GSAP animation and reduced-motion/mobile fallbacks. Verify the production deployment after merging the release.
