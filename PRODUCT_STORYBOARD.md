@@ -1,58 +1,45 @@
-# CoreDraft Studio — SaaS product storytelling register
+# CoreDraft Studio — Public Product Story and Screenshot Register
 
-The homepage is SaaS-first. It tells one product story at a time. Existing documentation and engineering services stay available below the portfolio.
+## Marketing positions
 
-## Product maturity statements (public copy)
+- **QuoteDesk:** Active in business operations. On-demand adaptation available.
+- **Construction Control:** Active in business operations. Implementation tailored to each organization.
+- **ProcureFlow:** On-demand customization.
+- **PharmaDocs:** On-demand customization. Regulated production usage requires project-specific validation.
+- **People & Compliance:** On-demand customization.
 
-| Chapter | Public label | Important qualification |
-| --- | --- | --- |
-| QuoteDesk | Live — internal operations | Deployed for internal commercial operations. No claim of general public self-service subscriptions. |
-| ProcureFlow | In browser testing | UAT has not demonstrated full production readiness. |
-| PharmaDocs | In development — validation pending | No claim of GxP validation or regulated production suitability. |
-| People & Compliance | Internal capability — evolving | Not marketed as a separate generally available subscription. |
-| Construction Control | Development preview | Authentic screenshots of offline, fictional preview workflows, not a proof of live integration. |
+No client names appear in marketing copy. No invented subscriber counts, performance statistics, endorsements, or independent validation claims.
 
-## Screenshot storyboard and asset register
+## Visuals already in the website repository
 
-The front page is prepared for three illustrated steps per product. **Never label drawings or marketing mockups as actual product screenshots.**
+The Construction Control chapter contains three authentic UI screenshots from its separate source repository, captured with fictional sample records:
+- `Assets/product-screens/construction-expense-preview.png`
+- `Assets/product-screens/construction-billing-preview.png`
+- `Assets/product-screens/construction-evidence-preview.png`
 
-### 01 — QuoteDesk (real captures to be supplied)
-1. Quotation editor, version controls and approval handoff.
-2. Customer outcome and purchase order record.
-3. Invoice, controlled print packet or customer receiving closure.
+## New genuine screenshot pack
 
-### 02 — ProcureFlow (real captures to be supplied)
-1. Requisition authoring.
-2. Independent approver queue.
-3. RFQ, supplier comparison or purchase order workspace.
+The repository homepage and motion engine support the following assets. They are supplied as a separate ZIP for upload into the repository's `Assets/product-screens/` directory.
 
-### 03 — PharmaDocs (real captures to be supplied)
-1. Controlled document review with annotations.
-2. Deviation/CAPA or OOS/OOT investigation.
-3. Audit trail, QA intelligence or management report.
+- QuoteDesk: `quotedesk-editor.webp`, `quotedesk-workflow.webp`, `quotedesk-review.webp`
+- ProcureFlow: `procureflow-overview.webp`, `procureflow-requisitions.webp`, `procureflow-pipeline.webp`
+- PharmaDocs: `pharmadocs-overview.webp`, `pharmadocs-authoring.webp`, `pharmadocs-governance.webp`
 
-### 04 — People & Compliance (real captures to be supplied)
-1. Company/employee master records with no sensitive personal data.
-2. Payroll period with synthetic pay components.
-3. Company obligations, register or compliance overview.
+The historical sample-data captures came from existing application source previews and user Library screenshots; they are not freshly authenticated production captures. The three ProcureFlow files are crops of the same local dashboard screenshot and do not represent three separate product screens. QuoteDesk screenshots are cropped / redacted to remove company, staff and sample customer identification. All are optimized WebP assets.
 
-### 05 — Construction Control (captured and included)
-1. `Assets/product-screens/construction-expense-preview.png` — expense controls (development preview).
-2. `Assets/product-screens/construction-billing-preview.png` — RA billing and receivables (offline preview).
-3. `Assets/product-screens/construction-evidence-preview.png` — evidence workflow (offline design review).
+**Important:** Screenshot files in the separate ZIP have not been committed to GitHub because the available GitHub connector cannot transfer local binary files. The motion-enabled homepage uses a graceful editorial fallback for any missing asset, without broken images or misleading claims. Upload the supplied assets to the corresponding repository paths to activate real screenshots automatically on the next Cloudflare Git deployment.
 
-All three assets were copied from genuine UI preview images in the private construction-control-erp development repository. They contain fictional sample data. They are now part of this public website source so they can be served locally on Cloudflare Pages.
+## People & Compliance
 
-## Production capture protocol
+No suitable sanitized standalone image was located. Its chapter uses a dedicated animated workflow composition rather than a misleading screenshot from a different product. Capture three synthetic-data screens from the actual People & Compliance module before presenting them as product screenshots.
 
-- Capture desktop viewport approximately 1440 px wide. Include the useful application interface and preserve the context of the selected module.
-- If desired, add mobile captures for selected chapters. Use real rendered interface screens, not reconstructed replicas.
-- Use a demo/fictional tenant or sanitize customer names, employee names, rates, IDs, phone numbers, email addresses, uploaded documents and commercially sensitive information.
-- Validate that any screenshot's label, release version and actual product readiness still match the published wording.
-- Prefer optimized PNG/WebP assets kept at `Assets/product-screens/` in this repository; do not link directly to private apps or private repository assets.
-- Replace the matching `.story-concept` element in each `.story-scene` with a `.story-real-screen` frame containing the capture, preserving the `figcaption` and accessible alt text.
-- Verify aspect ratios, responsive cropping, keyboard behavior and small-screen performance before the next public release.
+## Scrollytelling behaviors
 
-## Release approach
+- Desktop: animated hero, background orbs and marshalling ticker, sticky product copy, scrubbed 3D screenshot movement, depth transitions, reveal effects, scene flourishes, chapter progress, focus rail.
+- Mobile: reduced-cost stacked animations that avoid excessive pinning, clipping and motion-induced slowdowns.
+- Accessibility: prefers-reduced-motion disables continuous and scrubbed transforms. Screen images have alt descriptions and product navigation remains keyboard accessible.
+- Resilience: GSAP + ScrollTrigger loaded from CDN when available. Native requestAnimationFrame scroll choreography works as fallback if CDN is blocked.
 
-The page uses native HTML/CSS and lightweight progressive-enhancement JavaScript; no build command is necessary. Push to `main` only after reviewing public marketing claims and page behavior. QuoteDesk's existing `/products/quotedesk/` page and the original `/oem-qualification/` services page are preserved.
+## Final QA
+
+Verify full page at 1440px desktop and 390px mobile; refresh with JavaScript disabled; keyboard traversal; prefers-reduced-motion; network offline to ensure native fallback; and absence of private identifiers within any screenshot before public promotion.
