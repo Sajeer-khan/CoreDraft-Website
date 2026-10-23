@@ -3,10 +3,16 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoreDraft Studio | Equipment Qualification &amp; Engineering Documentation Consultancy</title>
+  <title>CoreDraft Studio | Business Software That Removes the Busywork</title>
+  <meta name="description" content="CoreDraft Studio builds practical SaaS products for leaner business operations, stronger controls, and owner-level visibility. Discover QuoteDesk, our first featured product.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CoreDraft Studio — Run lean. See everything. Move forward.">
+  <meta property="og:description" content="Focused business software that removes busywork and gives owners more visibility. Explore QuoteDesk.">
+  <meta property="og:url" content="https://coredraftstudio.com/">
+  <meta property="og:image" content="https://coredraftstudio.com/Assets/Logo.png">
+  <link rel="canonical" href="https://coredraftstudio.com/">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="icon" href="Assets/Logo.png" sizes="any">
@@ -39,249 +45,360 @@
     .service-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(33,55,88,0.08); }
     /* Fix for fixed navbar overlapping section anchors */
     section[id] { scroll-margin-top: 90px; }
+
+  /* SaaS-first identity: retaining CoreDraft's navy, logo and editorial type */
+  :root{--cd-navy:#213758;--cd-deep:#101e32;--cd-mist:#f3f6f9;--cd-accent:#8fe8d9;--cd-ink:#111e2b}
+  *{box-sizing:border-box}
+  body{background:#fff;color:var(--cd-ink);-webkit-font-smoothing:antialiased}
+  ::selection{background:#a9ebe0;color:#102134}
+  a:focus-visible,button:focus-visible{outline:3px solid #3aabbb;outline-offset:4px}
+  .site-container{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+  .eyebrow{font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:10px;line-height:1.5}
+  .display-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:-.025em;line-height:1.02}
+  .section-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:-.03em;line-height:1.04;font-size:clamp(2.6rem,5vw,4.35rem)}
+  .section-pad{padding:100px 0}
+  .cd-nav{background:rgba(255,255,255,.96);backdrop-filter:blur(18px);border-bottom:1px solid #e4e9ed}
+  .cd-nav-link{font-size:13px;font-weight:550;color:#526071;transition:color .22s}
+  .cd-nav-link:hover{color:#213758}
+  .button-light,.button-dark,.button-ghost{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:49px;padding:13px 20px;font-size:13px;font-weight:650;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s}
+  .button-light{background:#fff;color:#213758}
+  .button-dark{background:#213758;color:#fff}
+  .button-ghost{color:#fff;border:1px solid rgba(255,255,255,.34)}
+  .button-light:hover,.button-dark:hover,.button-ghost:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+  .button-dark:hover{background:#14263f}
+  .button-ghost:hover{background:rgba(255,255,255,.09)}
+  .hero-saas{position:relative;padding-top:150px;padding-bottom:105px;background:radial-gradient(ellipse at 86% 20%,#344f76 0%,transparent 37%),linear-gradient(135deg,#14253d 0%,#213758 58%,#172842 100%);color:#fff;overflow:hidden}
+  .hero-saas:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:66px 66px;mask-image:linear-gradient(to right,transparent 18%,#000 100%);pointer-events:none}
+  .hero-saas:after{content:"";position:absolute;inset:auto -10% -38% auto;width:750px;height:750px;border:1px solid rgba(255,255,255,.08);border-radius:50%;pointer-events:none}
+  .hero-layout{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:48px;align-items:center}
+  .hero-heading{font-size:clamp(4rem,6.4vw,6.45rem);max-width:800px}
+  .hero-heading em{color:var(--cd-accent);font-weight:500}
+  .hero-intro{max-width:540px;color:#becddd;font-size:16px;line-height:1.82}
+  .hero-rule{height:1px;background:rgba(255,255,255,.16);margin-top:44px;margin-bottom:24px}
+  .hero-points{display:flex;flex-wrap:wrap;gap:14px 26px;color:#e0e8f1;font-size:12px}
+  .hero-points span:before{content:"";display:inline-block;vertical-align:middle;width:6px;height:6px;border-radius:50%;background:#8fe8d9;margin-right:10px}
+  .dashboard-wrap{position:relative}
+  .dashboard-wrap:before{content:"";position:absolute;inset:6% -5% -6%;border:1px solid rgba(255,255,255,.16);transform:rotate(4deg);pointer-events:none}
+  .mock-panel{position:relative;background:#f9fbfd;color:#193047;border-radius:13px;box-shadow:0 34px 80px rgba(0,0,0,.25);overflow:hidden;border:1px solid rgba(255,255,255,.6)}
+  .mock-top{display:flex;align-items:center;justify-content:space-between;padding:15px 17px;border-bottom:1px solid #e7edf2;background:#fff}
+  .mock-brand{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:750}
+  .mock-logo{width:23px;height:23px;background:#213758;color:white;border-radius:6px;display:grid;place-items:center;font-family:Georgia,serif}
+  .mock-dots{display:flex;gap:5px}
+  .mock-dots span{width:6px;height:6px;border-radius:50%;background:#d2dbe4}
+  .mock-inner{padding:22px}
+  .mock-suptitle{font-size:9px;color:#7c8b9c;letter-spacing:.16em;font-weight:750}
+  .mock-heading{font-size:20px;letter-spacing:-.03em;font-weight:720;margin:5px 0 16px}
+  .mock-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+  .mock-stat{background:#fff;border:1px solid #e9eef2;border-radius:9px;padding:12px}
+  .mock-stat small{display:block;font-size:9px;color:#8391a2;margin-bottom:7px}
+  .mock-stat strong{font-size:19px;letter-spacing:-.05em}
+  .mock-stat i{display:block;width:33px;height:3px;background:#8bd7c6;margin-top:10px;border-radius:5px}
+  .mock-line{margin-top:15px;border:1px solid #e8edf2;border-radius:9px;background:#fff;padding:12px}
+  .mock-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eef1f4}
+  .mock-row:last-child{border-bottom:0}
+  .mock-row strong{display:block;font-size:11px;margin-bottom:4px}
+  .mock-row small{color:#8190a1;font-size:9px}
+  .mini-status{font-size:9px;font-weight:700;padding:5px 8px;border-radius:5px;background:#eaf8f2;color:#23745d;white-space:nowrap}
+  .mini-status.amber{background:#fff5e7;color:#9d6615}
+  .mock-note{font-size:10px;color:#9caab8;text-align:right;margin-top:12px}
+  .trust-band{background:#eef3f6;border-bottom:1px solid #dfe7ec}
+  .trust-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:24px;align-items:center;padding:25px 0}
+  .trust-grid>p{font-size:11px;color:#617387;font-weight:650;letter-spacing:.13em;text-transform:uppercase}
+  .trust-item{font-size:12px;font-weight:650;color:#3a5068;border-left:1px solid #cfdae4;padding-left:24px}
+  .product-card{position:relative;background:#fff;border:1px solid #dfe5eb;box-shadow:0 28px 65px rgba(21,41,64,.06);overflow:hidden;display:grid;grid-template-columns:.94fr 1.06fr}
+  .product-copy{padding:clamp(30px,5vw,65px)}
+  .product-illustration{background:radial-gradient(ellipse at 72% 7%,#2f5176,#1b304f 58%,#14253c);padding:50px 38px;position:relative;display:flex;align-items:center;min-height:500px;overflow:hidden}
+  .product-illustration:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:36px 36px}
+  .product-flow{position:relative;z-index:2;background:#fff;width:100%;border:1px solid #dfe6ec;box-shadow:0 24px 55px rgba(5,20,40,.24);border-radius:12px;overflow:hidden}
+  .product-flow-header{padding:18px 21px;border-bottom:1px solid #e8edf3;display:flex;justify-content:space-between;align-items:center;gap:12px;color:#20364c;font-size:11px;font-weight:700}
+  .flow-steps{padding:21px 23px}
+  .flow-step{display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid #eef2f5;color:#2d4156;font-size:12px}
+  .flow-step:last-child{border-bottom:none}
+  .flow-num{width:29px;height:29px;flex:0 0 29px;border-radius:8px;background:#ecf3f8;display:grid;place-items:center;color:#213758;font-size:11px;font-weight:750}
+  .flow-step strong{display:block;font-size:12px}
+  .flow-step small{font-size:10px;color:#7a899b}
+  .flow-check{margin-left:auto;color:#28876b;font-weight:800}
+  .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+  .benefit-card{background:#f5f8fa;border:1px solid #e5ebef;padding:28px}
+  .benefit-number{display:inline-block;color:#7b91a9;font-size:11px;font-weight:700;letter-spacing:.14em}
+  .benefit-card h3{font-weight:700;font-size:16px;color:#213758;margin:20px 0 9px}
+  .benefit-card p{font-size:13px;line-height:1.75;color:#617080}
+  .future-card{border:1px solid #dce4ea;background:#f5f8fa;padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:26px}
+  .philosophy{background:#f4f7fa}
+  .philosophy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .philosophy-card{padding:29px;border:1px solid #dce4e9;background:#fff}
+  .philosophy-card .glyph{font-family:Georgia,serif;font-size:25px;color:#5385a2}
+  .philosophy-card h3{font-size:15px;font-weight:700;color:#213758;margin:23px 0 9px}
+  .philosophy-card p{font-size:12px;line-height:1.75;color:#627284}
+  .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+  .step-num{font-family:Georgia,serif;color:#7894ae;font-size:30px;padding-bottom:23px;border-bottom:1px solid #d5dee5}
+  .steps-grid h3{font-size:16px;color:#213758;font-weight:700;margin:22px 0 10px}
+  .steps-grid p{font-size:13px;color:#677789;line-height:1.7}
+  .services-list{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #dfe6eb;border-left:1px solid #dfe6eb}
+  .services-list article{padding:31px 33px;border-right:1px solid #dfe6eb;border-bottom:1px solid #dfe6eb;transition:background .2s}
+  .services-list article:hover{background:#f6f9fa}
+  .services-list h3{font-weight:700;font-size:16px;color:#213758;margin-bottom:10px}
+  .services-list p{font-size:13px;line-height:1.7;color:#6d7987}
+  .contact-pane{background:radial-gradient(ellipse at 15% 90%,#294769,#162a44 60%,#13253d);color:#fff;overflow:hidden}
+  .contact-pane .section-title{color:white}
+  .footer-link{color:#a8b7c8;font-size:12px;transition:color .2s}
+  .footer-link:hover{color:#fff}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+  .reveal.visible{opacity:1;transform:none}
+  .mobile-menu{display:none}
+  @media(max-width:1020px){
+    .hero-layout{grid-template-columns:1fr;gap:55px}
+    .hero-heading{max-width:850px}
+    .dashboard-wrap{max-width:650px}
+    .trust-grid{grid-template-columns:repeat(2,1fr)}
+    .trust-grid>p{grid-column:1/-1}
+    .product-card{grid-template-columns:1fr}
+    .product-illustration{min-height:330px}
+    .philosophy-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:767px){
+    .section-pad{padding:69px 0}
+    .cd-desktop-nav,.cd-desktop-cta{display:none!important}
+    .mobile-menu-button{display:inline-flex!important}
+    .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;padding:16px 22px 22px;background:white;border-bottom:1px solid #e5ebef;box-shadow:0 16px 22px rgba(20,40,60,.09)}
+    .mobile-menu.open{display:grid;gap:6px}
+    .mobile-menu a{font-size:14px;padding:12px 6px;font-weight:600;color:#213758}
+    .hero-saas{padding:113px 0 76px}
+    .hero-heading{font-size:clamp(3.4rem,13vw,5.5rem)}
+    .mock-inner{padding:14px}
+    .mock-stat{padding:9px}
+    .mock-stat strong{font-size:15px}
+    .mock-heading{font-size:18px}
+    .hero-layout{gap:45px}
+    .trust-grid{grid-template-columns:1fr;gap:15px}
+    .trust-item{padding-left:13px}
+    .product-copy{padding:31px 24px}
+    .product-illustration{padding:24px;min-height:360px}
+    .benefit-grid,.steps-grid{grid-template-columns:1fr}
+    .philosophy-grid{grid-template-columns:1fr}
+    .future-card{padding:28px;display:block}
+    .services-list{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition-duration:.01ms!important}
+    .reveal,.fade-up{opacity:1!important;transform:none!important}
+  }
+
   </style>
   <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}.mobile-menu{display:grid!important}</style></noscript>
  </head>
- <body class="font-sans-body bg-white text-[#111111] overflow-x-hidden">
-   <!-- Navigation -->
-   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E5E7EB]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-     <div class="flex items-center justify-between h-16 lg:h-20">
-      <div class="flex items-center gap-3">
-       <img src="Assets/Logo.png" alt="CoreDraft Studio Logo" class="h-10 w-10 object-contain block" />
-       <span class="font-serif-heading text-xl lg:text-2xl font-semibold tracking-tight text-[#213758]"><span class="font-semibold">CoreDraft</span><span class="font-light"> Studio</span></span>
-      </div>
-      <div class="hidden md:flex items-center gap-8">
-       <a href="#services" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Services</a>
-       <a href="#oem" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">For OEMs</a>
-       <a href="#process" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Process</a>
-       <a href="#contact" class="text-sm font-medium text-[#111111]/70 hover:text-[#213758] transition-colors">Contact</a>
-      </div>
-      <a href="#contact" class="hidden lg:block px-5 py-2.5 bg-[#213758] text-white text-sm font-medium tracking-wide hover:bg-[#1a2c47] transition-colors">Start Intake</a>
-     </div>
-    </div>
+ 
+ <body class="font-sans-body overflow-x-hidden">
+  <a href="#main" class="sr-only focus:not-sr-only fixed top-1 left-1 z-[100] bg-white px-4 py-2 text-[#213758]">Skip to content</a>
+  <header class="cd-nav fixed inset-x-0 top-0 z-50">
+   <div class="site-container flex items-center justify-between h-[73px]">
+    <a href="/" aria-label="CoreDraft Studio — home" class="flex gap-3 items-center">
+     <img src="Assets/Logo.png" class="w-10 h-10 object-contain" alt="" width="40" height="40">
+     <span class="font-serif-heading text-[25px] leading-none text-[#213758] tracking-tight font-semibold">CoreDraft <span class="font-normal">Studio</span></span>
+    </a>
+    <nav class="cd-desktop-nav hidden md:flex gap-7 items-center" aria-label="Main navigation">
+     <a class="cd-nav-link" href="#products">Products</a>
+     <a class="cd-nav-link" href="#approach">Our philosophy</a>
+     <a class="cd-nav-link" href="#process">How we build</a>
+     <a class="cd-nav-link" href="#services">Services</a>
+     <a class="cd-nav-link" href="#contact">Contact</a>
+    </nav>
+    <a class="cd-desktop-cta button-dark hidden lg:inline-flex" href="#products">Explore our software <span aria-hidden="true">↗</span></a>
+    <button id="mobile-toggle" class="mobile-menu-button hidden p-3 border border-[#dfe6ec] rounded-md text-[#213758]" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+   </div>
+   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+     <a href="#products">Products</a><a href="#approach">Our philosophy</a><a href="#process">How we build</a><a href="#services">Services</a><a href="#contact">Contact</a>
    </nav>
-
-   <!-- Hero -->
-   <section class="relative min-h-[90vh] flex items-center bg-[#213758] overflow-hidden">
-    <div class="blueprint-grid">
-     <div class="grid-line-h" style="top:20%"></div>
-     <div class="grid-line-h" style="top:40%;animation-delay:-3s"></div>
-     <div class="grid-line-h" style="top:60%;animation-delay:-6s"></div>
-     <div class="grid-line-h" style="top:80%;animation-delay:-9s"></div>
-     <div class="grid-line-v" style="left:15%"></div>
-     <div class="grid-line-v" style="left:35%;animation-delay:-4s"></div>
-     <div class="grid-line-v" style="left:55%;animation-delay:-8s"></div>
-     <div class="grid-line-v" style="left:75%;animation-delay:-12s"></div>
-     <div class="grid-line-v" style="left:95%;animation-delay:-2s"></div>
+  </header>
+  <main id="main">
+   <section class="hero-saas" aria-labelledby="hero-heading">
+    <div class="site-container hero-layout">
+      <div>
+       <div class="eyebrow text-[#9fdfd8] flex items-center gap-3 mb-7"><span class="inline-block w-6 h-px bg-[#9fdfd8]"></span> SaaS products built around real business problems</div>
+       <h1 id="hero-heading" class="display-title hero-heading mb-7">Run lean.<br><em>See everything.</em><br>Move forward.</h1>
+       <p class="hero-intro mb-8">Less paperwork. Fewer follow-ups. Clearer decisions. CoreDraft Studio builds focused business software that removes the busywork and gives owners the visibility to lead.</p>
+       <div class="flex flex-wrap gap-3">
+         <a class="button-light" href="#products">Explore our products <span aria-hidden="true">↗</span></a>
+         <a class="button-ghost" href="#contact">Talk to us <span aria-hidden="true">↗</span></a>
+       </div>
+       <div class="hero-rule"></div>
+       <div class="hero-points"><span>Less administrative drag</span><span>Better business control</span><span>Designed for real operations</span></div>
+      </div>
+      <div class="dashboard-wrap" aria-label="Illustrative business management dashboard">
+       <div class="mock-panel">
+        <div class="mock-top"><div class="mock-brand"><span class="mock-logo">C</span>CoreDraft / Workspace</div><div class="mock-dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+        <div class="mock-inner">
+         <div class="mock-suptitle">BUSINESS AT A GLANCE</div>
+         <div class="mock-heading">Everything important. One view.</div>
+         <div class="mock-stats">
+          <div class="mock-stat"><small>Active work</small><strong>12</strong><i></i></div>
+          <div class="mock-stat"><small>Need attention</small><strong>03</strong><i style="background:#e8b76d"></i></div>
+          <div class="mock-stat"><small>On track</small><strong>09</strong><i></i></div>
+         </div>
+         <div class="mock-line">
+           <div class="mock-suptitle mb-2">WORKFLOW ACTIVITY</div>
+           <div class="mock-row"><div><strong>Quotation approved</strong><small>Next step: customer submission</small></div><span class="mini-status">Complete</span></div>
+           <div class="mock-row"><div><strong>Purchase order pending</strong><small>Follow-up requires attention</small></div><span class="mini-status amber">Action due</span></div>
+           <div class="mock-row"><div><strong>Delivery record received</strong><small>Documentation linked to the job</small></div><span class="mini-status">Recorded</span></div>
+         </div>
+         <div class="mock-note">Conceptual visualization · illustrative information</div>
+        </div>
+       </div>
+      </div>
     </div>
-    <div class="geo-outline w-64 h-64 top-[10%] right-[10%]" style="animation-delay:-5s"></div>
-    <div class="geo-outline w-48 h-48 bottom-[15%] left-[5%]" style="animation-delay:-10s"></div>
-    <div class="geo-outline w-32 h-32 top-[40%] right-[30%]" style="animation-delay:-15s"></div>
-    <div class="moving-line w-full top-[25%]" style="animation-delay:-3s"></div>
-    <div class="moving-line w-[60%] top-[55%]" style="animation-delay:-9s"></div>
-    <div class="moving-line w-[80%] top-[75%]" style="animation-delay:-15s"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#213758] z-[1] pointer-events-none"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full py-20 lg:py-32">
-     <div class="max-w-4xl">
-      <div class="inline-block px-4 py-2 border border-white/20 mb-8 fade-up">
-       <span class="text-xs lg:text-sm font-medium tracking-[0.2em] text-white/80 uppercase">Equipment Qualification &amp; Engineering Documentation</span>
+   </section>
+   <div class="trust-band"><div class="site-container trust-grid">
+     <p>Designed to make business simpler</p>
+     <div class="trust-item">Operations, not unnecessary complexity</div>
+     <div class="trust-item">Visibility without constant chasing</div>
+     <div class="trust-item">Controls built into everyday work</div>
+   </div></div>
+
+   <section id="products" class="section-pad bg-white" aria-labelledby="products-heading">
+    <div class="site-container">
+     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-11 reveal">
+      <div class="max-w-[770px]">
+        <div class="eyebrow text-[#5c7894] mb-5">Our software / Product 01</div>
+        <h2 id="products-heading" class="section-title text-[#213758] mb-5">A better way to run<br><em class="font-normal">the business behind the work.</em></h2>
+        <p class="max-w-[640px] text-[#687786] text-[15px] leading-8">We begin with one tangible problem, build around actual workflows, and introduce products as they become ready. First up: the commercial paperwork and approvals that slow businesses down.</p>
       </div>
-      <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.1] mb-6 fade-up">We Make Equipment <span class="italic">Sellable</span> in Regulated Markets.</h1>
-      <p class="text-lg lg:text-xl text-white/70 max-w-3xl mb-8 leading-relaxed font-light fade-up">Qualification packages (URS, IQ/OQ/PQ, SOPs) for pharmaceutical, HVAC, and cleanroom equipment manufacturers. PIC/S, WHO, and GMP-compliant documentation that turns compliance into a sales advantage.</p>
-      <div class="flex flex-col sm:flex-row items-start gap-6 fade-up">
-       <a href="#contact" class="btn-primary inline-flex items-center px-8 py-4 bg-white text-[#213758] font-medium tracking-wide hover:bg-white/95 transition-all">
-        <span>Start Your Qualification Package</span>
-        <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-       </a>
-       <a href="oem-qualification/" class="inline-flex items-center px-8 py-4 border border-white/30 text-white font-medium tracking-wide hover:bg-white/10 transition-all">
-        <span>For Manufacturers →</span>
-       </a>
-      </div>
+      <span class="eyebrow text-[#698197] border-l-2 border-[#8bcdbf] pl-4">Focused products. Thoughtful growth.</span>
+     </div>
+     <article class="product-card reveal" aria-labelledby="quotedesk-heading">
+       <div class="product-copy">
+         <div class="flex items-center gap-3 flex-wrap mb-9">
+          <span class="eyebrow text-[#52738f]">01 / Featured product</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 bg-[#e7f5ef] text-[#32715c] rounded-full">In operational use</span>
+         </div>
+         <h3 id="quotedesk-heading" class="display-title text-[clamp(3.5rem,5vw,5.2rem)] text-[#213758] mb-4">QuoteDesk<span class="text-[#74a5a2]">.</span></h3>
+         <p class="text-[17px] font-semibold text-[#29445e] mb-5 leading-7">From quotation to completion. Without the administrative chaos.</p>
+         <p class="text-[14px] text-[#667688] leading-8 mb-7">A structured commercial workflow for teams that quote, win, deliver and invoice. QuoteDesk brings approvals, customer outcomes, controlled documents and billing into a traceable process — with clearer visibility for owners.</p>
+         <div class="grid grid-cols-2 gap-3 mb-9 text-[12px] font-semibold text-[#41586f]">
+           <div>✓ Quotation approvals</div><div>✓ Controlled paperwork</div>
+           <div>✓ PO outcome tracking</div><div>✓ Invoicing &amp; closure</div>
+         </div>
+         <div class="flex flex-wrap gap-3"><a class="button-dark" href="products/quotedesk/">Explore QuoteDesk <span aria-hidden="true">↗</span></a><a class="button-dark" style="background:#eef3f6;color:#213758" href="mailto:intake@coredraftstudio.com?subject=QuoteDesk%20Walkthrough%20Enquiry">Request a walkthrough <span aria-hidden="true">↗</span></a></div>
+         <p class="text-[11px] text-[#7f8d9b] mt-5 leading-6">Deployed for live internal business operations. General self-service availability has not been announced.</p>
+       </div>
+       <div class="product-illustration" aria-label="Diagram of the QuoteDesk commercial workflow">
+        <div class="product-flow">
+          <div class="product-flow-header"><span>QUOTE → CLOSE</span><span class="text-[#6e8194]">A connected workflow</span></div>
+          <div class="flow-steps">
+            <div class="flow-step"><span class="flow-num">01</span><div><strong>Prepare &amp; approve</strong><small>Structured quotation and controlled sign-off</small></div><span class="flow-check">✓</span></div>
+            <div class="flow-step"><span class="flow-num">02</span><div><strong>Record the outcome</strong><small>Win, loss, purchase order and supporting files</small></div><span class="flow-check">✓</span></div>
+            <div class="flow-step"><span class="flow-num">03</span><div><strong>Invoice &amp; deliver</strong><small>Partial billing, issued documents, customer records</small></div><span class="flow-check">✓</span></div>
+            <div class="flow-step"><span class="flow-num">04</span><div><strong>Close with evidence</strong><small>Traceable completion and receiving documents</small></div><span class="flow-check">✓</span></div>
+          </div>
+        </div>
+       </div>
+     </article>
+     <div class="benefit-grid reveal">
+       <div class="benefit-card"><span class="benefit-number">01 / TIME</span><h3>Stop preparing the same thing twice</h3><p>Carry information forward through the workflow instead of rebuilding documents at every step.</p></div>
+       <div class="benefit-card"><span class="benefit-number">02 / CONTROL</span><h3>Make the right steps unavoidable</h3><p>Approvals, supporting evidence and controlled issue records become part of the normal process.</p></div>
+       <div class="benefit-card"><span class="benefit-number">03 / VISIBILITY</span><h3>Know what needs your attention</h3><p>See the status of commercial work without assembling updates from scattered chats and spreadsheets.</p></div>
+     </div>
+     <div class="future-card mt-9 reveal">
+       <div><div class="eyebrow text-[#63819c] mb-2">What's next</div><h3 class="font-serif-heading text-[29px] font-semibold text-[#213758] leading-tight">More purpose-built products are on the way.</h3><p class="text-[13px] text-[#66788a] mt-2 leading-6">We'll reveal each product individually, as its workflows and availability are ready to present.</p></div>
+       <a href="mailto:intake@coredraftstudio.com?subject=CoreDraft%20Product%20Updates" class="button-dark shrink-0 mt-5 lg:mt-0">Ask about upcoming products <span aria-hidden="true">↗</span></a>
      </div>
     </div>
    </section>
 
-   <!-- Services -->
-   <section id="services" class="py-20 lg:py-32 bg-[#F8F9FA]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-     <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start mb-12">
-      <div class="fade-up lg:col-span-2 lg:sticky lg:top-28">
-       <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/60 uppercase mb-4 block">What We Do</span>
-       <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] mb-6">Four Practices, One Standard.</h2>
-       <p class="text-[#111111]/70 leading-relaxed max-w-md">Every document we produce meets international regulatory expectations — because compliance isn't a checkbox, it's market access.</p>
-      </div>
-      <div class="lg:col-span-3 space-y-6">
-       <div class="service-card bg-white p-6 lg:p-8 border border-[#E5E7EB] fade-up">
-        <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-1">Qualification &amp; Validation Documentation</h3>
-        <p class="text-sm text-[#111111]/60 mb-4">URS, DQ, IQ, OQ, PQ, SOPs — full equipment qualification packages for manufacturers supplying regulated industries.</p>
-        <div class="flex flex-wrap gap-3"><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">PIC/S</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">WHO GMP</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">EU Annex 15</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">ISO 14644</span></div>
-        <a href="oem-qualification/" class="inline-flex items-center gap-1 mt-4 text-sm font-medium text-[#213758] hover:underline">Learn more →</a>
+   <section id="approach" class="section-pad philosophy" aria-labelledby="approach-heading">
+     <div class="site-container">
+       <div class="max-w-[720px] mb-11 reveal">
+         <div class="eyebrow text-[#5c7894] mb-5">The CoreDraft philosophy</div>
+         <h2 id="approach-heading" class="section-title text-[#213758] mb-5">Software should remove work.<br><em class="font-normal">Not create more of it.</em></h2>
+         <p class="text-[#69798b] text-[15px] leading-8">Our products start with the frustrations business owners and their teams face every day — then work backwards to a simpler operating model.</p>
        </div>
-       <div class="service-card bg-white p-6 lg:p-8 border border-[#E5E7EB] fade-up">
-        <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-1">CDR Development</h3>
-        <p class="text-sm text-[#111111]/60 mb-4">Competency Demonstration Reports for Engineers Australia migration skills assessment. Stage 1 &amp; Stage 2, with career episode narratives.</p>
-        <div class="flex flex-wrap gap-3"><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">Engineers Australia</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">Migrants</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">Skilled Visas</span></div>
+       <div class="philosophy-grid reveal">
+         <div class="philosophy-card"><span class="glyph" aria-hidden="true">↗</span><h3>Lean by design</h3><p>Reduce unnecessary administration and repetitive work so small teams can do more.</p></div>
+         <div class="philosophy-card"><span class="glyph" aria-hidden="true">◎</span><h3>Owner-level clarity</h3><p>Make operational information accessible without constant calls, chasing and manual reporting.</p></div>
+         <div class="philosophy-card"><span class="glyph" aria-hidden="true">◇</span><h3>Built-in accountability</h3><p>Give approvals, changes and key documents a clear, consistent, traceable home.</p></div>
+         <div class="philosophy-card"><span class="glyph" aria-hidden="true">✳</span><h3>Focused simplicity</h3><p>Build around the job to be done, not around an endless collection of features.</p></div>
        </div>
-       <div class="service-card bg-white p-6 lg:p-8 border border-[#E5E7EB] fade-up">
-        <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-1">Professional CV &amp; Career Portfolio</h3>
-        <p class="text-sm text-[#111111]/60 mb-4">Engineer-specific CVs, career episodes, and portfolio packages for migration, executive roles, and international opportunities.</p>
-        <div class="flex flex-wrap gap-3"><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">Executive</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">Migration</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">GCC</span></div>
-       </div>
-       <div class="service-card bg-white p-6 lg:p-8 border border-[#E5E7EB] fade-up">
-        <h3 class="font-serif-heading text-xl font-semibold text-[#213758] mb-1">Tender Documentation</h3>
-        <p class="text-sm text-[#111111]/60 mb-4">Technical and commercial bid packages for infrastructure, pharma, and industrial tenders — EOI, PQQs, method statements, and compliance matrices.</p>
-        <div class="flex flex-wrap gap-3"><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">PPRA</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">FIDIC</span><span class="px-3 py-1 text-[11px] font-medium bg-[#213758]/5 text-[#213758] tracking-wide uppercase">GCC Tenders</span></div>
-       </div>
-      </div>
      </div>
+   </section>
+
+   <section id="process" class="section-pad bg-white" aria-labelledby="process-heading">
+     <div class="site-container">
+       <div class="grid lg:grid-cols-2 gap-12 mb-12 reveal">
+         <div><div class="eyebrow text-[#5c7894] mb-5">How we build</div><h2 id="process-heading" class="section-title text-[#213758]">Real problems.<br><em class="font-normal">Useful software.</em></h2></div>
+         <p class="text-[#69798b] text-[15px] leading-8 lg:self-end max-w-[470px]">We use operating reality as our starting point. Each product is shaped by a specific business process, then refined around the people who actually use it.</p>
+       </div>
+       <div class="steps-grid reveal">
+         <div><div class="step-num">01</div><h3>Observe</h3><p>Find the repetitive work, missed steps and blind spots costing businesses time or money.</p></div>
+         <div><div class="step-num">02</div><h3>Simplify</h3><p>Remove unnecessary steps before automating what remains.</p></div>
+         <div><div class="step-num">03</div><h3>Build</h3><p>Create clear, practical workflows with usability and accountability in mind.</p></div>
+         <div><div class="step-num">04</div><h3>Improve</h3><p>Refine against real usage, outcomes and changing operational needs.</p></div>
+       </div>
+     </div>
+   </section>
+
+   <section id="services" class="section-pad bg-[#f8fafb]" aria-labelledby="services-heading">
+     <div class="site-container">
+       <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-20 items-start">
+        <div class="reveal">
+         <div class="eyebrow text-[#637f99] mb-5">Our specialist roots</div>
+         <h2 id="services-heading" class="section-title text-[#213758] mb-5">Expertise beyond<br><em class="font-normal">the software.</em></h2>
+         <p class="text-[#657689] text-[14px] leading-8 mb-6">CoreDraft Studio began with specialist documentation and engineering support. These services remain available alongside our growing software portfolio.</p>
+         <a href="oem-qualification/" class="inline-block text-[#213758] text-[13px] font-bold border-b border-[#213758] pb-1">Explore OEM qualification services ↗</a>
+        </div>
+        <div class="services-list reveal">
+          <article><h3>Qualification &amp; validation</h3><p>URS, DQ, IQ/OQ/PQ and related regulated-industry technical documentation.</p></article>
+          <article><h3>Engineering tender support</h3><p>Technical bids, method statements, compliance matrices and tender documentation.</p></article>
+          <article><h3>Engineering career portfolios</h3><p>Professional CVs, technical career narratives and international-facing portfolios.</p></article>
+          <article><h3>CDR development</h3><p>Competency Demonstration Reports and supporting material for engineering skills assessment.</p></article>
+        </div>
+       </div>
+     </div>
+   </section>
+
+   <section class="section-pad bg-white" aria-label="About CoreDraft Studio">
+    <div class="site-container grid lg:grid-cols-[.85fr_1.15fr] gap-12 lg:gap-24 items-center reveal">
+      <div><div class="eyebrow text-[#63809a] mb-5">Built close to the problem</div><h2 class="section-title text-[#213758]">We know what<br><em class="font-normal">busywork costs.</em></h2></div>
+      <div><p class="text-[#536879] text-[17px] leading-9 mb-5">Great business software shouldn't require a huge team to operate it. It should help the team you already have stay focused, informed and accountable.</p><p class="text-[#718092] text-[14px] leading-8">That's the thinking behind CoreDraft Studio's move into SaaS: make everyday business operations easier to run, easier to see and easier to grow.</p></div>
     </div>
    </section>
 
-   <!-- For OEMs Section -->
-   <section id="oem" class="py-20 lg:py-32 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-     <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-      <div class="fade-up lg:col-span-3">
-       <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/60 uppercase mb-4 block">For Equipment Manufacturers</span>
-       <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] mb-6">Your Equipment, Fully Qualified for Any Market.</h2>
-       <p class="text-[#111111]/70 leading-relaxed mb-6">You build quality equipment. But without qualification documentation, you're locked out of regulated pharma, biotech, and healthcare markets.</p>
-       <p class="text-[#111111]/70 leading-relaxed mb-8">We produce complete URS, DQ, IQ, OQ, PQ, and SOP packages tailored to your equipment and target regulatory jurisdiction — delivered in 5–7 days. Starting at $2,000.</p>
-       <div class="flex flex-col sm:flex-row items-start gap-4">
-        <a href="oem-qualification/" class="inline-flex items-center px-6 py-3 bg-[#213758] text-white text-sm font-medium tracking-wide hover:bg-[#1a2c47] transition-all">View OEM Packages &amp; Pricing →</a>
-        <a href="#contact" class="inline-flex items-center px-6 py-3 border border-[#213758] text-[#213758] text-sm font-medium tracking-wide hover:bg-[#213758]/5 transition-all">Request Quote</a>
-       </div>
+   <section id="contact" class="contact-pane section-pad" aria-labelledby="contact-heading">
+    <div class="site-container relative z-10 flex flex-col lg:flex-row gap-12 items-start lg:items-end justify-between">
+      <div class="max-w-[735px] reveal">
+       <div class="eyebrow text-[#9bd9d1] mb-6">Let's make business run better</div>
+       <h2 id="contact-heading" class="section-title mb-6">Have a problem worth<br><em class="font-normal text-[#9bdfd4]">solving?</em></h2>
+       <p class="text-[#bccbd9] text-[15px] leading-8 max-w-[560px]">Explore QuoteDesk, talk through a workflow challenge, or ask what we're building next. We welcome conversations with the people running the work.</p>
       </div>
-      <div class="lg:col-span-2 fade-up">
-       <div class="bg-[#F8F9FA] p-8 border border-[#E5E7EB]">
-        <h3 class="font-serif-heading text-lg font-semibold text-[#213758] mb-4">What's Included</h3>
-        <ul class="space-y-3 text-sm">
-         <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-[#213758]/10 flex items-center justify-center shrink-0"><span class="text-[#213758] text-xs font-bold">✓</span></span>User Requirement Specification (URS)</li>
-         <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-[#213758]/10 flex items-center justify-center shrink-0"><span class="text-[#213758] text-xs font-bold">✓</span></span>Design Qualification (DQ)</li>
-         <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-[#213758]/10 flex items-center justify-center shrink-0"><span class="text-[#213758] text-xs font-bold">✓</span></span>Installation / Operational / Performance Qualification (IQ/OQ/PQ)</li>
-         <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-[#213758]/10 flex items-center justify-center shrink-0"><span class="text-[#213758] text-xs font-bold">✓</span></span>Standard Operating Procedures (SOPs)</li>
-         <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-[#213758]/10 flex items-center justify-center shrink-0"><span class="text-[#213758] text-xs font-bold">✓</span></span>Validation Summary Report</li>
-         <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-[#213758]/10 flex items-center justify-center shrink-0"><span class="text-[#213758] text-xs font-bold">✓</span></span>Editable source files (Word / Excel)</li>
-        </ul>
-       </div>
-      </div>
-     </div>
+      <div class="reveal"><a href="mailto:intake@coredraftstudio.com?subject=CoreDraft%20Studio%20Enquiry" class="button-light whitespace-nowrap">Start a conversation <span aria-hidden="true">↗</span></a><p class="text-[#b4c3d2] text-[12px] mt-5">intake@coredraftstudio.com</p></div>
     </div>
    </section>
-
-   <!-- Process -->
-   <section id="process" class="py-20 lg:py-32 bg-[#F8F9FA]">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-     <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-      <div class="fade-up lg:col-span-2 lg:sticky lg:top-28">
-       <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/60 uppercase mb-4 block">How We Work</span>
-       <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] mb-6">From Brief to Delivered Document</h2>
-       <p class="text-[#111111]/70 leading-relaxed max-w-md">We work remotely, on your timeline. Each engagement follows the same proven process.</p>
-      </div>
-      <div class="lg:col-span-3 space-y-0">
-       <div class="process-step pl-16 lg:pl-20 fade-up">
-        <div class="absolute left-0 top-1 w-12 h-12 bg-[#213758] flex items-center justify-center shrink-0"><span class="text-white font-serif-heading text-xl font-bold">01</span></div>
-        <h3 class="font-serif-heading text-xl font-semibold text-[#213758]">Brief &amp; Scoping</h3>
-        <p class="text-sm text-[#111111]/60 mt-1 mb-6">We learn your equipment, target market, and regulatory requirements. No charge for the discovery call.</p>
-       </div>
-       <div class="process-step pl-16 lg:pl-20 fade-up">
-        <div class="absolute left-0 top-1 w-12 h-12 bg-[#213758] flex items-center justify-center shrink-0"><span class="text-white font-serif-heading text-xl font-bold">02</span></div>
-        <h3 class="font-serif-heading text-xl font-semibold text-[#213758]">Proposal &amp; Agreement</h3>
-        <p class="text-sm text-[#111111]/60 mt-1 mb-6">Fixed-price quote, scope of work, and timeline. 50% down to begin.</p>
-       </div>
-       <div class="process-step pl-16 lg:pl-20 fade-up">
-        <div class="absolute left-0 top-1 w-12 h-12 bg-[#213758] flex items-center justify-center shrink-0"><span class="text-white font-serif-heading text-xl font-bold">03</span></div>
-        <h3 class="font-serif-heading text-xl font-semibold text-[#213758]">Drafting &amp; Review</h3>
-        <p class="text-sm text-[#111111]/60 mt-1 mb-6">We draft the full package, share for review, and incorporate one round of revisions.</p>
-       </div>
-       <div class="process-step pl-16 lg:pl-20 fade-up">
-        <div class="absolute left-0 top-1 w-12 h-12 bg-[#213758] flex items-center justify-center shrink-0"><span class="text-white font-serif-heading text-xl font-bold">04</span></div>
-        <h3 class="font-serif-heading text-xl font-semibold text-[#213758]">Delivery &amp; Support</h3>
-        <p class="text-sm text-[#111111]/60 mt-1 mb-6">Final signed-off PDF + editable files. Ongoing support for buyer auditor queries.</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-
-   <!-- Positioning -->
-   <section class="py-20 lg:py-32 bg-white">
-    <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center">
-     <div class="fade-up max-w-3xl mx-auto">
-      <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/60 uppercase mb-4 block">Our Position</span>
-      <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758] leading-[1.15] mb-8">We Don't Sell Documents.<br><span class="italic">We Enable Your Equipment to Be Sellable in Regulated Markets.</span></h2>
-      <div class="divider max-w-xs mx-auto mb-8"></div>
-      <p class="text-[#111111]/70 leading-relaxed max-w-2xl mx-auto">Every piece of documentation we produce is designed to pass auditor scrutiny. Our founder brings 10+ years of hands-on pharma compliance experience — PIC/S inspections, WHO pre-qualification, and GMP remediation at operating plants.</p>
-     </div>
-    </div>
-   </section>
-
-   <!-- Who We Work With -->
-   <section class="py-20 lg:py-32 bg-[#F8F9FA]">
-    <div class="max-w-5xl mx-auto px-6 lg:px-12">
-     <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-      <span class="text-xs font-medium tracking-[0.2em] text-[#213758]/60 uppercase mb-4 block">Who We Work With</span>
-      <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#213758]">Clients &amp; Partners</h2>
-     </div>
-     <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto fade-up">
-      <div class="bg-white p-6 border border-[#E5E7EB]">
-       <h3 class="font-serif-heading text-lg font-semibold text-[#213758] mb-2">Equipment Manufacturers</h3>
-       <p class="text-sm text-[#111111]/60">Chinese HVAC, pharma, and cleanroom OEMs exporting to regulated markets. We provide the qualification documentation they need to close deals.</p>
-      </div>
-      <div class="bg-white p-6 border border-[#E5E7EB]">
-       <h3 class="font-serif-heading text-lg font-semibold text-[#213758] mb-2">Engineering Professionals</h3>
-       <p class="text-sm text-[#111111]/60">Skilled engineers seeking Australian migration. CDR reports, CVs, and career portfolios for Engineers Australia assessment.</p>
-      </div>
-      <div class="bg-white p-6 border border-[#E5E7EB]">
-       <h3 class="font-serif-heading text-lg font-semibold text-[#213758] mb-2">Equipment Sales Partners</h3>
-       <p class="text-sm text-[#111111]/60">Sales agents and distributors adding qualification documentation to their equipment deals. Commission-based partnership model.</p>
-      </div>
-     </div>
-    </div>
-   </section>
-
-   <!-- CTA -->
-   <section id="contact" class="py-20 lg:py-32 bg-[#213758]">
-    <div class="blueprint-grid">
-     <div class="grid-line-h" style="top:20%"></div>
-     <div class="grid-line-h" style="top:60%;animation-delay:-6s"></div>
-     <div class="grid-line-v" style="left:25%"></div>
-     <div class="grid-line-v" style="left:75%;animation-delay:-8s"></div>
-    </div>
-    <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-12 text-center">
-     <div class="inline-block px-4 py-2 border border-white/20 mb-8 fade-up"><span class="text-xs font-medium tracking-[0.2em] text-white/80 uppercase">Start Your Project</span></div>
-     <h2 class="font-serif-heading text-3xl lg:text-4xl xl:text-5xl font-semibold text-white leading-[1.15] mb-6 fade-up">Ready for Documentation That Opens Markets?</h2>
-     <p class="text-white/70 max-w-2xl mx-auto mb-10 fade-up">Send us a brief description of your equipment or project. We'll respond within 24 hours with a scope, timeline, and fixed-price quote.</p>
-     <div class="max-w-xl mx-auto space-y-4 fade-up">
-      <a href="mailto:intake@coredraftstudio.com" class="btn-primary inline-flex items-center px-8 py-4 bg-white text-[#213758] font-medium tracking-wide hover:bg-white/95 transition-all">
-       <span>intake@coredraftstudio.com</span>
-       <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-     </div>
-     <p class="text-white/40 text-sm mt-6 fade-up">No obligation. Confidential. Free consultation.</p>
-    </div>
-   </section>
-
-   <!-- Footer -->
-   <footer class="py-8 bg-[#1a2c47] border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-     <div class="flex items-center gap-2">
-      <img src="Assets/Logo.png" alt="CoreDraft Studio" class="h-6 w-6 object-contain block opacity-50" />
-      <span class="text-sm text-white/40">CoreDraft Studio &copy; 2026</span>
-     </div>
-     <div class="flex items-center gap-6 text-xs text-white/30">
-      <a href="oem-qualification/" class="hover:text-white/50 transition-colors">OEM Packages</a>
-      <a href="mailto:intake@coredraftstudio.com" class="hover:text-white/50 transition-colors">intake@coredraftstudio.com</a>
-     </div>
-    </div>
-   </footer>
-
-  <!-- Fade-up observer -->
+  </main>
+  <footer class="bg-[#101f32] py-9">
+   <div class="site-container flex flex-col lg:flex-row gap-7 justify-between items-start lg:items-center">
+    <div class="flex items-center gap-3"><img src="Assets/Logo.png" alt="" width="29" height="29" class="w-7 h-7 object-contain opacity-75"><span class="text-[#b7c5d3] text-[13px]">CoreDraft Studio © 2026</span></div>
+    <div class="flex flex-wrap gap-x-7 gap-y-3"><a class="footer-link" href="#products">Products</a><a class="footer-link" href="#approach">Philosophy</a><a class="footer-link" href="#services">Specialist services</a><a class="footer-link" href="oem-qualification/">OEM qualification</a><a class="footer-link" href="mailto:intake@coredraftstudio.com">Contact</a></div>
+   </div>
+  </footer>
   <script>
-    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+   (function(){
+    var toggle=document.getElementById('mobile-toggle');
+    var menu=document.getElementById('mobile-menu');
+    if(toggle&&menu){
+      toggle.addEventListener('click',function(){
+        var open=menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded',String(open));
+        toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+      });
+      menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');});});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
+    }
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(el){el.classList.add('visible');});return;}
+    var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:.08});
+    els.forEach(function(el){observer.observe(el);});
+   })();
   </script>
-  <script src="/_sdk/new_canvas_data_sdk.js" type="text/javascript"></script>
  </body>
 </html>
