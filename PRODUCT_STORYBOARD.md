@@ -17,9 +17,9 @@ The Construction Control chapter contains three authentic UI screenshots from it
 - `Assets/product-screens/construction-billing-preview.png`
 - `Assets/product-screens/construction-evidence-preview.png`
 
-## New genuine screenshot pack
+## Product screenshot assets — committed to the website
 
-The repository homepage and motion engine support the following assets. They are supplied as a separate ZIP for upload into the repository's `Assets/product-screens/` directory.
+All twelve additional optimized WebP screenshots have been committed under `Assets/product-screens/` and are referenced automatically by the homepage motion engine.
 
 - QuoteDesk: `quotedesk-editor.webp`, `quotedesk-workflow.webp`, `quotedesk-review.webp`
 - ProcureFlow: `procureflow-overview.webp`, `procureflow-requisitions.webp`, `procureflow-pipeline.webp`
@@ -29,7 +29,7 @@ The screenshot assets come from existing application source previews and histori
 
 - People & Compliance: `people-overview.webp`, `people-payroll.webp`, `people-master.webp`
 
-**Important:** Screenshot files in the separate ZIP have not been committed to GitHub because the available GitHub connector cannot transfer local binary files. The motion-enabled homepage uses a graceful editorial fallback for any missing asset, without broken images or misleading claims. Upload the supplied assets to the corresponding repository paths to activate real screenshots automatically on the next Cloudflare Git deployment.
+**Published asset verification:** Each of the twelve new WebP files was transferred to the repository using the Git blobs API and its resulting Git blob SHA was matched against the local file's `git hash-object` digest. No manual screenshot upload is required. The motion-enabled homepage still has a graceful editorial fallback if an image request fails.
 
 ## People & Compliance screenshots
 
