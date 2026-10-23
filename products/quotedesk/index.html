@@ -16,7 +16,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="../../Assets/product-detail.css?v=2" rel="stylesheet">
+  <link href="../../Assets/product-detail.css?v=3" rel="stylesheet">
+  <link href="../../Assets/outcome-story.css?v=1" rel="stylesheet">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
   <script defer src="../../Assets/product-detail.js?v=1"></script>
@@ -27,7 +28,7 @@
   <header class="site-nav"><div class="site-nav-inner container">
   <a class="brand" href="../../" aria-label="CoreDraft Studio homepage"><img src="../../Assets/Logo.png" alt="" width="39" height="39"><span class="editorial">CoreDraft Studio</span></a>
   <button type="button" class="menu-toggle" aria-label="Open menu" aria-controls="product-menu" aria-expanded="false"><svg aria-hidden="true" width="21" height="21" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-  <nav class="nav-items" id="product-menu" aria-label="Product navigation"><a href="../">All products</a><a href="#capabilities">Capabilities</a><a href="#gallery">Screenshots</a><a href="#fit">Our approach</a><a class="nav-cta" href="#contact">Request a private walkthrough <span aria-hidden="true">↗</span></a></nav>
+  <nav class="nav-items" id="product-menu" aria-label="Product navigation"><a href="../">All products</a><a href="#problems-solved">Problems solved</a><a href="#capabilities">Capabilities</a><a href="#gallery">Screenshots</a><a href="#fit">Our approach</a><a class="nav-cta" href="#contact">Request a private walkthrough <span aria-hidden="true">↗</span></a></nav>
 </div></header>
   <main id="main">
     <section class="hero" style="--accent:#9ce8d5" aria-labelledby="hero-title">
@@ -56,7 +57,21 @@
        <div class="reveal"><div class="eyebrow" style="color:#7393a7">The problem we address</div><h2 class="editorial" id="challenge-title">The work isn't lost at quotation.<br><em>It's lost between the steps.</em></h2></div>
        <div class="intro-main reveal"><p>Quotation files, approvals, purchase orders, invoices and delivery acknowledgements often end up in different folders or chats. Each handoff adds uncertainty and creates another place for a job to stall.</p><p><strong>QuoteDesk connects the commercial record across the journey, making it easier to prepare, approve, issue, track and close work with clear ownership.</strong></p><div class="intro-impact"><span>↗ One commercial record across the lifecycle</span><span>↗ Fewer untracked handoffs and document revisions</span><span>↗ Better owner visibility into wins, pending actions and closure</span></div></div>
     </div></section>
-    <section class="modules" id="capabilities" aria-labelledby="capabilities-title"><div class="container modules-inner">
+    <section class="outcome-section" id="problems-solved" aria-labelledby="outcomes-title">
+ <div class="container">
+   <div class="outcome-top reveal">
+     <div class="outcome-heading"><div class="eyebrow">Business problems addressed / quotedesk</div><h2 class="editorial" id="outcomes-title">Commercial leaks.<br><em>Closed one step at a time.</em></h2></div>
+     <p class="outcome-summary">QuoteDesk tackles the administrative gaps between preparing an offer, winning a customer, delivering the work and keeping the commercial record complete.</p>
+   </div>
+   <div class="outcome-grid">
+    <article class="outcome-card reveal"><div class="outcome-id">01</div><span class="outcome-pain">No one knows which quotations need attention</span><h3>Sales follow-through</h3><p>Quotation status, customer outcomes and purchase-order evidence make the pipeline easier to review. Advanced prospect nurturing can be customized.</p><div class="outcome-connection">↗ LeadDesk-style capability</div></article>
+<article class="outcome-card reveal"><div class="outcome-id">02</div><span class="outcome-pain">Approvals disappear into messages</span><h3>Commercial accountability</h3><p>Keep quotation revisions, responsible approvals and controlled issue records connected.</p><div class="outcome-connection">↗ Controlled approvals</div></article>
+<article class="outcome-card reveal"><div class="outcome-id">03</div><span class="outcome-pain">Invoices and receiving papers drift apart</span><h3>Billing and collections visibility</h3><p>Link quotation, order, invoice and receiving records so outstanding commercial actions are easier to identify. Automated collection chasing is an optional integration.</p><div class="outcome-connection">↗ CollectDesk-style visibility</div></article>
+<article class="outcome-card reveal"><div class="outcome-id">04</div><span class="outcome-pain">Owners repeatedly ask for updates</span><h3>Owner-level clarity</h3><p>Surface pending quotations, conversion outcomes and lifecycle exceptions through the existing management view.</p><div class="outcome-connection">↗ OwnerPulse-style oversight</div></article>
+   </div>
+   <div class="outcome-honesty"><p>QuoteDesk already addresses quotation, approval, order and billing visibility. Full CRM automation, automated payment reminders and job-level realized profit are not claimed as standard features; those require specific scope and integration.</p><a href="../future/">See genuine future product ideas ↗</a></div>
+ </div></section>
+<section class="modules" id="capabilities" aria-labelledby="capabilities-title"><div class="container modules-inner">
       <div class="section-heading reveal"><div class="eyebrow">The capability landscape</div><h2 class="editorial" id="capabilities-title">A complete overview.<br><em style="font-weight:400">Without the unnecessary complexity.</em></h2><p>Modules are described from the user's perspective. Exact controls, automations, configurations and integrations are defined during a private implementation discussion.</p></div>
       <div class="modules-grid"><article class="module reveal"><div class="module-n">01</div><h3>Quotation workspace</h3><p>Build detailed goods and service offers with configurable commercial terms, item structures and tax presentation.</p></article>
 <article class="module reveal"><div class="module-n">02</div><h3>Approvals and revisions</h3><p>Keep document review, changes and responsible approvals in a controlled business process.</p></article>
@@ -138,7 +153,7 @@
   </main>
   <footer class="footer"><div class="container footer-inner">
      <div>© 2026 CoreDraft Studio · <a href="../../">Back to homepage</a></div>
-     <nav class="links" aria-label="Other products"><a href="../future/">Future ideas</a><a href="../procureflow/">ProcureFlow</a><a href="../pharmadocs/">PharmaDocs</a><a href="../people-compliance/">People &amp; Compliance</a><a href="../construction-control/">Construction Control</a><a href="mailto:intake@coredraftstudio.com">Contact</a></nav>
+     <nav class="links" aria-label="Other products"><a href="../future/">Innovation roadmap</a><a href="../procureflow/">ProcureFlow</a><a href="../pharmadocs/">PharmaDocs</a><a href="../people-compliance/">People &amp; Compliance</a><a href="../construction-control/">Construction Control</a><a href="mailto:intake@coredraftstudio.com">Contact</a></nav>
   </div></footer>
 </body>
 </html>

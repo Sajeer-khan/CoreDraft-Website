@@ -331,6 +331,21 @@ body { overflow-x:clip!important; }
 @media(max-width:767px){.next-portfolio{padding:65px 0 74px}.next-heading h2{font-size:clamp(3.5rem,12vw,5rem)}}
 @media(prefers-reduced-motion:reduce){.next-concept,.next-footer a{transition:none!important}.next-concept:hover,.next-footer a:hover{transform:none!important}}
 
+
+/* Problem-first portfolio discovery */
+.core-problems{padding:46px 0 20px;border-top:1px solid #e2e9ee}
+.core-problems .eyebrow{color:#688ba2}
+.core-problems h3{font-family:'Cormorant Garamond',Georgia,serif;color:#27445d;font-size:clamp(2.7rem,4.1vw,4.4rem);letter-spacing:-.03em;font-weight:620;margin:13px 0 20px}
+.core-problems h3 em{font-weight:400}
+.core-problem-links{display:flex;flex-wrap:wrap;gap:9px}
+.core-problem-links a{padding:11px 14px;border:1px solid #d3e0e6;background:#fff;color:#395870;font-size:11px;font-weight:700;transition:transform .24s,background .24s}
+.core-problem-links a:hover{transform:translateY(-3px);background:#e7f3f2}
+.next-concept.integrated{background:#a8e4d511;border-color:#a8e4d55d}
+.next-concept.integrated .next-number{color:#afeadd}
+.next-concept.integrated h3{color:#d7f1e9}
+.next-concept.integrated a{color:#a6eadc}
+@media(prefers-reduced-motion:reduce){.core-problem-links a{transition:none}.core-problem-links a:hover{transform:none}}
+
 </style>
   <style>body { box-sizing: border-box; }</style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}.mobile-menu{display:grid!important}</style></noscript>
@@ -350,7 +365,7 @@ body { overflow-x:clip!important; }
     </a>
     <nav class="cd-desktop-nav hidden md:flex gap-7 items-center" aria-label="Main navigation">
      <a class="cd-nav-link" href="#products">Products</a>
-     <a class="cd-nav-link" href="#coming-next">Coming next</a>
+     <a class="cd-nav-link" href="#coming-next">Roadmap</a>
      <a class="cd-nav-link" href="#approach">Our philosophy</a>
      <a class="cd-nav-link" href="#process">How we build</a>
      <a class="cd-nav-link" href="#services">Services</a>
@@ -423,6 +438,21 @@ body { overflow-x:clip!important; }
        <a href="#story-quotedesk" data-story-tab="quotedesk"><span>01</span> QuoteDesk</a><a href="#story-procureflow" data-story-tab="procureflow"><span>02</span> ProcureFlow</a><a href="#story-pharmadocs" data-story-tab="pharmadocs"><span>03</span> PharmaDocs</a><a href="#story-peopledesk" data-story-tab="peopledesk"><span>04</span> People &amp; Compliance</a><a href="#story-construction" data-story-tab="construction"><span>05</span> Construction Control</a>
     </div><div class="story-progress" id="story-progress"></div></nav>
     <div class="site-container" style="padding-top:28px;display:flex;justify-content:flex-end"><a href="products/" style="font-size:12px;font-weight:700;color:#315d72;border-bottom:1px solid #8badb2;padding-bottom:6px">View all five product pages ↗</a></div>
+   <div class="site-container core-problems" id="solutions-by-problem">
+      <div class="eyebrow">Business problems, connected to the right product</div>
+      <h3>What you need solved.<br><em>Where it belongs.</em></h3>
+      <nav class="core-problem-links" aria-label="Explore business problems across products">
+        <a href="products/quotedesk/#problems-solved">Sales &amp; quotation follow-through ↗</a>
+        <a href="products/quotedesk/#problems-solved">Billing &amp; commercial records ↗</a>
+        <a href="products/procureflow/#problems-solved">Suppliers &amp; procurement ↗</a>
+        <a href="products/construction-control/#problems-solved">Projects &amp; margins ↗</a>
+        <a href="products/construction-control/#problems-solved">Materials &amp; receivables ↗</a>
+        <a href="products/pharmadocs/#problems-solved">Quality &amp; audit readiness ↗</a>
+        <a href="products/people-compliance/#problems-solved">Payroll &amp; compliance ↗</a>
+        <a href="products/future/#integrated">Management intelligence ↗</a>
+      </nav>
+    </div>
+
     <div class="story-chapters">
       <article class="story-chapter" id="story-quotedesk" data-product="quotedesk" style="--chapter-accent:#8ed9c7" aria-labelledby="story-title-quotedesk">
    <div class="story-chapter-copy">
@@ -657,18 +687,18 @@ body { overflow-x:clip!important; }
    <section class="next-portfolio" id="coming-next" aria-labelledby="next-title">
     <div class="site-container next-container">
       <div class="next-heading reveal">
-        <span class="eyebrow">CoreDraft / Beyond today's portfolio</span>
-        <h2 id="next-title">The next problems<br><em>worth solving.</em></h2>
-        <p>We're exploring a new wave of practical business systems — inspired by the same principle as QuoteDesk: less busywork, stronger visibility and more time for the work that matters.</p>
+        <span class="eyebrow">CoreDraft / A focused innovation roadmap</span>
+        <h2 id="next-title">Fewer products.<br><em>More problems solved.</em></h2>
+        <p>We extend the systems that already solve the problem. Only genuinely distinct workflows become candidates for separate products.</p>
       </div>
       <div class="next-concepts">
-        <article class="next-concept reveal"><span class="next-number">01 / PROJECT EXECUTION</span><h3>JobDesk<span style="color:#87dfd0">.</span></h3><p>See the whole job — from award to execution and commercial performance.</p><a href="products/future/#jobdesk">Explore the concept ↗</a></article>
-        <article class="next-concept reveal"><span class="next-number">02 / FIELD SERVICE</span><h3>ServiceDesk<span style="color:#87dfd0">.</span></h3><p>Keep recurring service commitments and customer follow-through connected.</p><a href="products/future/#servicedesk">Explore the concept ↗</a></article>
-        <article class="next-concept reveal"><span class="next-number">03 / SALES FOLLOW-UP</span><h3>LeadDesk<span style="color:#87dfd0">.</span></h3><p>Bring clearer next actions and better opportunity visibility to lean sales teams.</p><a href="products/future/#leaddesk">Explore the concept ↗</a></article>
+        <article class="next-concept reveal"><span class="next-number">01 / FIELD SERVICE · FUTURE CONCEPT</span><h3>ServiceDesk<span style="color:#87dfd0">.</span></h3><p>Recurring maintenance, technician visits and customer asset history as a focused field-service workflow.</p><a href="products/future/#servicedesk">Explore the concept ↗</a></article>
+        <article class="next-concept reveal"><span class="next-number">02 / CONTRACT OBLIGATIONS · FUTURE CONCEPT</span><h3>ContractDesk<span style="color:#87dfd0">.</span></h3><p>Track ongoing obligations, renewals, warranties and milestones beyond simply storing contracts.</p><a href="products/future/#contractdesk">Explore the concept ↗</a></article>
+        <article class="next-concept integrated reveal"><span class="next-number">ALREADY COVERED BY THE EXISTING PORTFOLIO</span><h3>Integrated capabilities.</h3><p>Job management, sales follow-up, margins, receivables, suppliers, inventory and owner intelligence belong in our current systems.</p><a href="products/future/#integrated">See what is already covered ↗</a></article>
       </div>
       <div class="next-footer reveal">
-        <p>Also exploring MarginDesk, CollectDesk, VendorDesk, StockDesk, ContractDesk, OwnerPulse and a separate mobile initiative, TERVIAN. These are concepts, not release announcements.</p>
-        <a href="products/future/">Explore future products <span aria-hidden="true">↗</span></a>
+        <p>Our innovation roadmap separates new product opportunities from deeper capabilities already addressed by QuoteDesk, ProcureFlow, Construction Control and the wider suite. TERVIAN remains a separate mobile initiative.</p>
+        <a href="products/future/">Explore the roadmap <span aria-hidden="true">↗</span></a>
       </div>
     </div>
    </section>
@@ -744,7 +774,7 @@ body { overflow-x:clip!important; }
   <footer class="bg-[#101f32] py-9">
    <div class="site-container flex flex-col lg:flex-row gap-7 justify-between items-start lg:items-center">
     <div class="flex items-center gap-3"><img src="Assets/Logo.png" alt="" width="29" height="29" class="w-7 h-7 object-contain opacity-75"><span class="text-[#b7c5d3] text-[13px]">CoreDraft Studio © 2026</span></div>
-    <div class="flex flex-wrap gap-x-7 gap-y-3"><a class="footer-link" href="#products">Products</a><a class="footer-link" href="products/future/">Coming next</a><a class="footer-link" href="#approach">Philosophy</a><a class="footer-link" href="#services">Specialist services</a><a class="footer-link" href="oem-qualification/">OEM qualification</a><a class="footer-link" href="mailto:intake@coredraftstudio.com">Contact</a></div>
+    <div class="flex flex-wrap gap-x-7 gap-y-3"><a class="footer-link" href="#products">Products</a><a class="footer-link" href="products/future/">Innovation roadmap</a><a class="footer-link" href="#approach">Philosophy</a><a class="footer-link" href="#services">Specialist services</a><a class="footer-link" href="oem-qualification/">OEM qualification</a><a class="footer-link" href="mailto:intake@coredraftstudio.com">Contact</a></div>
    </div>
   </footer>
   <script>
