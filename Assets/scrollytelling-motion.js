@@ -11,7 +11,7 @@
     {id:'quotedesk',images:['quotedesk-editor.webp','quotedesk-workflow.webp','quotedesk-review.webp'],tags:['Quotation builder','Approval record','Controlled review']},
     {id:'procureflow',images:['procureflow-overview.webp','procureflow-requisitions.webp','procureflow-pipeline.webp'],tags:['Procurement overview','Requisition activity','Purchasing pipeline']},
     {id:'pharmadocs',images:['pharmadocs-overview.webp','pharmadocs-authoring.webp','pharmadocs-governance.webp'],tags:['Quality overview','Document workspace','Quality governance']},
-    {id:'peopledesk',images:[],tags:['Payroll setup','Salary controls','Governance register']},
+    {id:'peopledesk',images:['people-overview.webp','people-payroll.webp','people-master.webp'],tags:['Operations overview','Payroll and employee controls','Company compliance workspace']},
     {id:'construction',images:[],tags:['Project expense control','Billing overview','Evidence workflow']}
   ];
   var $=function(sel,root){return(root||document).querySelector(sel)};
