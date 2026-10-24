@@ -56,3 +56,5 @@ Only marketing website HTML, one consent script, site privacy notice, sitemap, a
 ## Public contact information
 
 The same business number is intentionally published for calling and WhatsApp enquiries: **+92 327 2934549** (E.164: `+923272934549`; WhatsApp: `https://wa.me/923272934549`). It appears as plain, crawlable anchor text in website contact areas, not only via JavaScript. The custom GA4 contact-click event counts an accepted visitor's click as intent, never a confirmed phone call, completed WhatsApp message or lead.
+
+The dedicated `/contact/` page is also tracked only after analytics opt-in. The site's Call/WhatsApp buttons and footer use the same business number, and clicking a WhatsApp link triggers a `contact_click` event with `contact_channel=whatsapp` after consent. The visible phone number is not sent as a custom GA4 event parameter.
