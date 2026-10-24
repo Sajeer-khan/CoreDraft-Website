@@ -5,7 +5,10 @@ Use only for genuine profiles at Clutch, GoodFirms, TechBehemoths, DesignRush, r
 **Brand/display name:** CoreDraft Studio  
 **Legal company name (when required):** CoreDraft Studio (Private) Limited  
 **Website:** https://coredraftstudio.com/  
-**Business email:** intake@coredraftstudio.com  
+**Business email:** intake@coredraftstudio.com
+**Business telephone:** +92 327 2934549 (`+923272934549`)
+**WhatsApp business contact:** https://wa.me/923272934549 (same number)
+**Public contact URL:** https://coredraftstudio.com/contact/  
 **Country:** Pakistan  
 **City:** Karachi (only when accurate for the specific profile/location)  
 **Primary positioning:** Custom business workflow software and SaaS implementation  

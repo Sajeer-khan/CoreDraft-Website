@@ -1,0 +1,20 @@
+/* CoreDraft public business contact. Shared across all static pages. */
+.cd-contact-bar{max-width:1150px;margin:0 auto;padding:24px 25px 21px;border-top:1px solid rgba(189,220,226,.24);display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap;font-family:Inter,system-ui,-apple-system,sans-serif}
+.cd-contact-label{display:flex;flex-direction:column;gap:3px;min-width:170px}
+.cd-contact-label strong{color:#f0fbfd;font-size:14px;font-weight:750}
+.cd-contact-label span{color:#b9ccd9;font-size:11px;line-height:1.5}
+.cd-contact-options{display:flex;align-items:center;flex-wrap:wrap;gap:9px}
+.cd-contact-options a{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 15px;border:1px solid rgba(183,219,228,.38);border-radius:7px;background:rgba(255,255,255,.06);color:#ecf9fc;font-size:12px;font-weight:700;line-height:1.3;text-decoration:none;transition:background .22s,transform .22s}
+.cd-contact-options a:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+.cd-contact-options a.cd-whatsapp{background:#b3f1dd;color:#173d40;border-color:#b3f1dd}
+.cd-contact-options a.cd-whatsapp:hover{background:#d4fff0}
+.cd-contact-options a:focus-visible,.cd-call-action a:focus-visible{outline:3px solid #8ae9da;outline-offset:3px}
+.cd-contact-options .cd-contact-icon{font-size:15px;line-height:1}
+.cd-call-action{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 0}
+.cd-call-action a{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;min-height:43px;border-radius:5px;font-size:12px;font-weight:750;text-decoration:none;transition:transform .2s}
+.cd-call-action a:hover{transform:translateY(-2px)}
+.cd-call-action .cd-direct-call{background:#edf8f9;color:#244862;border:1px solid #edf8f9}
+.cd-call-action .cd-direct-whatsapp{background:#b5f1d9;color:#18483c;border:1px solid #b5f1d9}
+.cd-contact-options a.cd-details{background:transparent;color:#cddde5;border-color:rgba(183,219,228,.28)}
+@media(max-width:720px){.cd-contact-bar{padding:25px 20px;align-items:flex-start}.cd-contact-label{width:100%}.cd-contact-options{width:100%}.cd-contact-options a{flex:1;min-width:140px}.cd-call-action{width:100%}.cd-call-action a{flex:1}}
+@media(prefers-reduced-motion:reduce){.cd-contact-options a,.cd-call-action a{transition:none}.cd-contact-options a:hover,.cd-call-action a:hover{transform:none}}

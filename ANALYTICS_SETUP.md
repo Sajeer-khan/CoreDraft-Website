@@ -20,7 +20,7 @@ Analytics is optional and defaults to **off** for a new browser:
 2. Until the visitor accepts, the script does not fetch `gtag.js`, initialize a GA4 connection or issue any GA4 page-view event.
 3. Consent or decline is stored locally under `coredraft_analytics_consent_v1`; a compact **Analytics settings** control can reopen the prompt.
 4. On acceptance, the page loads Google's analytics script with the above measurement ID and tracks page views and ordinary GA4 enhanced measurement.
-5. If a visitor clicks a `mailto:` or `tel:` link after accepting, a custom `contact_click` event is sent with a channel (`email` or `phone`) and a page path — **not a recipient email address, phone number, message body, or personal name**.
+5. If a visitor clicks a `mailto:`, `tel:` or CoreDraft WhatsApp (`https://wa.me/923272934549`) link after accepting, a custom `contact_click` event is sent with a channel (`email`, `phone` or `whatsapp`) and page path — **not a recipient email address, phone number, message body, or personal name**.
 6. A contact click is **not** a confirmed lead, sent email, or sale. It can be used as a weak interest signal.
 7. If consent is revoked, the site attempts to clear recognized first-party `_ga*` cookies and reloads. This doesn't delete historical Google data.
 8. Script loading occurs only on `coredraftstudio.com` and `www.coredraftstudio.com`; Cloudflare Pages preview and local hostnames don't inflate production traffic.
@@ -52,3 +52,9 @@ After GitHub release and the Cloudflare Pages deployment complete:
 ## Scope
 
 Only marketing website HTML, one consent script, site privacy notice, sitemap, and related documentation were updated. No customer SaaS databases, authentication, finance systems, payroll records or eQMS regulated production configurations are affected.
+
+## Public contact information
+
+The same business number is intentionally published for calling and WhatsApp enquiries: **+92 327 2934549** (E.164: `+923272934549`; WhatsApp: `https://wa.me/923272934549`). It appears as plain, crawlable anchor text in website contact areas, not only via JavaScript. The custom GA4 contact-click event counts an accepted visitor's click as intent, never a confirmed phone call, completed WhatsApp message or lead.
+
+The dedicated `/contact/` page is also tracked only after analytics opt-in. The site's Call/WhatsApp buttons and footer use the same business number, and clicking a WhatsApp link triggers a `contact_click` event with `contact_channel=whatsapp` after consent. The visible phone number is not sent as a custom GA4 event parameter.

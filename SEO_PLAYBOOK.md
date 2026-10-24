@@ -11,7 +11,7 @@ Product mix: QuoteDesk, ProcureFlow, PharmaDocs, People & Compliance, Constructi
 - Canonical URL and OpenGraph metadata across those routes.
 - JSON-LD: Organization, WebSite, WebPage, BreadcrumbList, SoftwareApplication on product pages, Article on practical guides, and Service on OEM qualification. Structured data intentionally **does not fabricate reviews, pricing, ratings, certification, office addresses or customer endorsements**.
 - Four useful, original guides (see keyword map) plus guides directory and About page.
-- Sitemap at `https://coredraftstudio.com/sitemap.xml`, enumerating 15 canonical URLs. All modified pages show their real change date, 2026-10-24.
+- Sitemap at `https://coredraftstudio.com/sitemap.xml`, enumerating 17 canonical URLs. All modified pages show their real change date, 2026-10-24.
 - robots.txt already allows public crawling and advertises the sitemap.
 - Root IndexNow key file and GitHub Actions workflow submit modified public HTML URLs after merges to `main`. Requires GitHub Actions enabled and the key publicly reachable after Cloudflare deploy. Alerts are **notifications, not indexing guarantees**.
 - Original design, module descriptions, animation and authentic sanitized screenshots preserved.
@@ -34,7 +34,7 @@ Product mix: QuoteDesk, ProcureFlow, PharmaDocs, People & Compliance, Constructi
 5. Look at crawl, indexing and query reports.
 
 ### Cloudflare / technical configuration
-- In Cloudflare Pages Deployments verify `main` is deployed and all 15 canonical URLs return successful HTML (not login, challenge, or a 404 fallback).
+- In Cloudflare Pages Deployments verify `main` is deployed and all 17 canonical URLs return successful HTML (not login, challenge, or a 404 fallback).
 - Test `/robots.txt`, `/sitemap.xml`, and `/<indexnow-key>.txt` from a browser outside the admin session; check real HTTP statuses.
 - Ensure only `https://coredraftstudio.com/` is treated as canonical. Test the `www` and `http` versions and configure proper permanent redirects where DNS/control allows. Do not guess that a canonical HTML tag alone is a server redirect.
 - If Cloudflare serves a default `.pages.dev` mirror, ensure it is canonicalized to the custom domain, and consider redirect policy if appropriate.
@@ -136,3 +136,7 @@ GitHub Actions shows a summary and stores a JSON report artifact for 30 days. **
 Google Search Console is connected via Windsor.ai for read-only access. It currently returns no search queries, landing page metrics or sitemap rows, including when fresh data is requested. Windsor.ai does not expose a Search Console sitemap submission/write action. Google can discover the sitemap via the existing `Sitemap:` line in `robots.txt`; direct Search Console report management requires an appropriately authorized account/API scope. Do not claim sitemap submission or account-level indexing verification was completed.
 
 GA4 is not yet connected in Windsor.ai. Analytics source authorization and any new Google property setup require the account owner's authorization; no arbitrary measurement identifier is to be inserted into the site.
+
+## 9. Public business contacts
+
+The user-provided CoreDraft Studio telephone and WhatsApp number is **+92 327 2934549** (international dialing link `tel:+923272934549` and WhatsApp URL `https://wa.me/923272934549`). It is publicly visible as clickable, crawlable HTML on the homepage, the product pages, the knowledge hub and dedicated `https://coredraftstudio.com/contact/`. SEO and directory listings must use the same business contact details and should not invent an office address, opening hours, or other identity claims.
