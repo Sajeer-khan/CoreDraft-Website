@@ -162,7 +162,8 @@
     if (!target) return;
     var href = target.getAttribute("href") || "";
     var contactType = href.slice(0,7).toLowerCase() === "mailto:" ? "email" :
-      href.slice(0,4).toLowerCase() === "tel:" ? "phone" : null;
+      href.slice(0,4).toLowerCase() === "tel:" ? "phone" :
+      /^https:\/\/wa\.me\/923272934549(?:[/?#]|$)/i.test(href) ? "whatsapp" : null;
     if (contactType) {
       // Intent signal only; a click is not a confirmed enquiry or sale. No address or user text sent.
       window.gtag("event", "contact_click", {
