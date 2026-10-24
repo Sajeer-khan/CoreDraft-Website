@@ -1,0 +1,36 @@
+name: CoreDraft live SEO health
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - '**/index.html'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'scripts/public_seo_health.py'
+      - '.github/workflows/seo-health.yml'
+  schedule:
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-seo-health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out deployed source
+        uses: actions/checkout@v4
+      - name: Allow CDN deployment to propagate after a push
+        if: github.event_name == 'push'
+        run: sleep 60
+      - name: Audit public crawlability and search metadata
+        run: python3 scripts/public_seo_health.py
+      - name: Upload the machine-readable audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coredraft-public-seo-health
+          path: seo-health-report.json
+          if-no-files-found: warn
+          retention-days: 30
