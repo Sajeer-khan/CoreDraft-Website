@@ -15,5 +15,6 @@
 .cd-call-action a:hover{transform:translateY(-2px)}
 .cd-call-action .cd-direct-call{background:#edf8f9;color:#244862;border:1px solid #edf8f9}
 .cd-call-action .cd-direct-whatsapp{background:#b5f1d9;color:#18483c;border:1px solid #b5f1d9}
+.cd-contact-options a.cd-details{background:transparent;color:#cddde5;border-color:rgba(183,219,228,.28)}
 @media(max-width:720px){.cd-contact-bar{padding:25px 20px;align-items:flex-start}.cd-contact-label{width:100%}.cd-contact-options{width:100%}.cd-contact-options a{flex:1;min-width:140px}.cd-call-action{width:100%}.cd-call-action a{flex:1}}
 @media(prefers-reduced-motion:reduce){.cd-contact-options a,.cd-call-action a{transition:none}.cd-contact-options a:hover,.cd-call-action a:hover{transform:none}}
