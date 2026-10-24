@@ -119,3 +119,20 @@ Avoid promising a fixed ranking or visitors-per-month. No analytics property or 
 4. Evaluate full site conversion measurement with privacy-respecting analytics; use consent controls where applicable.
 5. Add demonstrable real use cases or measured anonymized case studies with explicit client permission.
 6. Revisit structured data after actual product commercial packaging, customer reviews and pricing exist. Google SoftwareApplication rich results have additional required properties; current semantic markup alone does not guarantee enhanced listings.
+
+## 8. Automated live-site checks (added 24 October 2026)
+
+A new `.github/workflows/seo-health.yml` GitHub Actions job checks the public site daily at approximately 08:20 Pakistan Standard Time, after relevant changes to `main`, and through manual workflow dispatch.
+
+It runs `scripts/public_seo_health.py` using only public URLs, without tokens or search-console credentials. The audit checks:
+- `robots.txt` availability, broad crawl blocking and the canonical sitemap declaration;
+- XML sitemap availability and parseability, duplicate/foreign URLs;
+- Every XML sitemap page for HTTP 200, HTML body, canonical tags and noindex;
+- HTML titles, metadata, JSON-LD parseability;
+- Public IndexNow key verification.
+
+GitHub Actions shows a summary and stores a JSON report artifact for 30 days. **A passing check confirms public crawlability, not that Google indexed the URLs.** Scheduled workflows may run later than their stated cron time.
+
+Google Search Console is connected via Windsor.ai for read-only access. It currently returns no search queries, landing page metrics or sitemap rows, including when fresh data is requested. Windsor.ai does not expose a Search Console sitemap submission/write action. Google can discover the sitemap via the existing `Sitemap:` line in `robots.txt`; direct Search Console report management requires an appropriately authorized account/API scope. Do not claim sitemap submission or account-level indexing verification was completed.
+
+GA4 is not yet connected in Windsor.ai. Analytics source authorization and any new Google property setup require the account owner's authorization; no arbitrary measurement identifier is to be inserted into the site.
