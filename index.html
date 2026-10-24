@@ -3,11 +3,11 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoreDraft Studio | Your Business Should Work for You</title>
-  <meta name="description" content="You built your business to lead it, not chase every update. CoreDraft Studio creates practical software bringing clarity to commercial work, procurement, projects, quality and payroll.">
+  <title>Business Workflow Software for Growing Companies | CoreDraft Studio</title>
+  <meta name="description" content="Stop chasing quotations, purchasing decisions and project updates. Discover CoreDraft Studio's customizable business workflow software for leaner operations.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="CoreDraft Studio — Your business should work for you.">
-  <meta property="og:description" content="Less chasing. More clarity. More room to lead. Discover CoreDraft Studio business software.">
+  <meta property="og:title" content="Business Workflow Software for Growing Companies | CoreDraft Studio">
+  <meta property="og:description" content="Stop chasing quotations, purchasing decisions and project updates. Discover CoreDraft Studio's customizable business workflow software for leaner operations.">
   <meta property="og:url" content="https://coredraftstudio.com/">
   <meta property="og:image" content="https://coredraftstudio.com/Assets/Logo.png">
   <link rel="canonical" href="https://coredraftstudio.com/">
@@ -351,6 +351,23 @@ body { overflow-x:clip!important; }
 .hero-saas .hero-heading em{font-size:.94em}
 .hero-saas .hero-intro{max-width:600px}
 @media(max-width:760px){.hero-saas .hero-heading{font-size:clamp(3.3rem,11vw,5.5rem)}}
+
+/* Search-discoverable learning center in the emotional SaaS homepage. */
+.learn-section{padding:96px 0;background:#f2f6f8;border-top:1px solid #dbe7ec}
+.learn-section .learn-label{font-size:10px;font-weight:800;color:#708c9c;letter-spacing:.18em;text-transform:uppercase}
+.learn-section h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:640;font-size:clamp(3.5rem,6vw,6rem);color:#213a56;letter-spacing:-.035em;line-height:1.02;margin:18px 0}
+.learn-section h2 em{font-weight:400}
+.learn-section .learn-intro{font-size:13px;color:#708391;max-width:670px;line-height:1.9}
+.learn-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:39px 0 23px}
+.learn-card{padding:27px;background:#fff;border:1px solid #dbe5eb;display:flex;flex-direction:column;min-height:202px;transition:transform .22s,border-color .22s}
+.learn-card:hover{transform:translateY(-5px);border-color:#9bc8c5}
+.learn-card .learn-cat{font-size:10px;letter-spacing:.14em;color:#6a95a1;font-weight:750;text-transform:uppercase}
+.learn-card h3{font-size:17px;line-height:1.45;font-weight:750;color:#29465f;margin:20px 0 13px}
+.learn-card p{font-size:12px;color:#6e8190;line-height:1.75}
+.learn-card .learn-action{font-size:11px;color:#267d7b;font-weight:750;margin-top:auto;padding-top:14px}
+.learn-index{display:inline-block;padding:13px 18px;background:#203e5a;color:#fff;font-size:12px;font-weight:750}
+@media(max-width:680px){.learn-section{padding:65px 0}.learn-grid{grid-template-columns:1fr}.learn-section h2{font-size:3.5rem}}
+@media(prefers-reduced-motion:reduce){.learn-card{transition:none}.learn-card:hover{transform:none}}
 </style>
   <style>body { box-sizing: border-box; }</style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}.mobile-menu{display:grid!important}</style></noscript>
@@ -360,6 +377,12 @@ body { overflow-x:clip!important; }
   <script defer src="Assets/scrollytelling-motion.js?v=2"></script>
    <link rel="stylesheet" href="Assets/emotional-story.css?v=1">
   <script defer src="Assets/emotional-story.js?v=1"></script>
+<meta property="og:site_name" content="CoreDraft Studio">
+<meta property="og:image:alt" content="CoreDraft Studio brand logo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Business Workflow Software for Growing Companies | CoreDraft Studio">
+<meta name="twitter:description" content="Stop chasing quotations, purchasing decisions and project updates. Discover CoreDraft Studio's customizable business workflow software for leaner operations.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://coredraftstudio.com/#organization","name":"CoreDraft Studio (Private) Limited","alternateName":"CoreDraft Studio","url":"https://coredraftstudio.com/","logo":"https://coredraftstudio.com/Assets/Logo.png","email":"intake@coredraftstudio.com"},{"@type":"WebSite","@id":"https://coredraftstudio.com/#website","name":"CoreDraft Studio","url":"https://coredraftstudio.com/","publisher":{"@id":"https://coredraftstudio.com/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://coredraftstudio.com/#webpage","url":"https://coredraftstudio.com/","name":"Business Workflow Software for Growing Companies | CoreDraft Studio","description":"Stop chasing quotations, purchasing decisions and project updates. Discover CoreDraft Studio's customizable business workflow software for leaner operations.","isPartOf":{"@id":"https://coredraftstudio.com/#website"},"inLanguage":"en"}]}</script>
 </head>
  
  <body class="font-sans-body overflow-x-hidden">
@@ -375,6 +398,7 @@ body { overflow-x:clip!important; }
      <a class="cd-nav-link" href="#coming-next">Roadmap</a>
      <a class="cd-nav-link" href="#approach">Our philosophy</a>
      <a class="cd-nav-link" href="#process">How we build</a>
+     <a class="cd-nav-link" href="guides/">Guides</a>
      <a class="cd-nav-link" href="#services">Services</a>
      <a class="cd-nav-link" href="#contact">Contact</a>
     </nav>
@@ -384,7 +408,7 @@ body { overflow-x:clip!important; }
     </button>
    </div>
    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-     <a href="#products">Products</a><a href="#coming-next">Coming next</a><a href="#approach">Our philosophy</a><a href="#process">How we build</a><a href="#services">Services</a><a href="#contact">Contact</a>
+     <a href="#products">Products</a><a href="#coming-next">Coming next</a><a href="#approach">Our philosophy</a><a href="#process">How we build</a><a href="guides/">Guides</a><a href="#services">Services</a><a href="#contact">Contact</a>
    </nav>
   </header>
   <main id="main">
@@ -759,6 +783,17 @@ body { overflow-x:clip!important; }
     </div>
    </section>
 
+<section class="learn-section" id="practical-guides" aria-labelledby="learning-heading">
+ <div class="site-container"><div class="learn-label">Practical knowledge / For people running the work</div>
+ <h2 id="learning-heading">Before you buy software,<br><em>understand the bottleneck.</em></h2>
+ <p class="learn-intro">Four practical guides to the problems that keep growing companies chasing approvals, costs and records. Useful even if you never buy from us.</p>
+ <div class="learn-grid">
+  <article class="learn-card"><div class="learn-cat">Commercial operations</div><h3>How to build a quotation approval process that doesn't lose the sale</h3><p>Follow the journey from draft to customer decision, order and invoice.</p><a class="learn-action" href="guides/quotation-approval-process/">Read the guide ↗</a></article>
+  <article class="learn-card"><div class="learn-cat">Procurement</div><h3>Why purchase requisitions stall—and where to fix the process</h3><p>Understand approvals, supplier selection, orders and receiving.</p><a class="learn-action" href="guides/purchase-requisition-approval-workflow/">Read the guide ↗</a></article>
+  <article class="learn-card"><div class="learn-cat">Construction</div><h3>How project costs, running bills and cash can tell different stories</h3><p>Separate commitments, site costs and what the customer has actually certified.</p><a class="learn-action" href="guides/construction-project-cost-control/">Read the guide ↗</a></article>
+  <article class="learn-card"><div class="learn-cat">Pharmaceutical quality</div><h3>What a controlled document lifecycle needs beyond a PDF</h3><p>Practical questions about revisions, training, reviews and validation.</p><a class="learn-action" href="guides/pharmaceutical-document-control/">Read the guide ↗</a></article>
+ </div><a class="learn-index" href="guides/">Explore the knowledge hub ↗</a></div>
+</section>
    <section id="approach" class="section-pad philosophy" aria-labelledby="approach-heading">
      <div class="site-container">
        <div class="max-w-[720px] mb-11 reveal">
@@ -830,7 +865,7 @@ body { overflow-x:clip!important; }
   <footer class="bg-[#101f32] py-9">
    <div class="site-container flex flex-col lg:flex-row gap-7 justify-between items-start lg:items-center">
     <div class="flex items-center gap-3"><img src="Assets/Logo.png" alt="" width="29" height="29" class="w-7 h-7 object-contain opacity-75"><span class="text-[#b7c5d3] text-[13px]">CoreDraft Studio © 2026</span></div>
-    <div class="flex flex-wrap gap-x-7 gap-y-3"><a class="footer-link" href="#products">Products</a><a class="footer-link" href="products/future/">Innovation roadmap</a><a class="footer-link" href="#approach">Philosophy</a><a class="footer-link" href="#services">Specialist services</a><a class="footer-link" href="oem-qualification/">OEM qualification</a><a class="footer-link" href="mailto:intake@coredraftstudio.com">Contact</a></div>
+    <div class="flex flex-wrap gap-x-7 gap-y-3"><a class="footer-link" href="#products">Products</a><a class="footer-link" href="products/future/">Innovation roadmap</a><a class="footer-link" href="#approach">Philosophy</a><a class="footer-link" href="#services">Specialist services</a><a class="footer-link" href="oem-qualification/">OEM qualification</a><a class="footer-link" href="guides/">Guides</a><a class="footer-link" href="about/">About</a><a class="footer-link" href="mailto:intake@coredraftstudio.com">Contact</a></div>
    </div>
   </footer>
   <script>

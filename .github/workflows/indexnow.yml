@@ -1,0 +1,38 @@
+name: Notify IndexNow of changed public pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - '**/index.html'
+permissions:
+  contents: read
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out published source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Submit changed pages to IndexNow
+        shell: bash
+        run: |
+          set -euo pipefail
+          KEY=$(cat 9f248b2d14884227ab3d2f0b7e45a6c1.txt)
+          BEFORE=$(python3 -c 'import json,os; print(json.load(open(os.environ["GITHUB_EVENT_PATH"])).get("before",""))')
+          if [[ -z "$BEFORE" || "$BEFORE" =~ ^0+$ ]]; then
+            BEFORE=$(git rev-parse HEAD^)
+          fi
+          # Let the external Cloudflare Pages build begin before submitting new URLs.
+          sleep 45
+          mapfile -t PAGES < <(git diff --name-only "$BEFORE" "$GITHUB_SHA" | grep -E '(^index\.html$|/index\.html$)' || true)
+          if [[ ${#PAGES[@]} -eq 0 ]]; then echo 'No changed public HTML pages'; exit 0; fi
+          for page in "${PAGES[@]}"; do
+            if [[ "$page" == index.html ]]; then URL='https://coredraftstudio.com/';
+            else URL="https://coredraftstudio.com/${page%index.html}"; fi
+            echo "Notifying IndexNow: $URL"
+            curl --fail --show-error --silent --retry 2 --retry-delay 8 --max-time 30 \
+              "https://api.indexnow.org/indexnow?url=${URL}&key=${KEY}" || echo "IndexNow notification not accepted yet for ${URL}"
+          done
+          echo 'Submitted changed canonical pages. Indexing is not guaranteed.'

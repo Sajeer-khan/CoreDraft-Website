@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://coredraftstudio.com/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>1.00</priority></url>
-  <url><loc>https://coredraftstudio.com/products/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://coredraftstudio.com/products/quotedesk/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://coredraftstudio.com/products/procureflow/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://coredraftstudio.com/products/pharmadocs/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://coredraftstudio.com/products/people-compliance/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://coredraftstudio.com/products/construction-control/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://coredraftstudio.com/oem-qualification/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.60</priority></url>
-  <url><loc>https://coredraftstudio.com/products/future/</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://coredraftstudio.com/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/products/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/products/quotedesk/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/products/procureflow/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/products/pharmadocs/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/products/people-compliance/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/products/construction-control/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/products/future/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/oem-qualification/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/guides/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/guides/quotation-approval-process/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/guides/purchase-requisition-approval-workflow/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/guides/construction-project-cost-control/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/guides/pharmaceutical-document-control/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://coredraftstudio.com/about/</loc><lastmod>2026-10-24</lastmod></url>
 </urlset>
