@@ -23,6 +23,9 @@
 
   function startAnalytics() {
     if (initialized) return;
+    // Ignore Cloudflare preview / alternate domains so production reports stay clean.
+    var hostname = window.location.hostname.toLowerCase();
+    if (hostname !== "coredraftstudio.com" && hostname !== "www.coredraftstudio.com") return;
     initialized = true;
     accepted = true;
     window.dataLayer = window.dataLayer || [];
