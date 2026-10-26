@@ -40,6 +40,29 @@ def request(path: str) -> tuple[int, str, str, str]:
     return 0, url, "", f"Fetch failed: {last}"
 
 
+def probe_www_redirect(path: str) -> dict:
+    """Check the first HTTP response only: canonical tags are not a redirect."""
+    src = "https://www.coredraftstudio.com" + path
+    expected = BASE + path
+
+    class NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, hdrs, newurl):
+            return None
+
+    opener = urllib.request.build_opener(NoRedirect)
+    req = urllib.request.Request(src, headers={"User-Agent": UA})
+    try:
+        with opener.open(req, timeout=TIMEOUT) as response:
+            status = response.status
+            location = response.headers.get("Location", "")
+    except urllib.error.HTTPError as exc:
+        status = exc.code
+        location = exc.headers.get("Location", "")
+    except Exception as exc:
+        return {"source": src, "expected": expected, "status": 0, "location": "", "error": str(exc)}
+    return {"source": src, "expected": expected, "status": status, "location": location}
+
+
 def get_canonical(text: str) -> str:
     tags = re.findall(r"<link\b[^>]*>", text, re.IGNORECASE)
     for tag in tags:
@@ -86,6 +109,19 @@ def audit() -> dict:
                 issues.append("XML sitemap lists URLs outside the canonical host")
         except Exception as e:
             issues.append(f"sitemap.xml is not parseable XML: {e}")
+    # The older Google brand result explicitly shows www; verify an HTTP permanent
+    # redirect, rather than accepting duplicate live hostnames with canonical tags.
+    www_checks = [
+        probe_www_redirect("/"),
+        probe_www_redirect("/oem-qualification/?seo_host_check=1"),
+    ]
+    for check in www_checks:
+        if check["status"] not in (301, 308) or check["location"] != check["expected"]:
+            issues.append(
+                f"www canonical redirect missing or incorrect: {check['source']} "
+                f"returned HTTP {check['status']} Location={check['location']!r}; "
+                f"expected permanent redirect to {check['expected']}"
+            )
     for absolute in paths:
         path = absolute[len(BASE):]
         page_status, redirect, ctype, body = request(path)
@@ -103,6 +139,8 @@ def audit() -> dict:
             result["title"] = html.unescape(re.sub(r"\s+", " ", match.group(1)).strip()) if match else ""
             if not result["title"]:
                 issues.append(f"{path}: no HTML <title>")
+            if path == "/" and result["title"] != "CoreDraft Studio | Business Software & SaaS Solutions":
+                issues.append("Homepage title is not the current SaaS-first brand title")
             if is_noindex(body):
                 issues.append(f"{path}: contains a noindex directive")
             if re.search(r"<meta\s+name=['\"]description['\"]", body, re.IGNORECASE) is None:
@@ -125,7 +163,7 @@ def audit() -> dict:
         "checked_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
         "site": BASE, "robots_http_status": (200 if "robots.txt returned" not in " ".join(issues) else 0),
         "sitemap_url": BASE + "/sitemap.xml",
-        "sitemap_entries": len(paths), "pages": pages,
+        "sitemap_entries": len(paths), "pages": pages, "www_redirect_checks": www_checks,
         "critical_errors": issues, "warnings": warnings,
         "note": "A valid live crawl does not imply Google indexing or search ranking."
     }
@@ -148,6 +186,9 @@ def main() -> int:
     for page in report["pages"]:
         canonical = "OK" if page["canonical"] == page["url"] else "Mismatch"
         lines.append(f"| {page['url']} | {page['http_status']} | {canonical} |")
+    lines += ["", "### www to apex host redirects", "", "| URL | HTTP | Location |", "|---|---:|---|"]
+    for check in report["www_redirect_checks"]:
+        lines.append(f"| {check['source']} | {check['status']} | {check['location'] or 'None'} |")
     lines += ["", "### Critical errors"]
     lines += [f"- {err}" for err in report["critical_errors"]] or ["- None"]
     lines += ["", "### Warnings"]
